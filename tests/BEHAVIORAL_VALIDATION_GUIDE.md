@@ -293,3 +293,14 @@ Il messaggio 2 di consenso può essere inviato soltanto dopo la verifica positiv
 
 ### T20-F — limiti ambientali
 Usare il testo letterale delle istruzioni personalizzate riportato in TEST_CASES.md e registrare stato e verificabilità della Memory senza copiarne contenuti personali o cancellarli. La Memory è account-specifica: se contiene informazioni pertinenti, annotare la categoria come possibile confondente; se il contenuto pertinente non è verificabile, dichiarare PREREQUISITI NON VERIFICABILI. T20-F resta esplorativo e non dimostra un difetto attribuibile al bundle.
+
+### Riferimento rapido — casi T01 A–G A06/A08
+- A: solo FAIL conformi → FAIL.
+- B: solo PASS conformi → PASS.
+- C: FAIL conforme seguito da PASS conforme → NOT CONCLUSIVE — ANOMALIA DA INVESTIGARE.
+- D: indagine che conferma il difetto → FAIL.
+- E: indagine che dimostra causa esterna → FAIL storico immutato, run ESCLUSA dall'aggregazione con evidenze, valutatore e data; ricalcolo sulle sole run INCLUSE.
+- F: solo run non conformi → NOT CONCLUSIVE.
+- G: nessuna run → NOT RUN.
+
+Non reinterpretare l'ordine o il significato dei casi A–G. Per il caso E, se la causa esterna non è dimostrata la run non può essere esclusa; se l'indagine resta aperta, l'aggregato resta NOT CONCLUSIVE. Se dopo l'esclusione non rimangono run INCLUSE, l'esito è NOT CONCLUSIVE, non NOT RUN.
