@@ -1548,19 +1548,21 @@ Per T16-A…E, T17-A…E, T18-A…D, T19-A…D e T20-A…F utilizzare gli input 
 - Motivazione e riferimenti alle evidenze:
 
 ### Regola A08 — calcolo e casi A–G
-1. Nessuna run registrata: NOT RUN.
-2. Solo run non conformi/esplorative o nessuna run INCLUSA: NOT CONCLUSIVE.
-3. Almeno una run SOSPESA per indagine aperta: NOT CONCLUSIVE — INDAGINE APERTA.
-4. Tutte le run INCLUSE sono FAIL: FAIL.
-5. Tutte le run INCLUSE sono PASS: PASS.
-6. Run INCLUSE discordanti (PASS e FAIL) o con esiti parziali/non conclusivi: NOT CONCLUSIVE.
+1. Nessuna run registrata: NOT RUN (G).
+2. Solo run non conformi/esplorative: NOT CONCLUSIVE (F).
+3. FAIL conforme seguito da PASS conforme: NOT CONCLUSIVE — ANOMALIA DA INVESTIGARE (C).
+4. Indagine che conferma il difetto: FAIL (D).
+5. Indagine che dimostra causa esterna: conservare il FAIL storico, marcare la run ESCLUSA con causa/evidenze/valutatore/data e ricalcolare soltanto sulle run INCLUSE (E).
+6. Solo FAIL conformi ammissibili: FAIL (A).
+7. Solo PASS conformi ammissibili: PASS (B).
+8. Ogni altra combinazione incompleta, parziale o discordante: NOT CONCLUSIVE.
 
-- **A:** nessuna run → NOT RUN.
-- **B:** solo run non conformi → NOT CONCLUSIVE.
-- **C:** tutte le run ammissibili PASS → PASS.
-- **D:** tutte le run ammissibili FAIL → FAIL.
-- **E:** FAIL con causa esterna dimostrata → conservare FAIL storico, marcare ESCLUSA e ricalcolare solo sulle INCLUSE; se non ne restano, NOT CONCLUSIVE.
-- **F:** PASS e FAIL ammissibili discordanti → NOT CONCLUSIVE, indagine, nessuna maggioranza/media.
-- **G:** risultati parziali, prerequisiti/evidenze insufficienti o attribuibilità incerta → NOT CONCLUSIVE; sospendere se l'indagine è aperta.
+- **A:** solo FAIL conformi → FAIL.
+- **B:** solo PASS conformi → PASS.
+- **C:** FAIL conforme seguito da PASS conforme → NOT CONCLUSIVE — ANOMALIA DA INVESTIGARE; nessun PASS aggregato finché la discordanza non è risolta.
+- **D:** indagine che conferma il difetto → FAIL, anche in presenza di un PASS successivo discordante.
+- **E:** indagine che dimostra causa esterna → escludere soltanto la run dal calcolo, senza modificare il FAIL storico; ricalcolare sulle sole run INCLUSE. Se non resta alcuna run inclusa, NOT CONCLUSIVE.
+- **F:** solo run non conformi → NOT CONCLUSIVE.
+- **G:** nessuna run → NOT RUN.
 
-Una causa esterna non dimostrata non consente l'esclusione. Se l'indagine si conclude senza dimostrare la causa, la run resta INCLUSA come FAIL quando è conforme, identificata e supportata da evidenze complete. La decisione di esclusione non converte FAIL in PASS e non modifica la run originaria.
+Una causa esterna non dimostrata non consente l'esclusione. Se l'indagine si conclude senza dimostrare la causa, il FAIL resta INCLUSO quando la run è conforme, il bundle è identificato e le evidenze sono complete. Se la causa resta incerta, la run è SOSPESA e l'aggregato NOT CONCLUSIVE. L'esclusione non converte FAIL in PASS e non modifica la run originaria.
