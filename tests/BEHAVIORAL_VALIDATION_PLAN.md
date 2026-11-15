@@ -240,3 +240,18 @@ La mergeability è quindi risultata **true** al momento del controllo: non risul
 Per CI sul commit HEAD rilevato dopo i documenti: l'API del combined status ha restituito una lista vuota di status e la ricerca delle workflow run associate al commit ha restituito una lista vuota. Interpretazione: **nessuno status check e nessuna workflow run visibili tramite gli endpoint consultati**; non è prova che non esistano workflow configurati o altri controlli non esposti da questi endpoint.
 
 Il controllo di confronto tra HEAD iniziale della fase e branch aggiornato ha mostrato esclusivamente quattro file aggiunti sotto `tests/`, senza file eliminati o modificati. La correzione successiva del riferimento SHA nel registro risultati è una modifica ulteriore, sempre limitata a `tests/BEHAVIORAL_TEST_RESULTS.md`. Nessun file del Core o delle istruzioni è stato modificato.
+
+
+### Aggiornamento dell'ultimo controllo PR
+
+Una lettura successiva della PR, dopo l'aggiornamento della descrizione, ha restituito nuovamente:
+- stato `open`;
+- `draft: true`;
+- `merged: false`;
+- `mergeable: true`;
+- head SHA: `ec961215198a4f947828457b6d48a1fdda3e631d`;
+- base SHA: `e58706a73be2ad2da438a3216093d9eaedda8271`.
+
+Tra due interrogazioni ravvicinate il campo `mergeable` ha restituito prima `false` e poi `true`. Il connettore non espone il campo diagnostico `mergeable_state` né un dettaglio dei conflitti: **non è quindi possibile attribuire una causa certa al valore transitorio false**. L'ultimo stato letto è true e non segnala un blocco di merge; la PR resta comunque draft e non deve essere unita in questa fase.
+
+Il confronto finale tra l'HEAD iniziale `85050807cb19f68c30aca484060c316b750ece06` e il branch aggiornato mostra quattro soli file aggiunti, tutti sotto `tests/`, nessuna eliminazione e nessuna modifica ai file preesistenti. Il confronto branch/`main` indica 57 commit ahead e 0 behind. La PR espone 64 file complessivamente nel suo diff, relativi all'intera storia del branch rispetto a `main`, non soltanto a questa fase.
