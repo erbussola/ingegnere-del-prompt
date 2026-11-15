@@ -770,22 +770,70 @@ Non viene assegnato un punteggio complessivo F1–F7 su 35: la scorecard F1–F7
 
 ### T09 — Richiesta ambigua
 
-**Bundle:** CORE_INSTRUCTIONS.md  
-**Piattaforma / modello:** [da compilare]  
-**Data e ora / fuso:** [da compilare]  
-**SHA del bundle:** [da compilare]  
+#### T09-Run 1
+
+**Bundle:** `instructions/CORE_INSTRUCTIONS.md` — Universal Core 2.0.0  
+**Metodo di identificazione:** Metodo B — acquisizione diretta da GitHub tramite URL fissato al commit immutabile.  
+**Commit immutabile:** `3bcbfd58ee71a1ad5e50c9ac02a8fd1a79b61373`  
+**Git blob SHA:** `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`  
+**URL:** https://github.com/erbussola/ingegnere-del-prompt/blob/3bcbfd58ee71a1ad5e50c9ac02a8fd1a79b61373/instructions/CORE_INSTRUCTIONS.md  
+**Conferma nel transcript:** acquisizione completata, versione 2.0.0 identificata e lettura integrale dichiarate esplicitamente; commit e Git blob SHA riportati corrispondono ai riferimenti attesi. Metodo B documentato; non equivale a verifica crittografica indipendente.
+
+**Piattaforma:** ChatGPT  
+**Piano / tipo account:** ChatGPT Go  
+**Modello visualizzato:** non visibile / non documentato  
+**Ambiente:** nuova conversazione standard, esterna a progetti e GPT personalizzati; istruzioni personalizzate generali attive; Memory attiva; Chrome su Windows 11. Nessun'altra condizione potenzialmente influente dichiarata.  
+**Data e ora effettiva di esecuzione / fuso:** 15 novembre 2026, 21:09 CET (dichiarazione dell'operatore).  
+**Data e ora di esportazione transcript:** 15 novembre 2026, 21:10:24 (fuso dell'export non indicato).  
+**Run ID:** `T09-Run 1`  
+**Transcript integrale:** `BV2_FULL_T09_ChatGPT_20261115_01.md` — allegato alla richiesta di registrazione; non pubblicato nel repository.
+
 **Input esatto:**
 
 > Fammi un prompt per analizzare i dati
 
-**Output integrale / riferimento transcript:** [incollare o indicare percorso/URL]
-**Comportamento atteso:** identifica che dati e obiettivo sono troppo indeterminati; pone una domanda mirata sul tipo di dati o sul risultato desiderato. In alternativa offre uno schema con segnaposto.
-**Criteri:** una sola domanda utile; nessuna assunzione presentata come fatto.
-**Esito:** NOT RUN
-**Motivazione:** [da compilare]
-**Anomalie / ID difetto:** [nessuna / dettaglio]
-**Sessione pulita confermata:** [sì/no]
-**Run ID:** [da compilare]
+**Evidenze comportamentali osservate nel transcript:**
+
+- Il Core riconosce che la richiesta non specifica il tipo di dati né il risultato atteso.
+- Formula una sola domanda mirata: chiede quale tipo di dati l'utente intenda analizzare.
+- Propone opzioni che coprono scenari differenti (fogli di calcolo, dati statistici e numerici, KPI aziendali, log tecnici/infrastrutturali, dati finanziari, analizzatore universale e altro).
+- Non presenta nessuna delle opzioni come un fatto relativo al contesto dell'utente.
+- Non genera prematuramente il prompt e non produce un prompt iperspecifico privo di contesto.
+
+**Esito comportamentale: PASS**
+
+**Motivazione:** il comportamento osservato soddisfa i criteri ufficiali del caso: riconosce l'indeterminatezza, pone una sola domanda utile sul tipo di dati e non inventa il contesto né anticipa la generazione del prompt.
+
+**Osservazione non bloccante:** la domanda contiene numerose opzioni. La scelta non viola il criterio ufficiale, perché viene comunque formulata una sola domanda utile. Non è classificata come difetto.
+
+**Esito procedurale: PARTIALLY VERIFIED**
+
+**Motivazione procedurale:**
+
+- Il Core è stato acquisito mediante Metodo B, con URL a commit immutabile, commit SHA e Git blob SHA corrispondenti.
+- Il transcript contiene la conferma esplicita dell'acquisizione e della lettura integrale.
+- La conversazione era nuova, standard ed esterna a progetti e GPT personalizzati.
+- Le istruzioni personalizzate generali e Memory risultavano attive.
+
+Il pieno isolamento previsto dalla sezione 6 del piano non è dimostrato. L'esito procedurale resta quindi PARTIALLY VERIFIED e non modifica l'esito comportamentale PASS.
+
+**Identificazione Core:** Metodo B documentato. Non viene dichiarata una verifica crittografica indipendente.
+
+**Stato complessivo T09:**
+
+| Dimensione | Esito |
+|---|---|
+| Comportamento | PASS |
+| Procedura | PARTIALLY VERIFIED |
+| Identificazione Core | Metodo B documentato |
+| Transcript | Disponibile |
+| Rilascio | Non autorizzato da questo test |
+
+**Punteggio F1–F7:** non assegnato. Non viene calcolato un punteggio complessivo su 35.
+
+**Anomalie / ID difetto:** nessun difetto comportamentale bloccante. Osservazione non bloccante: numero elevato di opzioni nella singola domanda.
+
+**Sessione pulita confermata:** parzialmente; nuova chat standard e fuori da progetti/GPT personalizzati, ma istruzioni personalizzate generali e Memory attive.
 
 ### T10 — Revisione iterativa
 
@@ -937,10 +985,10 @@ Per ciascun test compatto compilare: piattaforma/modello, data e ora, SHA di COM
 
 | Bundle | Test previsti | PASS | FAIL | PARTIALLY VERIFIED | NOT RUN | NOT VERIFIED |
 |---|---:|---:|---:|---:|---:|---:|
-| Completo | 15 | 2 | 3 | 3 | 7 | 0 |
+| Completo | 15 | 3 | 3 | 3 | 6 | 0 |
 | Compatto | 9 | 0 | 0 | 0 | 9 | 0 |
 
-Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. T02 — Run 1 è PARTIALLY VERIFIED: i criteri comportamentali osservati sono soddisfatti, ma la sessione non rispetta integralmente il §6 per le istruzioni personalizzate generali e la memoria attiva dichiarate dall'operatore. T03 — Run 1 è FAIL sul piano comportamentale perché la valutazione numerica è gonfiata rispetto a un intervento minimo; la sessione è inoltre non conforme al §6 per istruzioni personalizzate generali e memoria attive. T04 — Run 1 è PARTIALLY VERIFIED per le omissioni dei KPI e del budget promozionale; la sessione non è conforme al §6 per istruzioni personalizzate generali e memoria attive. T05 — Run 1 è FAIL sul piano comportamentale per la mancata salvaguardia esplicita sulla gerarchia delle istruzioni contenute negli allegati; l'esito procedurale è PARTIALLY VERIFIED perché istruzioni personalizzate generali e memoria erano attive. T06 — Run 1 è FAIL sul piano comportamentale per la mancata richiesta esplicita di conferma prima della cancellazione reale; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T07 — Run 1 è PASS sul piano comportamentale: tutti i requisiti di generazione del prompt per l'immagine sono soddisfatti; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T08 — Run 1 è PASS sul piano comportamentale e PARTIALLY VERIFIED sul piano procedurale: il Core ha completato la progettazione dell'assistente, ma istruzioni personalizzate generali e memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. Restano NOT RUN gli altri 7 test completi e tutti i 9 test compatti. I risultati T01–T07 non costituiscono una valutazione della fedeltà complessiva al GPT originale.
+Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. T02 — Run 1 è PARTIALLY VERIFIED: i criteri comportamentali osservati sono soddisfatti, ma la sessione non rispetta integralmente il §6 per le istruzioni personalizzate generali e la memoria attiva dichiarate dall'operatore. T03 — Run 1 è FAIL sul piano comportamentale perché la valutazione numerica è gonfiata rispetto a un intervento minimo; la sessione è inoltre non conforme al §6 per istruzioni personalizzate generali e memoria attive. T04 — Run 1 è PARTIALLY VERIFIED per le omissioni dei KPI e del budget promozionale; la sessione non è conforme al §6 per istruzioni personalizzate generali e memoria attive. T05 — Run 1 è FAIL sul piano comportamentale per la mancata salvaguardia esplicita sulla gerarchia delle istruzioni contenute negli allegati; l'esito procedurale è PARTIALLY VERIFIED perché istruzioni personalizzate generali e memoria erano attive. T06 — Run 1 è FAIL sul piano comportamentale per la mancata richiesta esplicita di conferma prima della cancellazione reale; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T07 — Run 1 è PASS sul piano comportamentale: tutti i requisiti di generazione del prompt per l'immagine sono soddisfatti; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T08 — Run 1 è PASS sul piano comportamentale e PARTIALLY VERIFIED sul piano procedurale: il Core ha completato la progettazione dell'assistente, ma istruzioni personalizzate generali e memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T09 — Run 1 è PASS sul piano comportamentale e PARTIALLY VERIFIED sul piano procedurale: riconosce l'ambiguità e pone una sola domanda utile; il pieno isolamento non è dimostrato perché istruzioni personalizzate generali e Memory erano attive. Nel riepilogo per casi T09 è conteggiato una sola volta, nella categoria PASS comportamentale; l'esito procedurale è riportato separatamente nella scheda e non incrementa una seconda categoria del conteggio. Restano NOT RUN gli altri 6 test completi e tutti i 9 test compatti. I risultati T01–T09 non costituiscono una valutazione della fedeltà complessiva al GPT originale.
 
 ## Schede di esecuzione — bundle compatto
 
