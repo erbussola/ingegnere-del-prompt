@@ -392,22 +392,84 @@ I punteggi seguenti sono una valutazione del solo transcript T01, non il risulta
 
 ### T04 — Creazione per marketing
 
-**Bundle:** CORE_INSTRUCTIONS.md  
-**Piattaforma / modello:** [da compilare]  
-**Data e ora / fuso:** [da compilare]  
-**SHA del bundle:** [da compilare]  
-**Input esatto:**
+#### Run 1
+
+**Bundle:** `instructions/CORE_INSTRUCTIONS.md` — Core Universale 2.0.0  
+**Snapshot operativo:** `84db964b5ec17ae6c203c125b95133c64b772e75`  
+**SHA Git del bundle:** `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6` — identità della copia `CORE_INSTRUCTIONS_T04.md` verificata tramite Git blob SHA e corrispondente al Core previsto nello snapshot operativo. Il transcript documenta il nome dell'allegato ma non ne incorpora i byte: l'identità dell'allegato originale nella sessione non è dimostrabile autonomamente dal solo export.
+
+**Piattaforma:** ChatGPT  
+**Piano / tipo account:** ChatGPT Go (dichiarazione dell'operatore)  
+**Modello visualizzato:** non visualizzabile  
+**Data e ora effettiva di esecuzione / fuso:** 15 novembre 2026, ore 17:38 CET (dichiarazione dell'operatore)  
+**Data e ora di esportazione del transcript:** 15 novembre 2026, 17:51:02 (timestamp riportato nell'export)  
+**Browser / sistema:** Google Chrome su Windows 11 (dichiarazione dell'operatore)  
+**Transcript integrale:** `BV2_FULL_T04_ChatGPT_20261115_01(1).md` — allegato alla richiesta di registrazione; non pubblicato nel repository. Source: [conversazione ChatGPT](https://chatgpt.com/c/6af9dfdc-9860-83eb-af28-026dc1a14655).  
+**Primo messaggio:** allegato Markdown `CORE_INSTRUCTIONS_T04.md`.  
+**Modalità di caricamento:** file Markdown allegato.
+
+**Conformità della sessione / §6:** NON CONFORME. L'operatore dichiara che la conversazione era nuova, standard ed esterna a progetti e GPT personalizzati. Erano tuttavia attive le istruzioni personalizzate generali e la memoria. Queste condizioni non soddisfano il requisito di isolamento del §6. La non conformità procedurale è tenuta distinta dalla valutazione del comportamento osservato.
+
+**Input T04 esatto:**
 
 > Crea un prompt per lanciare su Instagram un corso base di fotografia per adulti principianti
 
-**Output integrale / riferimento transcript:** [incollare o indicare percorso/URL]
-**Comportamento atteso:** produce istruzioni per definire obiettivo, pubblico, proposta, calendario, formati, CTA e KPI; usa segnaposto per budget, date e dettagli del corso.
-**Criteri:** deliverable applicabili; ipotesi distinguibili; nessuna testimonianza o dato commerciale inventato.
-**Esito:** NOT RUN
-**Motivazione:** [da compilare]
-**Anomalie / ID difetto:** [nessuna / dettaglio]
-**Sessione pulita confermata:** [sì/no]
-**Run ID:** [da compilare]
+**Turno successivo dell'utente:**
+
+> La modalità di erogazione non è ancora definita. Utilizza un segnaposto esplicito nel prompt e procedi con la creazione della versione completa.
+
+**Sequenza ed evidenze osservate nel transcript:**
+
+- L'assistente ha riconosciuto correttamente la modalità A — creazione di prompt.
+- Ha identificato come già noti piattaforma, destinatari e obiettivo promozionale.
+- Ha posto una sola domanda pertinente sulla modalità di erogazione (in presenza oppure online), motivandola con l'impatto sulla strategia comunicativa.
+- Dopo che l'utente ha dichiarato che la modalità non era definita e ha chiesto un segnaposto, l'assistente ha accettato il dato mancante come non bloccante e ha prodotto il prompt completo senza ulteriori domande.
+- Il prompt è strutturato e copiabile. Comprende ruolo, obiettivo, contesto, strategia comunicativa, materiali promozionali, indicazioni creative, organizzazione del risultato e criteri di qualità.
+- I deliverable includono post di lancio, carosello da 6–8 slide, Reel, almeno 5 Stories, calendario editoriale di 3 settimane, FAQ e messaggio DM.
+- Sono previsti segnaposto per modalità di erogazione, nome corso, organizzatore/docente, località, durata, programma, prezzo, data di inizio, iscrizione e posti disponibili.
+- Il prompt non contiene testimonianze, recensioni, numeri di iscritti, percentuali di conversione, risultati pregressi o altre metriche commerciali presentate come fatti.
+- Il transcript termina con il prompt completo e una nota progettuale che spiega la scelta di non vincolare la campagna a una specifica attrezzatura o modalità di erogazione.
+
+**Aspetti positivi:**
+
+- Corretta identificazione della modalità A.
+- Una sola domanda di chiarimento, pertinente e motivata.
+- Uso corretto del segnaposto quando la modalità non è ancora definita.
+- Consegna completa, autonoma e pronta da copiare.
+- Buona varietà di materiali promozionali e struttura operativa.
+- Nessuna testimonianza o dato commerciale inventato; i dati organizzativi mancanti sono demandati a segnaposto.
+- Tono e linguaggio coerenti con adulti principianti.
+
+**Omissioni specifiche T04:**
+
+- **T04-01 — KPI non esplicitati:** la scheda T04 richiede che il prompt chieda di definire KPI per monitorare i risultati della campagna. Il prompt tratta obiettivi e conversione dei contatti, ma non richiede esplicitamente indicatori di performance, metriche, target o modalità di misurazione.
+- **T04-02 — Budget della campagna non previsto tra i segnaposto:** il prompt contiene il campo `[PREZZO O DA DEFINIRE]`, che riguarda il prezzo del corso, ma non un campo per il budget promozionale/advertising della campagna. I due concetti non sono equivalenti.
+
+**Osservazione minore:**
+
+La sezione strategica propone di valorizzare composizione fotografica, gestione della luce ed esposizione. Questi argomenti non sono confermati nel transcript come contenuti effettivi del programma. Sarebbe stato più preciso indicarli come esempi o ipotesi da verificare rispetto al programma reale. L'osservazione non viene classificata come dato commerciale inventato né come errore critico.
+
+**Valutazione F1–F7 riferita esclusivamente alle evidenze T04**
+
+| Criterio | Punteggio | Evidenza e motivazione |
+|---|---:|---|
+| F1 — Accoglienza | 5/5 | La risposta iniziale riconosce il contesto già fornito, individua gli elementi fondamentali e mantiene un tono professionale e diretto, senza preamboli superflui. |
+| F2 — Comprensione | 5/5 | Comprende che l'utente vuole un prompt operativo per promuovere su Instagram un corso base di fotografia per adulti principianti; il risultato resta aderente all'obiettivo. |
+| F3 — Domande progressive | 5/5 | Pone una sola domanda pertinente sulla modalità di erogazione. Quando l'utente dichiara che il dato non è disponibile, non insiste e usa un segnaposto esplicito. |
+| F4 — RICCE flessibile | 5/5 | Il prompt integra ruolo, istruzioni, contesto, vincoli e formati di output in modo coerente con un'attività articolata, senza imporre una sezione Examples artificiale. |
+| F5 — Cinque suggerimenti | N/A | T04 è un caso di creazione, non di ottimizzazione sostanziale di un prompt esistente. Il criterio non entra nel denominatore. |
+| F6 — Prompt finale | 4/5 | Prompt completo e copiabile, con deliverable applicabili e segnaposto per diversi dati mancanti. La mancanza dei KPI espliciti e del segnaposto per il budget della campagna impedisce il punteggio pieno. |
+| F7 — Iterazione | 5/5 | Integra la risposta dell'utente nella versione finale, sostituisce la modalità non definita con un segnaposto e consegna il prompt integrale senza perdere l'obiettivo iniziale. |
+
+**Riepilogo dei criteri applicabili T04:** 29/30 (F5 escluso). Il totale descrive esclusivamente i sei criteri applicabili osservati in questo caso e non viene confrontato con le soglie di campagna definite su 35 punti.
+
+**Esito comportamentale:** PARTIALLY VERIFIED
+
+**Motivazione:** il comportamento è complessivamente corretto: riconoscimento della modalità, chiarimento progressivo, uso di segnaposto e consegna di un prompt completo e copiabile. Il prompt omette tuttavia due requisiti espliciti della scheda T04: la definizione dei KPI e il segnaposto per il budget della campagna. Le omissioni giustificano PARTIALLY VERIFIED, senza configurare un fallimento critico. L'osservazione sugli argomenti fotografici resta minore.
+
+**Esito procedurale:** PARTIALLY VERIFIED — sessione non conforme al requisito di isolamento §6 per istruzioni personalizzate generali e memoria attive. La sessione era dichiarata nuova, standard ed esterna a progetti e GPT personalizzati. Non viene assegnato PASS procedurale.
+
+**Anomalie / ID difetto:** T04-01 (KPI non esplicitati); T04-02 (budget campagna non previsto tra i segnaposto). Osservazione minore: argomenti fotografici non confermati come programma effettivo.
 
 ### T05 — Analisi documentale
 
