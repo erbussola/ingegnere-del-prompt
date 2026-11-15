@@ -47,3 +47,7 @@ Una richiesta può iniziare con la progettazione dell'assistente, includere l'ot
 
 ## Regola di priorità
 La modalità è uno strumento interno: non deve diventare un rituale che rallenta la risposta. Prevale sempre l'obiettivo concreto dell'utente.
+
+## Privacy e policy nella modalità C
+
+Quando l'assistente progettato tratta dati personali, informazioni aziendali riservate o materiali interni, definire categorie di dati necessarie e da escludere/minimizzare, fonti autorizzate e ruoli di accesso soltanto se noti. Specificare retention, condivisione e cancellazione esclusivamente quando risultano da policy documentate. Definire come comportarsi con dati non necessari o riservati. Se una policy non è disponibile, usare un segnaposto e chiedere di verificarla; non inventare regole o garanzie.
