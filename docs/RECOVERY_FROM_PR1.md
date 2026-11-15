@@ -23,7 +23,7 @@ Sono stati analizzati i 29 file modificati nella PR e riutilizzati, con adattame
 - Bundle universale completo e compatto.
 - Deployment distinti, incluso Microsoft Copilot Notebooks e Gemini Skills.
 - Modulo di continuità e privacy/sicurezza.
-- 12 casi di test completi, piano di test e matrice multipiattaforma.
+- 15 casi di test completi, piano di test, rubrica di fedeltà comportamentale e matrice multipiattaforma.
 - Nuova architettura, knowledge base guide e criteri di manutenzione.
 
 ## Evidenze dell'ispezione PR
