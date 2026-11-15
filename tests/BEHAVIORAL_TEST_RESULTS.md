@@ -320,22 +320,75 @@ I punteggi seguenti sono una valutazione del solo transcript T01, non il risulta
 
 ### T03 — Ottimizzazione di un prompt già strutturato
 
-**Bundle:** CORE_INSTRUCTIONS.md  
-**Piattaforma / modello:** [da compilare]  
-**Data e ora / fuso:** [da compilare]  
-**SHA del bundle:** [da compilare]  
-**Input esatto:**
+#### Run 1
+
+**Bundle:** `instructions/CORE_INSTRUCTIONS.md` — Core Universale 2.0.0  
+**Snapshot operativo:** `84db964b5ec17ae6c203c125b95133c64b772e75`  
+**SHA Git del bundle:** `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6` — verificato calcolando il Git blob SHA del file `CORE_INSTRUCTIONS(3).md` fornito dall'operatore; corrisponde al blob dello snapshot operativo. Il transcript riporta come nome dell'allegato `CORE_INSTRUCTIONS(2).md`; la copia fornita per la verifica ha nome differente ma contenuto con SHA corrispondente. Il transcript non incorpora i byte dell'allegato originale.
+**Piattaforma:** ChatGPT  
+**Piano / tipo account:** ChatGPT Go (dichiarazione dell'operatore)  
+**Modello visualizzato:** non visualizzabile (dichiarazione dell'operatore)  
+**Esecuzione:** 15 novembre 2026, ore 16:53, fuso Europe/Rome (CET, UTC+01:00; dichiarazione dell'operatore)  
+**Esportazione transcript:** 15 novembre 2026, ore 16:54:28 (fuso non indicato nel file)  
+**Transcript integrale:** `BV2_FULL_T03_ChatGPT_YYYYMMDD_01.md` — allegato alla richiesta di registrazione, non modificato e non pubblicato nel repository. Conversazione sorgente: https://chatgpt.com/c/6af9d53e-b9dc-83ed-8d33-d3d3eb5c0341  
+**Run ID:** non documentato.
+
+**Conformità della sessione / §6:** NON CONFORME. L'operatore dichiara che la conversazione era una nuova chat standard, esterna a progetti e GPT personalizzati, ma erano attive le istruzioni personalizzate generali dell'account e la memoria. Il file delle istruzioni personalizzate generali è stato fornito come evidenza e contiene preferenze di risposta, contesto professionale e indicazioni comportamentali. La presenza di istruzioni persistenti e memoria attiva non soddisfa il requisito di sessione pulita del §6. La condizione è registrata sulla base della dichiarazione e dei materiali dell'operatore; non sono state alterate le impostazioni dell'account.
+
+**Altre condizioni dichiarate:** account autenticato; browser Google Chrome su PC Windows 11; nessun progetto o GPT personalizzato; nessuna istruzione aggiuntiva specifica di progetto. La memoria e il contesto personale dell'account erano disponibili.
+
+**Modalità di caricamento del Core:** file Markdown allegato alla conversazione. Il transcript mostra il primo messaggio con il nome `CORE_INSTRUCTIONS(2).md` e la risposta di acquisizione dell'assistente. Il file successivamente fornito per la verifica, `CORE_INSTRUCTIONS(3).md`, ha Git blob SHA corrispondente al bundle atteso. L'identità del contenuto del file fornito è verificata; il transcript non consente un confronto byte-per-byte dell'allegato originale presente nella chat.
+
+**Input T03 esatto:**
 
 > Valuta e migliora, solo se necessario, questo prompt: “Riassumi il testo fornito in italiano in massimo 150 parole. Mantieni i fatti, non aggiungere informazioni e segnala eventuali ambiguità”
 
-**Output integrale / riferimento transcript:** [incollare o indicare percorso/URL]
-**Comportamento atteso:** riconosce che il prompt è già chiaro; può proporre una micro-miglioria o spiegare che non servono cinque interventi sostanziali.
-**Criteri:** proporzionalità; preservazione del significato; valutazione non gonfiata.
-**Esito:** NOT RUN
-**Motivazione:** [da compilare]
-**Anomalie / ID difetto:** [nessuna / dettaglio]
-**Sessione pulita confermata:** [sì/no]
-**Run ID:** [da compilare]
+**Evidenze comportamentali osservate:**
+
+- L'assistente riconosce la modalità B — analisi e ottimizzazione di un prompt esistente.
+- Classifica l'intervento come minimo e dichiara che il prompt originale è già ben formulato.
+- Identifica correttamente obiettivo, lingua, limite massimo di 150 parole, fedeltà ai fatti e gestione delle ambiguità.
+- Dichiara che non vi sono criticità sostanziali e che non servono cinque suggerimenti.
+- Propone due precisazioni circoscritte: preservare esplicitamente il significato originale e segnalare le ambiguità separatamente, senza risolverle con interpretazioni inventate.
+- Restituisce un prompt completo, utilizzabile e coerente con l'intento originario.
+- Non introduce ruoli, sezioni RICCE o vincoli estranei al compito.
+- La conclusione riconosce che le modifiche sono utili ma non indispensabili.
+
+**Aspetti positivi:**
+
+- Riconoscimento corretto della qualità del prompt originale.
+- Intervento proporzionato e classificazione minima.
+- Nessuna criticità artificiale e nessun elenco forzato di cinque suggerimenti.
+- Conservazione dell'intento, della lingua, del limite di lunghezza e del vincolo di fedeltà.
+- Prompt rivisto completo e copiabile.
+- Nessuna informazione o caratteristica personale inventata.
+
+**Osservazioni / anomalia:**
+
+- La valutazione numerica prima/dopo non è coerente con la regola del Core secondo cui, per correzioni minime, non si deve forzare un miglioramento numerico. L'assistente assegna all'originale 9, 9, 9, 10, 10 (media 9,4) e alla versione rivista 10 in tutti i criteri (media 10,0), pur affermando che le precisazioni non sono indispensabili. Il salto a 10 in ogni criterio non è adeguatamente giustificato dalle due micro-modifiche e configura una valutazione gonfiata rispetto al criterio esplicito del caso T03.
+- Il transcript mostra un singolo turno di richiesta e risposta; non fornisce evidenza per valutare iterazioni successive.
+
+**Valutazione F1–F7 — Run 1**
+
+| Criterio | Punteggio | Evidenza e motivazione |
+|---|---:|---|
+| F1 — Accoglienza | 5/5 | Risposta professionale, pertinente e priva di preamboli superflui. |
+| F2 — Comprensione | 5/5 | Riconosce che il prompt è già chiaro e individua correttamente gli elementi da preservare. |
+| F3 — Domande progressive | N/A | T03 non richiede chiarimenti e non prevede una sequenza multi-turn. |
+| F4 — RICCE flessibile | 5/5 | Evita ruoli e sezioni non necessari; aggiunge soltanto due precisazioni pertinenti. |
+| F5 — Cinque suggerimenti pertinenti | 5/5 | Non forza cinque suggerimenti in un intervento minimo; rispetta il controllo di proporzionalità previsto dalla rubrica. |
+| F6 — Prompt finale completo | 5/5 | Restituisce una versione integrale, autonoma, coerente e copiabile, senza requisiti arbitrari. |
+| F7 — Iterazione | N/A | Non sono previsti turni successivi; la capacità iterativa non è valutabile in questa run. |
+
+**Riepilogo dei criteri applicabili:** 25/25 (F3 e F7 N/A). Il punteggio F1–F7 descrive le dimensioni osservabili applicabili e non annulla l'anomalia specifica relativa alla valutazione qualitativa gonfiata.
+
+**Esito:** FAIL
+
+**Motivazione dell'esito:** l'assistente soddisfa i criteri di proporzionalità dell'intervento e preservazione del significato, ma viola il criterio esplicito T03 della valutazione non gonfiata. La progressione da 9,4 a 10,0 non è sostenuta dalle modifiche minime proposte e contraddice l'istruzione del Core di non forzare un miglioramento numerico per correzioni minime. Inoltre, indipendentemente dall'esito comportamentale, la sessione non soddisfa il requisito di isolamento del §6 per le istruzioni personalizzate generali e la memoria attive; non è quindi possibile assegnare PASS procedurale.
+
+**Esito comportamentale:** FAIL — criterio «valutazione non gonfiata» non soddisfatto.  
+**Esito procedurale:** NON CONFORME al §6 — istruzioni personalizzate generali e memoria attive.  
+**Anomalie / ID difetto:** T03-01 — valutazione numerica non proporzionata a una revisione minima; T03-02 — sessione non conforme al requisito di isolamento.
 
 ### T04 — Creazione per marketing
 
@@ -601,10 +654,10 @@ Per ciascun test compatto compilare: piattaforma/modello, data e ora, SHA di COM
 
 | Bundle | Test previsti | PASS | FAIL | PARTIALLY VERIFIED | NOT RUN | NOT VERIFIED |
 |---|---:|---:|---:|---:|---:|---:|
-| Completo | 15 | 0 | 0 | 2 | 13 | 0 |
+| Completo | 15 | 0 | 1 | 2 | 12 | 0 |
 | Compatto | 9 | 0 | 0 | 0 | 9 | 0 |
 
-Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. T02 — Run 1 è PARTIALLY VERIFIED: i criteri comportamentali osservati sono soddisfatti, ma la sessione non rispetta integralmente il §6 per le istruzioni personalizzate generali e la memoria attiva dichiarate dall'operatore. Gli altri 13 test completi e tutti i 9 test compatti restano NOT RUN. I risultati T01 e T02 non costituiscono una valutazione della fedeltà complessiva al GPT originale.
+Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. T02 — Run 1 è PARTIALLY VERIFIED: i criteri comportamentali osservati sono soddisfatti, ma la sessione non rispetta integralmente il §6 per le istruzioni personalizzate generali e la memoria attiva dichiarate dall'operatore. T03 — Run 1 è FAIL sul piano comportamentale perché la valutazione numerica è gonfiata rispetto a un intervento minimo; la sessione è inoltre non conforme al §6 per istruzioni personalizzate generali e memoria attive. Gli altri 12 test completi e tutti i 9 test compatti restano NOT RUN. I risultati T01, T02 e T03 non costituiscono una valutazione della fedeltà complessiva al GPT originale.
 
 
 ## Schede di esecuzione — bundle compatto
