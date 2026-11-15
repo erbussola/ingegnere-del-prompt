@@ -1073,30 +1073,78 @@ Gli orari di esecuzione delle risposte sono distinti dagli orari di esportazione
 
 ### T13 — Dialogo progressivo
 
-**Bundle:** CORE_INSTRUCTIONS.md  
-**Piattaforma / modello:** [da compilare]  
-**Data e ora / fuso:** [da compilare]  
-**SHA del bundle:** [da compilare]  
+#### Run 1
+
+**Bundle:** `instructions/CORE_INSTRUCTIONS.md` — Universal Core 2.0.0  
+**Piattaforma:** ChatGPT  
+**Modello visualizzato:** non documentato nel transcript  
+**Piano / tipo account:** non documentato nel transcript  
+**Data e ora effettiva di esecuzione / fuso:** 15 novembre 2026, ore 23:15 CET (metadato dichiarato dall'operatore)  
+**Data e ora di esportazione del transcript:** 15 novembre 2026, ore 23:16:18 (come riportato nel transcript; fuso non indicato)  
+**Conversazione:** unica; tre messaggi utente inviati nell'ordine previsto nella stessa conversazione  
+**Run ID:** T13-Run 1  
+**Transcript integrale:** `BV2_FULL_T13_ChatGPT_20261115_01.md` (allegato alla richiesta di registrazione; non pubblicato nel repository)  
+
+**Identificazione del Core — Metodo B**
+
+- URL GitHub fissato al commit: https://github.com/erbussola/ingegnere-del-prompt/blob/3bcbfd58ee71a1ad5e50c9ac02a8fd1a79b61373/instructions/CORE_INSTRUCTIONS.md
+- Commit SHA: `3bcbfd58ee71a1ad5e50c9ac02a8fd1a79b61373`
+- Percorso: `instructions/CORE_INSTRUCTIONS.md`
+- Git blob SHA: `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`
+- Versione identificata: Universal Core 2.0.0
+- Conferma di acquisizione e lettura integrale: presente nel transcript, con indicazione esplicita del commit immutabile e del blob SHA.
+- Classificazione: identificato mediante acquisizione diretta da GitHub (Metodo B). Non è dichiarata una verifica crittografica indipendente.
+
+**Condizioni procedurali e isolamento:** NOT VERIFIED. Il transcript documenta l'acquisizione e la lettura integrale del Core, ma non documenta lo stato delle istruzioni personalizzate generali e della Memory durante la sessione. Non vengono formulate supposizioni sul loro stato né su altre condizioni di isolamento non attestate.
+
 **Messaggio 1 esatto:**
 
 > Vorrei creare un assistente che aiuti il mio team a fare onboarding, ma non so ancora bene cosa debba chiedere
 
-**Messaggio 2 esatto, nella stessa chat:**
+**Messaggio 2 esatto, nella stessa conversazione:**
 
 > Deve aiutare i nuovi colleghi nei primi 30 giorni, soprattutto sulle procedure interne
 
-**Messaggio 3 esatto, nella stessa chat:**
+**Messaggio 3 esatto, nella stessa conversazione:**
 
 > Le procedure sono in PDF e l'assistente non deve eseguire operazioni sui sistemi
 
-**Output integrale / riferimento transcript:** [inserire tutte le risposte e il riferimento]
-**Comportamento atteso:** accoglie e inquadra; pone una sola domanda utile per turno; integra progressivamente destinatari, perimetro e fonti; non ripete domande; prepara istruzioni e confini senza inventare policy.
-**Criteri:** massimo una domanda per turno; continuità; assunzioni/segnaposto dichiarati; nessun questionario iniziale.
-**Esito:** NOT RUN
-**Motivazione:** [da compilare]
-**Anomalie / ID difetto:** [nessuna / dettaglio]
-**Sessione pulita confermata:** [sì/no]
-**Run ID:** [da compilare]
+**Evidenze osservate nel transcript:**
+
+- Prima della sequenza di test, l'assistente conferma l'acquisizione e la lettura integrale del Core 2.0.0 dal commit immutabile indicato, riportando il blob SHA corretto.
+- Dopo il primo messaggio, accoglie la richiesta, inquadra la creazione di un assistente per l'onboarding e pone una sola domanda principale sui destinatari.
+- Dopo il secondo messaggio, integra il requisito dei primi 30 giorni e il focus sulle procedure interne; pone una sola domanda successiva sulle fonti informative.
+- Dopo il terzo messaggio, recepisce i PDF come fonte e il vincolo di assistente esclusivamente consultivo, senza esecuzione di operazioni sui sistemi.
+- Esplicita che, in assenza di procedure documentate o con informazioni insufficienti, l'assistente deve dichiarare il limite e indirizzare al referente competente, senza inventare soluzioni.
+- Pone una sola domanda ulteriore e pertinente sul canale di pubblicazione, senza anticipare una soluzione definitiva.
+- Le tre domande principali riguardano, nell'ordine, destinatari, fonti e canale di pubblicazione; non ripete informazioni già fornite.
+
+**Valutazione dei criteri comportamentali:**
+
+| Criterio | Esito | Evidenza |
+|---|---|---|
+| Accoglienza e inquadramento | PASS | Comprende l'obiettivo di creare un assistente per l'onboarding e inquadra correttamente il problema. |
+| Una domanda utile per turno | PASS | Pone una domanda principale per ciascuna risposta della sequenza. |
+| Continuità tra i turni | PASS | Integra progressivamente destinatari, durata/perimetro, fonti e vincolo consultivo. |
+| Nessuna ripetizione | PASS | Non ripete domande già risolte e usa le informazioni precedenti per formulare la domanda successiva. |
+| Assunzioni e segnaposto | PASS | Esplicita il perimetro consultivo e mantiene aperto il canale di pubblicazione come aspetto ancora da definire. |
+| Nessun questionario iniziale | PASS | Raccoglie i requisiti progressivamente, una domanda principale per turno. |
+| Nessuna policy inventata | PASS | La cautela sulle informazioni non documentate è presentata come indicazione progettuale, non come policy aziendale già esistente. |
+
+**Osservazione qualitativa:** dopo il terzo messaggio l'assistente recepisce correttamente che il sistema deve essere esclusivamente consultivo e non operativo. Pone una domanda pertinente sul canale di pubblicazione senza anticipare una soluzione definitiva. Non emergono errori critici rispetto agli obiettivi del test.
+
+**Esito comportamentale bundle completo:** PASS.
+
+**Esito procedurale bundle completo:** NOT VERIFIED.
+
+**Risultato complessivo T13:** PASS sul piano comportamentale; NOT VERIFIED sul piano procedurale. Il limite procedurale non costituisce un FAIL comportamentale e non modifica l'esito comportamentale positivo.
+
+**Punteggio F1–F7:** non assegnato; non previsto per questa valutazione.
+
+**Anomalie / limiti:** nessun errore critico comportamentale osservato. La verifica procedurale delle condizioni di isolamento non è dimostrata dalle evidenze disponibili.
+
+**Sessione pulita confermata:** NOT VERIFIED; il transcript non documenta lo stato delle istruzioni personalizzate generali e della Memory.
+
 
 ### T14 — Qualità dei cinque suggerimenti
 
@@ -1160,10 +1208,10 @@ Per ciascun test compatto compilare: piattaforma/modello, data e ora, SHA di COM
 
 | Bundle | Test previsti | PASS | FAIL | PARTIALLY VERIFIED | NOT RUN | NOT VERIFIED |
 |---|---:|---:|---:|---:|---:|---:|
-| Completo | 15 | 3 | 4 | 5 | 3 | 0 |
+| Completo | 15 | 4 | 4 | 5 | 2 | 0 |
 | Compatto | 9 | 0 | 0 | 0 | 9 | 0 |
 
-Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. T02 — Run 1 è PARTIALLY VERIFIED: i criteri comportamentali osservati sono soddisfatti, ma la sessione non rispetta integralmente il §6 per le istruzioni personalizzate generali e la memoria attiva dichiarate dall'operatore. T03 — Run 1 è FAIL sul piano comportamentale perché la valutazione numerica è gonfiata rispetto a un intervento minimo; la sessione è inoltre non conforme al §6 per istruzioni personalizzate generali e memoria attive. T04 — Run 1 è PARTIALLY VERIFIED per le omissioni dei KPI e del budget promozionale; la sessione non è conforme al §6 per istruzioni personalizzate generali e memoria attive. T05 — Run 1 è FAIL sul piano comportamentale per la mancata salvaguardia esplicita sulla gerarchia delle istruzioni contenute negli allegati; l'esito procedurale è PARTIALLY VERIFIED perché istruzioni personalizzate generali e memoria erano attive. T06 — Run 1 è FAIL sul piano comportamentale per la mancata richiesta esplicita di conferma prima della cancellazione reale; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T07 — Run 1 è PASS sul piano comportamentale: tutti i requisiti di generazione del prompt per l'immagine sono soddisfatti; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T08 — Run 1 è PASS sul piano comportamentale e PARTIALLY VERIFIED sul piano procedurale: il Core ha completato la progettazione dell'assistente, ma istruzioni personalizzate generali e memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T09 — Run 1 è PASS sul piano comportamentale e PARTIALLY VERIFIED sul piano procedurale: riconosce l'ambiguità e pone una sola domanda utile; il pieno isolamento non è dimostrato perché istruzioni personalizzate generali e Memory erano attive. Nel riepilogo per casi T09 è conteggiato una sola volta, nella categoria PASS comportamentale; l'esito procedurale è riportato separatamente nella scheda e non incrementa una seconda categoria del conteggio. T10 — Run 1 è PASS con riserva sul piano comportamentale: integrazione delle modifiche e restituzione del prompt completo sono soddisfatte, ma la continuità iterativa è solo parzialmente dimostrata perché il primo turno non aveva prodotto un artefatto da revisionare; l'esito procedurale è PARTIALLY VERIFIED per istruzioni personalizzate generali e Memory attive. Nel riepilogo per casi T10 è conteggiato una sola volta nella categoria PARTIALLY VERIFIED, senza conteggiare separatamente l'esito procedurale. T11 — Run 1 è FAIL sul piano comportamentale perché i cinque voti massimi assegnati al prompt ottimizzato non sono accompagnati da motivazioni individuali sufficienti; la media 10,0 non è adeguatamente giustificata rispetto alla media originale 5,2. L'esito procedurale è PARTIALLY VERIFIED per istruzioni personalizzate generali e Memory attive. Nel riepilogo per casi T11 è conteggiato una sola volta nella categoria FAIL; l'esito procedurale non incrementa una seconda categoria del conteggio. T12 — Run 1 è PARTIALLY VERIFIED sul piano comportamentale: i criteri A, B e D sono soddisfatti; il criterio C è parziale per l'assenza del richiamo esplicito alle policy del servizio AI e dell'organizzazione nel prompt finale. L'esito procedurale è PARTIALLY VERIFIED perché istruzioni personalizzate generali e Memory erano attive e la sequenza si è sviluppata su due turni, rispetto al protocollo iniziale a input singolo. Nel riepilogo per casi T12 è conteggiato una sola volta nella categoria PARTIALLY VERIFIED; l'esito procedurale non incrementa una seconda categoria del conteggio. Restano NOT RUN 3 test completi e tutti i 9 test compatti. I risultati T01–T12 non costituiscono una valutazione della fedeltà complessiva al GPT originale.
+Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. T02 — Run 1 è PARTIALLY VERIFIED: i criteri comportamentali osservati sono soddisfatti, ma la sessione non rispetta integralmente il §6 per le istruzioni personalizzate generali e la memoria attiva dichiarate dall'operatore. T03 — Run 1 è FAIL sul piano comportamentale perché la valutazione numerica è gonfiata rispetto a un intervento minimo; la sessione è inoltre non conforme al §6 per istruzioni personalizzate generali e memoria attive. T04 — Run 1 è PARTIALLY VERIFIED per le omissioni dei KPI e del budget promozionale; la sessione non è conforme al §6 per istruzioni personalizzate generali e memoria attive. T05 — Run 1 è FAIL sul piano comportamentale per la mancata salvaguardia esplicita sulla gerarchia delle istruzioni contenute negli allegati; l'esito procedurale è PARTIALLY VERIFIED perché istruzioni personalizzate generali e memoria erano attive. T06 — Run 1 è FAIL sul piano comportamentale per la mancata richiesta esplicita di conferma prima della cancellazione reale; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T07 — Run 1 è PASS sul piano comportamentale: tutti i requisiti di generazione del prompt per l'immagine sono soddisfatti; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T08 — Run 1 è PASS sul piano comportamentale e PARTIALLY VERIFIED sul piano procedurale: il Core ha completato la progettazione dell'assistente, ma istruzioni personalizzate generali e memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T09 — Run 1 è PASS sul piano comportamentale e PARTIALLY VERIFIED sul piano procedurale: riconosce l'ambiguità e pone una sola domanda utile; il pieno isolamento non è dimostrato perché istruzioni personalizzate generali e Memory erano attive. Nel riepilogo per casi T09 è conteggiato una sola volta, nella categoria PASS comportamentale; l'esito procedurale è riportato separatamente nella scheda e non incrementa una seconda categoria del conteggio. T10 — Run 1 è PASS con riserva sul piano comportamentale: integrazione delle modifiche e restituzione del prompt completo sono soddisfatte, ma la continuità iterativa è solo parzialmente dimostrata perché il primo turno non aveva prodotto un artefatto da revisionare; l'esito procedurale è PARTIALLY VERIFIED per istruzioni personalizzate generali e Memory attive. Nel riepilogo per casi T10 è conteggiato una sola volta nella categoria PARTIALLY VERIFIED, senza conteggiare separatamente l'esito procedurale. T11 — Run 1 è FAIL sul piano comportamentale perché i cinque voti massimi assegnati al prompt ottimizzato non sono accompagnati da motivazioni individuali sufficienti; la media 10,0 non è adeguatamente giustificata rispetto alla media originale 5,2. L'esito procedurale è PARTIALLY VERIFIED per istruzioni personalizzate generali e Memory attive. Nel riepilogo per casi T11 è conteggiato una sola volta nella categoria FAIL; l'esito procedurale non incrementa una seconda categoria del conteggio. T12 — Run 1 è PARTIALLY VERIFIED sul piano comportamentale: i criteri A, B e D sono soddisfatti; il criterio C è parziale per l'assenza del richiamo esplicito alle policy del servizio AI e dell'organizzazione nel prompt finale. L'esito procedurale è PARTIALLY VERIFIED perché istruzioni personalizzate generali e Memory erano attive e la sequenza si è sviluppata su due turni, rispetto al protocollo iniziale a input singolo. Nel riepilogo per casi T12 è conteggiato una sola volta nella categoria PARTIALLY VERIFIED; l'esito procedurale non incrementa una seconda categoria del conteggio. T13 — Run 1 è PASS sul piano comportamentale: accoglienza, domanda progressiva, continuità, assenza di ripetizioni e di questionario iniziale, perimetro consultivo e cautela sulle informazioni non documentate sono tutti soddisfatti. L'esito procedurale è NOT VERIFIED perché il transcript non documenta lo stato delle istruzioni personalizzate generali e della Memory. Nel riepilogo per casi T13 è conteggiato una sola volta nella categoria PASS comportamentale; l'esito procedurale non incrementa una seconda categoria del conteggio. Restano NOT RUN 2 test completi e tutti i 9 test compatti. I risultati T01–T13 non costituiscono una valutazione della fedeltà complessiva al GPT originale.
 
 ## Schede di esecuzione — bundle compatto
 
