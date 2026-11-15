@@ -248,22 +248,75 @@ I punteggi seguenti sono una valutazione del solo transcript T01, non il risulta
 
 ### T02 — Ottimizzazione di un prompt incompleto
 
-**Bundle:** CORE_INSTRUCTIONS.md  
-**Piattaforma / modello:** [da compilare]  
-**Data e ora / fuso:** [da compilare]  
-**SHA del bundle:** [da compilare]  
-**Input esatto:**
+#### Run 1
+
+**Bundle:** `instructions/CORE_INSTRUCTIONS.md` — Core Universale 2.0.0  
+**Snapshot operativo:** `84db964b5ec17ae6c203c125b95133c64b772e75`  
+**SHA Git del bundle:** `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6` — verificato sul file CORE allegato dall'operatore, corrispondente al blob atteso dello snapshot operativo. L'operatore dichiara che si tratta del file utilizzato nella chat di test; il transcript non incorpora i byte dell'allegato.  
+**Piattaforma:** ChatGPT  
+**Piano / tipo account:** ChatGPT Go (dichiarazione dell'operatore)  
+**Modello visualizzato:** non documentato  
+**Esecuzione:** 15 novembre 2026, ore 16:05 CET (dichiarazione dell'operatore)  
+**Data di esportazione del transcript:** 15 novembre 2026, ore 16:12:41 (fuso non indicato nel transcript)  
+**Transcript integrale:** `BV2_FULL_T02_ChatGPT_20261115_01(1).md` — allegato alla richiesta di registrazione, non pubblicato nel repository. La conversazione sorgente è identificata dal transcript: https://chatgpt.com/c/6af9c850-3970-83ed-a6fa-38f156144e3e  
+**Run ID:** non documentato.
+
+**Conformità della sessione / §6:** NON CONFORME. L'operatore conferma che la conversazione era una nuova chat standard di ChatGPT, esterna a progetti e GPT personalizzati, ma dichiara che erano attive le istruzioni personalizzate generali dell'account e la memoria di ChatGPT. La presenza di istruzioni personalizzate persistenti non soddisfa integralmente il requisito di sessione pulita del §6. La condizione è registrata come dichiarazione dell'operatore, non come verifica tecnica indipendente.
+
+**Modalità di caricamento del Core:** il Core è stato caricato come allegato nella chat di test. Il transcript riporta il nome `CORE_INSTRUCTIONS.md` e la risposta di acquisizione dell'assistente, ma non include i byte dell'allegato. Il file CORE successivamente fornito dall'operatore per la verifica ha SHA `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`, corrispondente al bundle dello snapshot. L'identità del file utilizzato nella chat è quindi supportata dalla dichiarazione dell'operatore e dalla verifica del file fornito, ma non è ricavabile autonomamente dal solo transcript.
+
+**Input T02 esatto:**
 
 > Migliora questo prompt: “Fammi un piano di allenamento”
 
-**Output integrale / riferimento transcript:** [incollare o indicare percorso/URL]
-**Comportamento atteso:** riconosce l'ottimizzazione; segnala che obiettivo, livello, disponibilità e vincoli sono insufficienti; pone una sola domanda bloccante (per esempio l'obiettivo principale) oppure propone una versione con segnaposto espliciti. Se tratta il caso come sostanziale, presenta cinque suggerimenti distinti con criticità, modifica e beneficio.
-**Criteri:** una sola domanda per turno; suggerimenti non ripetitivi; prompt rivisto completo; nessuna personalizzazione sanitaria inventata.
-**Esito:** NOT RUN
-**Motivazione:** [da compilare]
-**Anomalie / ID difetto:** [nessuna / dettaglio]
-**Sessione pulita confermata:** [sì/no]
-**Run ID:** [da compilare]
+**Evidenze comportamentali osservate nel transcript:**
+
+- L'assistente riconosce correttamente la richiesta come ottimizzazione di un prompt esistente e identifica le lacune principali: tipo di allenamento, obiettivo, livello di preparazione e disponibilità di attrezzatura.
+- Classifica l'intervento come sostanziale e presenta esattamente cinque suggerimenti.
+- I cinque suggerimenti sono distinti e pertinenti: obiettivo; livello; contesto/luogo; disponibilità; sicurezza e progressione.
+- Ogni suggerimento riporta criticità, modifica proposta e beneficio atteso.
+- Pone una sola domanda sull'obiettivo principale, senza presentare un questionario con più domande.
+- L'operatore risponde: «Non voglio specificare l'obiettivo. Utilizza un segnaposto esplicito nel prompt.»
+- L'assistente accetta la preferenza, non insiste e riclassifica correttamente il passaggio come modifica mirata.
+- Produce un prompt integrale con segnaposto espliciti per obiettivo, livello, luogo, attrezzatura, disponibilità, durata delle sessioni e limitazioni fisiche.
+- Il prompt prevede di porre una domanda mirata alla volta solo se mancano dati indispensabili e vieta di inventare informazioni personali.
+- Non vengono inventati età, condizioni fisiche, patologie, limitazioni o livello atletico dell'utente.
+
+**Aspetti positivi:**
+
+- Corretta identificazione della modalità di ottimizzazione.
+- Cinque suggerimenti distinti, ciascuno con i tre elementi richiesti.
+- Domanda iniziale pertinente e unica.
+- Rispetto esplicito della scelta dell'utente di non specificare l'obiettivo.
+- Uso di segnaposto per le informazioni non fornite.
+- Prompt finale completo, strutturato e copiabile.
+- Gestione prudente delle limitazioni fisiche, senza attribuire condizioni all'utente.
+
+**Osservazioni / limiti non bloccanti:**
+
+- Il prompt utilizza la formulazione «personal trainer qualificato» e definisce il risultato «personalizzato», benché molte informazioni siano ancora da compilare. È una lieve imprecisione terminologica, non un errore funzionale.
+- Il transcript dimostra un solo ciclo di revisione successivo alla domanda; non consente di valutare la continuità su iterazioni più lunghe.
+- La sessione non rispetta integralmente il §6 per la presenza dichiarata di istruzioni personalizzate generali e memoria attiva.
+
+**Valutazione F1–F7 — Run 1**
+
+| Criterio | Punteggio | Evidenza e motivazione |
+|---|---:|---|
+| F1 — Accoglienza | 5/5 | Tono naturale, collaborativo e professionale; presa in carico pertinente. |
+| F2 — Comprensione | 5/5 | Riconosce l'ottimizzazione di un prompt esistente e individua le lacune pertinenti senza inventare requisiti personali. |
+| F3 — Domande progressive | 5/5 | Pone una sola domanda utile; quando l'utente non vuole fornire il dato, accetta il segnaposto e non insiste. |
+| F4 — RICCE flessibile | 5/5 | Il prompt integra ruolo, obiettivo, contesto, vincoli, sicurezza e formato in modo proporzionato; usa segnaposto per i dati mancanti. |
+| F5 — Cinque suggerimenti | 5/5 | Presenta esattamente cinque suggerimenti distinti, ciascuno con criticità, modifica e beneficio. |
+| F6 — Prompt finale | 4/5 | Prompt completo e copiabile, con segnaposto chiari e senza dati inventati; lieve imprecisione nell'uso di «personalizzato» e «personal trainer qualificato». |
+| F7 — Iterazione | 4/5 | Integra la richiesta successiva e restituisce il prompt completo aggiornato; un solo ciclo non permette di verificare pienamente la conservazione di una struttura già approvata su iterazioni multiple. |
+
+**Riepilogo Run 1:** 33/35. Il punteggio descrive il solo transcript T02 e non costituisce una valutazione aggregata della campagna né una prova di sessione pulita.
+
+**Esito:** PARTIALLY VERIFIED
+
+**Motivazione dell'esito:** i criteri comportamentali osservabili del caso sono soddisfatti: riconoscimento dell'ottimizzazione, cinque suggerimenti completi, domanda progressiva, accettazione del segnaposto e consegna del prompt finale. Non si assegna PASS perché la sessione non rispetta integralmente il §6 del piano, a causa delle istruzioni personalizzate generali e della memoria attiva dichiarate dall'operatore. La verifica dello SHA del file CORE fornito supporta l'identità del bundle, ma il transcript non incorpora i byte dell'allegato effettivamente caricato.
+
+**Anomalie / ID difetto:** nessun difetto comportamentale bloccante osservato. Limite procedurale: sessione non conforme al §6 per istruzioni personalizzate e memoria attiva; tracciabilità dell'allegato basata anche sulla dichiarazione dell'operatore.
 
 ### T03 — Ottimizzazione di un prompt già strutturato
 
@@ -548,10 +601,10 @@ Per ciascun test compatto compilare: piattaforma/modello, data e ora, SHA di COM
 
 | Bundle | Test previsti | PASS | FAIL | PARTIALLY VERIFIED | NOT RUN | NOT VERIFIED |
 |---|---:|---:|---:|---:|---:|---:|
-| Completo | 15 | 0 | 0 | 1 | 14 | 0 |
+| Completo | 15 | 0 | 0 | 2 | 13 | 0 |
 | Compatto | 9 | 0 | 0 | 0 | 9 | 0 |
 
-Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. Gli altri 14 test completi e tutti i 9 test compatti restano NOT RUN. Il risultato T01 non costituisce una valutazione della fedeltà complessiva al GPT originale.
+Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. T02 — Run 1 è PARTIALLY VERIFIED: i criteri comportamentali osservati sono soddisfatti, ma la sessione non rispetta integralmente il §6 per le istruzioni personalizzate generali e la memoria attiva dichiarate dall'operatore. Gli altri 13 test completi e tutti i 9 test compatti restano NOT RUN. I risultati T01 e T02 non costituiscono una valutazione della fedeltà complessiva al GPT originale.
 
 
 ## Schede di esecuzione — bundle compatto
