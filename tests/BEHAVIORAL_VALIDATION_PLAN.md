@@ -345,23 +345,24 @@ Una run è **INCLUSA** soltanto se è conforme, il bundle è identificato, le ev
 **Esclusione per causa esterna:** è ammessa soltanto quando l'indagine documenta evidenze sufficienti e verificabili che dimostrano che il FAIL è dovuto a una causa esterna non attribuibile al bundle o a una condizione di prova non riproducibile. Conservare il risultato storico FAIL senza modificarlo; impostare `Attribuibilità = CAUSA ESTERNA DIMOSTRATA` e `Ammissibilità = ESCLUSA`; registrare evidenze, valutatore, data/ora e motivazione. L'esclusione riguarda esclusivamente il calcolo aggregato, non cancella né converte il FAIL storico. Se le evidenze non dimostrano la causa esterna, la run non può essere esclusa discrezionalmente: chiudere l'indagine come non dimostrata e includere il FAIL se gli altri requisiti di ammissibilità sono soddisfatti. Se la causa resta incerta, mantenerla SOSPESA e l'aggregato NOT CONCLUSIVE.
 
 **Calcolo deterministico, senza maggioranze, medie o voto prevalente:**
-1. Nessuna run registrata → **NOT RUN**.
-2. Esistono run ma nessuna run INCLUSA, e non vi sono indagini aperte → **NOT CONCLUSIVE** (incluse tutte le run esplorative o escluse).
-3. Esiste almeno una run SOSPESA → **NOT CONCLUSIVE — INDAGINE APERTA**.
-4. Tutte le run INCLUSE hanno esito FAIL → **FAIL**.
-5. Tutte le run INCLUSE hanno esito PASS → **PASS**.
-6. Qualsiasi combinazione di PASS e FAIL inclusi, o presenza di PARTIALLY VERIFIED/NOT CONCLUSIVE tra le run incluse → **NOT CONCLUSIVE**.
+1. Nessuna run registrata → **NOT RUN** (caso G).
+2. Solo run non conformi/esplorative → **NOT CONCLUSIVE** (caso F).
+3. Una o più run SOSPESE per indagine aperta → **NOT CONCLUSIVE — INDAGINE APERTA**; in particolare, un FAIL conforme seguito da un PASS conforme richiede indagine e non consente PASS aggregato (caso C).
+4. Indagine conclusa con conferma del difetto → **FAIL** (caso D), anche se esiste una run PASS successiva discordante.
+5. Indagine conclusa con causa esterna dimostrata → escludere esclusivamente quella run dall'aggregazione, conservando il FAIL storico, quindi ricalcolare sulle sole run INCLUSE (caso E).
+6. Dopo aver applicato le esclusioni documentate: sole run conformi ammissibili PASS → **PASS** (caso B); sole run conformi ammissibili FAIL → **FAIL** (caso A).
+7. Ogni altra combinazione, inclusi risultati parziali, evidenze insufficienti o PASS/FAIL ammissibili discordanti non risolti → **NOT CONCLUSIVE**.
 
-Dopo una decisione di esclusione o inclusione, ricalcolare l'aggregato sulle sole run INCLUSE e riportare il numero/ID delle run incluse, escluse e sospese. Non ricalcolare se la decisione non è documentata.
+Dopo una decisione documentata di esclusione o inclusione, ricalcolare sulle sole run INCLUSE e riportare ID e numero delle run INCLUSE, ESCLUSE e SOSPESE. Non ricalcolare se la decisione non è documentata. Se una causa esterna non è dimostrata, il FAIL non può essere escluso; se l'indagine resta aperta, la run è SOSPESA e l'aggregato resta NOT CONCLUSIVE.
 
-**Matrice di coerenza dei casi A–G:**
-- **A — nessuna run:** NOT RUN.
-- **B — soltanto run non conformi/esplorative:** NOT CONCLUSIVE; nessuna entra nell'aggregazione controllata.
-- **C — tutte le run ammissibili PASS:** PASS.
-- **D — tutte le run ammissibili FAIL:** FAIL.
-- **E — FAIL con causa esterna dimostrata:** FAIL storico conservato, run ESCLUSA con indagine/evidenze/valutatore/data; ricalcolo sulle sole run INCLUSE. Se non resta alcuna run inclusa, NOT CONCLUSIVE, non NOT RUN.
-- **F — PASS e FAIL ammissibili discordanti:** NOT CONCLUSIVE; aprire/tenere aperta l'indagine, nessuna maggioranza o media.
-- **G — risultati parziali, evidenze/prerequisiti insufficienti o attribuibilità incerta:** NOT CONCLUSIVE; run sospesa se l'indagine è aperta, altrimenti non ammissibile finché non completata.
+**Matrice A–G, coerente con i casi A06:**
+- **A — solo FAIL conformi:** **FAIL**.
+- **B — solo PASS conformi:** **PASS**.
+- **C — FAIL conforme seguito da PASS conforme:** **NOT CONCLUSIVE — ANOMALIA DA INVESTIGARE**; nessun PASS aggregato finché la discordanza non è risolta.
+- **D — indagine che conferma il difetto:** **FAIL**; il difetto confermato non viene annullato da un PASS successivo.
+- **E — indagine che dimostra causa esterna:** conservare il FAIL storico, documentare causa/evidenze/valutatore/data, marcare la run ESCLUSA e ricalcolare soltanto sulle run INCLUSE; senza run INCLUSE l'esito è NOT CONCLUSIVE.
+- **F — solo run non conformi:** **NOT CONCLUSIVE**.
+- **G — nessuna run:** **NOT RUN**.
 
 Un FAIL controllato non viene annullato da un PASS successivo. Un FAIL non conforme resta esplorativo. La decisione di esclusione non è una riclassificazione del risultato storico.
 
