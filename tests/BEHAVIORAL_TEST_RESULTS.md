@@ -32,26 +32,29 @@
 
 ## Regola per le registrazioni future — identità del Core
 
-Per tutte le nuove registrazioni comportamentali, sia del bundle completo sia del bundle compatto, documentare separatamente il livello di verifica dell'identità del file utilizzato. Non retro-applicare questa regola alle registrazioni storiche T01–T05: restano fedeli alle evidenze disponibili al momento della loro valutazione.
+Per tutte le nuove registrazioni comportamentali, sia del bundle completo sia del bundle compatto, documentare il metodo di identificazione effettivamente utilizzato. Non retro-applicare questa regola alle registrazioni storiche T01–T05: restano fedeli alle evidenze disponibili al momento della loro valutazione.
 
-Usare il seguente modello:
-
-**Attestazione dell'identità del Core**
-- Ho calcolato personalmente l'hash del Core effettivamente utilizzato: Sì / No
-- Nome del file utilizzato:
-- Algoritmo utilizzato:
-- Hash del Core utilizzato:
-- Hash del Core di riferimento:
-- Confermo che i due hash corrispondono: Sì / No
+**Identificazione del Core**
+- Metodo utilizzato: A — confronto hash dell'operatore / B — acquisizione diretta da GitHub / verifica crittografica indipendente / non verificata.
+- URL GitHub fissato al commit (Metodo B):
+- Commit SHA:
+- Percorso del file:
+- Conferma di accesso e lettura integrale nel transcript (Metodo B):
+- Hash personale dell'operatore (Metodo A; facoltativo se è stato usato il Metodo B): Sì / No
+- Algoritmo e tipo di hash:
+- Hash del file utilizzato:
+- Hash del file di riferimento:
+- Esito del confronto:
 - Eventuali note:
 
-**Classificazione dell'evidenza:**
-- **Verificata dall'operatore:** attestazione esplicita presente, con nome file, algoritmo, entrambi gli hash e confronto dichiarato.
-- **Verificata tecnicamente in modo indipendente:** processo tecnico autonomo ha calcolato e confrontato gli hash.
-- **Non verificata:** mancano sia verifica indipendente sia attestazione esplicita.
-- **Non corrispondente:** gli hash comparabili sono differenti.
+**Classificazioni da non confondere**
+- **Identificato mediante confronto hash dell'operatore:** l'operatore dichiara il confronto del file effettivamente utilizzato con il riferimento, usando lo stesso algoritmo.
+- **Identificato mediante acquisizione diretta da GitHub:** transcript con URL fissato a commit immutabile, commit SHA, percorso e conferma esplicita di lettura integrale. Non richiede un ulteriore hash personale.
+- **Verifica crittografica indipendente:** processo tecnico indipendente calcola e confronta autonomamente gli hash dei contenuti.
+- **Identità non verificata:** nessuna delle evidenze precedenti è sufficiente.
+- **Non corrispondente:** confronto hash valido ma con valori differenti.
 
-Indicare sempre il tipo di hash. SHA-256 del file e Git blob SHA sono identificatori distinti e non intercambiabili. L'attestazione dell'operatore è evidenza QA valida, ma non deve essere descritta come verifica indipendente. L'assenza dell'attestazione non invalida automaticamente il test: si applicano le normali regole probatorie. Questa classificazione non modifica isolamento §6, F1–F7, né la distinzione tra esito comportamentale e procedurale; non attribuisce automaticamente PASS.
+SHA-256 del file e Git blob SHA sono identificatori distinti e non intercambiabili. L'acquisizione diretta da GitHub documenta la provenienza del contenuto dal commit indicato, ma non deve essere descritta come verifica crittografica indipendente. L'identificazione del Core non dimostra l'isolamento della sessione, non modifica i criteri comportamentali e non attribuisce automaticamente PASS.
 
 ## Registro esecuzioni — bundle completo
 
