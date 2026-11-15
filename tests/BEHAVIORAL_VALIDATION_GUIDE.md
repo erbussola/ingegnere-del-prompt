@@ -81,22 +81,27 @@ Questi due casi verificano la continuità tra turni: separarli in chat diverse i
 
 ## 5.1 Verificare e attestare l'identità del Core
 
-Prima di caricare il bundle nella sessione, verifica che il file locale sia quello previsto dal repository. La verifica può essere documentata in due modi distinti:
+L'identità del Core effettivamente utilizzato può essere documentata mediante due metodi alternativi. Entrambi sono validi ai fini dell'identificazione documentale del bundle, purché siano presenti le evidenze specificate.
 
-1. **Attestazione dell'operatore:** hai calcolato personalmente l'hash del file Core che hai effettivamente utilizzato e lo hai confrontato con l'hash del file di riferimento recuperato dal repository. Questa dichiarazione esplicita è un'evidenza documentale valida ai fini della registrazione QA.
-2. **Verifica tecnica indipendente:** un processo tecnico o la sessione di analisi calcola autonomamente gli hash dei due file e verifica la corrispondenza, senza basarsi soltanto sulla tua dichiarazione.
+**Metodo A — Confronto hash effettuato dall'operatore**
 
-Per un'attestazione confronta il file effettivamente destinato al caricamento con il file di riferimento dello stesso percorso e snapshot Git. Calcola entrambi gli hash con lo stesso algoritmo e sul contenuto effettivo dei file. Riporta algoritmo, nome del file, entrambi gli hash e risultato del confronto. Se i valori differiscono, registra **non corrispondente** e non dichiarare verificata l'identità.
+L'operatore calcola personalmente l'hash del file Core effettivamente utilizzato e lo confronta con l'hash del file di riferimento recuperato dallo stesso percorso e snapshot Git. I due valori devono essere ottenuti con lo stesso algoritmo e la stessa modalità. Registrare nome del file, algoritmo/tipo di hash, entrambi i valori e risultato del confronto. Se differiscono, classificare l'identità come **non corrispondente**.
 
-**Attenzione agli identificatori:** SHA-256 del file e Git blob SHA sono valori distinti. Non confrontare un SHA-256 con un Git blob SHA e non etichettare un Git blob SHA come SHA-1/SHA-256 del file. Se usi il Git blob SHA, specifica espressamente che è un *Git blob SHA* e calcolalo come tale per entrambi i contenuti. Per esempio, in PowerShell puoi calcolare SHA-256 con:
+**Metodo B — Acquisizione diretta da GitHub**
 
-```powershell
-Get-FileHash -LiteralPath .\CORE_INSTRUCTIONS.md -Algorithm SHA256
-```
+L'operatore fornisce un URL GitHub fissato a uno specifico commit immutabile. La chat accede al file, ne legge integralmente il contenuto e conferma esplicitamente l'acquisizione. Se il transcript documenta l'URL, il commit, il percorso del file e la conferma di lettura integrale, registrare il Core come **identificato mediante acquisizione diretta da GitHub**. In questo caso non è richiesto un ulteriore hash calcolato personalmente dall'operatore; l'attestazione hash resta facoltativa.
 
-Ripeti il calcolo sul file di riferimento scaricato dal repository. Il nome del file, da solo, non dimostra l'identità del contenuto.
+**Verifica crittografica indipendente**
 
-La verifica dell'identità del Core riguarda soltanto il file. Non dimostra che la sessione fosse isolata, non modifica i requisiti del §6 del piano e non determina l'esito comportamentale del test.
+È una classificazione distinta: un processo tecnico indipendente calcola autonomamente l'hash del contenuto effettivamente acquisito e quello del riferimento, quindi ne verifica la corrispondenza. Non confondere questa verifica con il Metodo A o con il Metodo B.
+
+**Identità non verificata**
+
+Usare questa classificazione quando non è disponibile evidenza sufficiente per il Metodo A, il Metodo B o una verifica crittografica indipendente.
+
+**Attenzione agli identificatori:** SHA-256 del file e Git blob SHA sono valori distinti e non intercambiabili. Indicare sempre il tipo di identificatore. L'acquisizione diretta da GitHub dimostra la provenienza documentata del contenuto dal commit indicato, ma non deve essere descritta come verifica crittografica indipendente.
+
+La classificazione dell'identità del Core riguarda soltanto il file bundle. Non dimostra che la sessione fosse isolata, non modifica i requisiti del §6 del piano e non determina automaticamente l'esito comportamentale del test. La conformità procedurale e l'esito comportamentale restano valutazioni separate.
 
 ## 5. Conservare il transcript
 
@@ -120,16 +125,20 @@ Nel file conserva:
 
 Non modificare il testo della risposta. Se devi oscurare informazioni riservate, conserva una copia originale solo se autorizzato e annota che la copia condivisa è stata oscurata. Non includere mai password, token, chiavi o codici MFA.
 
-**Attestazione dell'identità del Core** (compilare se la verifica è stata effettuata; altrimenti indicare non attestata):
-- Ho calcolato personalmente l'hash del Core effettivamente utilizzato: Sì / No
-- Nome del file utilizzato:
-- Algoritmo utilizzato (specificare SHA-256, Git blob SHA o altro):
-- Hash del Core utilizzato:
-- Hash del Core di riferimento:
-- Confermo che i due hash corrispondono: Sì / No
+**Identificazione del Core** (selezionare il metodo effettivamente documentato):
+- Metodo utilizzato: A — confronto hash dell'operatore / B — acquisizione diretta da GitHub / verifica crittografica indipendente / non verificata
+- URL GitHub fissato al commit (Metodo B):
+- Commit SHA:
+- Percorso del file:
+- Evidenza della lettura integrale e conferma della chat (Metodo B):
+- Hash calcolato dall'operatore (Metodo A, facoltativo se è stato usato il Metodo B): Sì / No
+- Algoritmo e tipo di hash:
+- Hash del file utilizzato:
+- Hash del file di riferimento:
+- Esito del confronto:
 - Eventuali note:
 
-Se non è stata eseguita una verifica personale, lasciare i campi non applicabili e indicare che manca l'attestazione. Non compilare i valori per deduzione.
+Per il Metodo B, non richiedere un hash personale aggiuntivo se transcript e riferimenti documentano URL immutabile, commit, percorso e conferma di lettura integrale. Non classificare l'acquisizione diretta come verifica crittografica indipendente. Non compilare dati mancanti per deduzione.
 
 ## 6. Compilare il risultato
 
