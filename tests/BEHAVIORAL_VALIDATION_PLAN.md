@@ -223,3 +223,20 @@ La campagna potrà essere dichiarata conclusa soltanto quando:
 7. il rapporto finale distingue risultati empirici, limiti e aspetti non testati.
 
 Il rilascio 2.0 resta NO-GO finché i difetti bloccanti non sono risolti e la valutazione finale non è supportata da evidenze. La PR #2 deve restare OPEN — DRAFT — NOT MERGED.
+
+
+## 15. Verifica amministrativa conclusiva della preparazione
+
+Dopo la creazione dei documenti, la PR #2 è stata interrogata nuovamente tramite GitHub:
+- stato: **OPEN**;
+- draft: **true**;
+- merged: **false**;
+- mergeable: **true**;
+- head SHA restituito dalla PR al controllo: `af7b7944916d540646c8a0ed1a39f0b872d513f5` (prima dell'ultima correzione editoriale al registro risultati);
+- nessuna review registrata.
+
+La mergeability è quindi risultata **true** al momento del controllo: non risulta un blocco di merge segnalato da GitHub. Questo dato non equivale a un'approvazione né autorizza il merge. La PR resta draft.
+
+Per CI sul commit HEAD rilevato dopo i documenti: l'API del combined status ha restituito una lista vuota di status e la ricerca delle workflow run associate al commit ha restituito una lista vuota. Interpretazione: **nessuno status check e nessuna workflow run visibili tramite gli endpoint consultati**; non è prova che non esistano workflow configurati o altri controlli non esposti da questi endpoint.
+
+Il controllo di confronto tra HEAD iniziale della fase e branch aggiornato ha mostrato esclusivamente quattro file aggiunti sotto `tests/`, senza file eliminati o modificati. La correzione successiva del riferimento SHA nel registro risultati è una modifica ulteriore, sempre limitata a `tests/BEHAVIORAL_TEST_RESULTS.md`. Nessun file del Core o delle istruzioni è stato modificato.
