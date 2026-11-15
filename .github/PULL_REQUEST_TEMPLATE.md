@@ -1,14 +1,17 @@
 ## Descrizione
 
-Descrivi le modifiche proposte.
+## Motivazione e contesto
 
-## Motivazione
-
-Quale problema risolvono o quale miglioramento introducono?
+## Tipo di modifica
+- [ ] Correzione
+- [ ] Nuova guida o aggiornamento
+- [ ] Template o esempio
+- [ ] Framework/metodologia
+- [ ] Traduzione
 
 ## Verifiche
-
-- [ ] Documentazione aggiornata.
-- [ ] Nessuna dipendenza a pagamento obbligatoria.
-- [ ] Nessuna credenziale o dato personale inserito.
-- [ ] Modifiche coerenti con gli obiettivi del progetto.
+- [ ] Link relativi verificati
+- [ ] Italiano e Markdown controllati
+- [ ] Nessun dato personale o segreto
+- [ ] Licenze e attribuzioni verificate
+- [ ] Nessuna dipendenza a pagamento obbligatoria

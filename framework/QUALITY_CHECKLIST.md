@@ -1,26 +1,26 @@
-# Prompt Quality Checklist
+# Checklist qualità del prompt
 
-Verificare prima della consegna:
+## Obiettivo e destinatario
+- [ ] Il risultato richiesto è esplicito?
+- [ ] È chiaro a chi è destinato il risultato?
+- [ ] Il compito è proporzionato al prompt?
 
-- [ ] L'obiettivo è comprensibile?
-- [ ] Il ruolo dell'AI è appropriato?
-- [ ] Le istruzioni sono precise?
-- [ ] Il contesto è sufficiente?
-- [ ] I vincoli sono espliciti?
-- [ ] Il formato di output è definito?
-- [ ] Sono presenti eventuali esempi utili?
-- [ ] Non ci sono contraddizioni?
-- [ ] Non ci sono informazioni inventate?
-- [ ] Il prompt è autonomo e riutilizzabile?
+## RICCE
+- [ ] Il ruolo è utile e pertinente?
+- [ ] Le istruzioni descrivono azioni e risultato?
+- [ ] Il contesto contiene le informazioni necessarie?
+- [ ] Vincoli, esclusioni e formato sono espliciti?
+- [ ] Gli esempi aggiungono valore, se necessari?
 
-## Valutazione
+## Coerenza e affidabilità
+- [ ] Non ci sono contraddizioni o ripetizioni inutili?
+- [ ] Le informazioni non disponibili non sono inventate?
+- [ ] È chiaro quando chiedere chiarimenti o dichiarare incertezza?
+- [ ] Fonti e verifica sono richieste se il tema è aggiornato o delicato?
 
-Attribuire un punteggio da 1 a 10 per:
-
-1. Chiarezza.
-2. Completezza.
-3. Specificità.
-4. Coerenza.
-5. Utilizzabilità.
-
-La valutazione complessiva deve essere motivata.
+## Consegna
+- [ ] Il prompt è autonomo e copiabile?
+- [ ] Il formato di output è utilizzabile?
+- [ ] I dati riservati sono esclusi o minimizzati?
+- [ ] La valutazione è motivata, se richiesta?
+- [ ] Le cinque proposte sono specifiche, quando l'ottimizzazione è sostanziale?

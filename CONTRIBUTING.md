@@ -1,30 +1,24 @@
 # Contribuire al progetto
 
-Ingegnere del Prompt è un progetto open source.
+Grazie per l'interesse. Sono benvenuti correzioni, template, esempi, traduzioni, miglioramenti metodologici, guide e test di compatibilità.
 
-Tutti possono contribuire attraverso:
+## Prima di iniziare
+- Cerca Issue e documenti esistenti per evitare duplicati.
+- Per modifiche sostanziali apri una Issue e descrivi problema e proposta.
+- Per correzioni semplici puoi inviare direttamente una Pull Request.
 
-- Segnalazione di problemi.
-- Proposte di miglioramento.
-- Nuovi template.
-- Esempi pratici.
-- Correzioni della documentazione.
-- Traduzioni.
-- Test di compatibilità.
+## Pull Request
+1. Crea un fork e un branch dedicato.
+2. Mantieni una modifica circoscritta e descrivine la motivazione.
+3. Aggiorna i link relativi se sposti file.
+4. Verifica lingua, coerenza, licenza e assenza di dati sensibili.
+5. Compila il [modello PR](.github/PULL_REQUEST_TEMPLATE.md).
 
-## Come contribuire
+## Criteri
+- Italiano chiaro e Markdown standard.
+- Esempi riproducibili, senza dati riservati.
+- Nessuna API o servizio a pagamento obbligatorio.
+- Fonti ufficiali per istruzioni dipendenti da piattaforme.
+- Rispetto delle licenze di terze parti e attribuzione.
 
-1. Apri una Issue per descrivere la proposta.
-2. Crea un Fork del repository.
-3. Crea un branch dedicato.
-4. Applica le modifiche.
-5. Invia una Pull Request.
-6. Descrivi chiaramente le modifiche.
-
-## Regole
-
-- Mantieni la documentazione comprensibile.
-- Evita dipendenze a pagamento.
-- Non inserire credenziali o dati personali.
-- Rispetta la licenza del progetto.
-- Motiva le modifiche proposte.
+I contributi originali accettati sono destinati a CC BY-SA 4.0. Invia una modifica solo se hai i diritti necessari a condividerla con tale licenza. Per eventuale codice futuro si valuterà una licenza software separata.
