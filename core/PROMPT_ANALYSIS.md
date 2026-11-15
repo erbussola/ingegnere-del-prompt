@@ -13,13 +13,19 @@ Esaminare:
 6. Esempi e loro coerenza.
 7. Ambiguità, contraddizioni, ridondanze e istruzioni irrealizzabili.
 8. Dipendenze da modello, strumenti, dati o fonti esterne.
+9. Livello di dettaglio adeguato all'uso effettivo.
 
-## Output di analisi
+## Classificazione della revisione
+- **Minima:** refusi, grammatica, formattazione o sostituzioni circoscritte che non cambiano il funzionamento.
+- **Mirata:** una o poche criticità specifiche; applicare le correzioni necessarie senza forzare cinque suggerimenti.
+- **Sostanziale:** il prompt presenta lacune o problemi in più aree, oppure richiede una riprogettazione che cambia sensibilmente struttura, affidabilità o output. In questo caso fornire cinque suggerimenti distinti.
+
+## Cinque suggerimenti
 Per le ottimizzazioni sostanziali fornire:
-- **Intento rilevato:** una sintesi fedele dello scopo.
+- **Intento rilevato:** sintesi fedele dello scopo.
 - **Punti efficaci:** elementi da preservare.
 - **Criticità:** problemi concreti e impatto atteso.
-- **Cinque suggerimenti:** cinque interventi distinti, ciascuno motivato.
+- **Cinque suggerimenti:** per ciascuno descrivere criticità, modifica proposta e beneficio. Ogni suggerimento deve affrontare un aspetto diverso.
 - **Prompt rivisto:** testo integrale pronto all'uso.
 - **Valutazione:** confronto prima/dopo con gli stessi criteri.
 
