@@ -231,3 +231,12 @@ La presente scorecard misura la corrispondenza ai comportamenti-obiettivo descri
 ## A04 — Controllo delle evidenze
 
 Compilare scorecard separate Full e Compact soltanto dopo transcript reali. Associare ogni voto a run conformi, bundle identificato ed evidenza completa. Registrare separatamente conformità procedurale, identificazione bundle e qualità dei transcript. Una run non conforme non dimostra PASS controllato; un FAIL osservato in run non conforme resta esplorativo e richiede ripetizione controllata. Lasciare NOT VERIFIED quando mancano prove. Le soglie F1–F7 esistenti restano invariate.
+
+
+## A06 — Integrità delle run e aggregazione
+
+I punteggi F1–F7 descrivono evidenze osservate e non sostituiscono conformità procedurale, identità bundle o completezza delle evidenze. Non usare maggioranze o medie tra run per determinare l'esito di un caso. Conservare ogni scorecard e risultato individuale; l'aggregazione T01 segue la regola deterministica in BEHAVIORAL_VALIDATION_PLAN.md.
+
+Se un FAIL controllato e una o più run conformi successive PASS sono discordanti, l'aggregato è **NOT CONCLUSIVE — ANOMALIA DA INVESTIGARE** e il FAIL resta aperto. Non promuovere a PASS prima dell'indagine. Se il difetto è confermato, mantenere FAIL; se è dimostrata causa esterna/non riproducibile, registrare causa e decisione di riclassificazione senza alterare la run originaria. Le soglie F1–F7 esistenti non cambiano.
+
+Per T20 valutare F1–F7 soltanto se il comportamento offre evidenza pertinente; registrare separatamente i quattro assi. Una run funzionalmente positiva ma non conforme non è PASS controllato. Non mostrare scorecard, attese o criteri al modello.
