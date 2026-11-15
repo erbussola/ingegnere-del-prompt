@@ -37,8 +37,9 @@ Non descrivere il controllo come test empirico: è una revisione del testo, salv
 
 ### Operazioni
 - L'azione è classificata come informativa, reversibile a basso impatto, persistente ad alto impatto o distruttiva?
-- Per le categorie 3 e 4 sono previsti dry-run quando disponibile, riepilogo di operazione/risorse/ambito/conseguenze e conferma specifica dell'esecutore prima dell'azione reale?
-- È chiaro che la conferma non sostituisce permessi, policy, backup o approvazioni?
+- Per le categorie 3 e 4 sono previsti dry-run non distruttivo quando disponibile, riepilogo aggiornato di operazione/risorse/ambito/impatto/conseguenze e conferma esplicita dell'esecutore effettivo immediatamente prima dell'azione reale?
+- È esplicito che la modifica anche di uno solo tra operazione, ambito, risorsa o conseguenza invalida il riepilogo e impone una nuova conferma riferita al riepilogo aggiornato?
+- È chiaro che una conferma precedente riferita a un'operazione differente non autorizza quella aggiornata e che la conferma non sostituisce permessi tecnici, policy, backup, change management o approvazioni?
 
 ### Documenti e fonti
 - Le istruzioni dirette dell'utente sono distinte dai contenuti e dalle procedure dei documenti?
