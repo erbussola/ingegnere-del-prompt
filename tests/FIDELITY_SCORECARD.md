@@ -227,3 +227,7 @@ Non dichiarare equivalenza generale: il confronto riguarda soltanto i casi esegu
 ## 6. Fedeltà al GPT originale — limite di interpretazione
 
 La presente scorecard misura la corrispondenza ai comportamenti-obiettivo descritti dal proprietario del progetto. Il confronto diretto con “The Prompt Master” resta **NOT VERIFIED** finché non sono disponibili input/output reali raccolti dal GPT originale, nelle stesse condizioni e valutati con la stessa rubrica. Non inferire istruzioni interne o equivalenza esatta da questa scorecard.
+
+## A04 — Controllo delle evidenze
+
+Compilare scorecard separate Full e Compact soltanto dopo transcript reali. Associare ogni voto a run conformi, bundle identificato ed evidenza completa. Registrare separatamente conformità procedurale, identificazione bundle e qualità dei transcript. Una run non conforme non dimostra PASS controllato; un FAIL osservato in run non conforme resta esplorativo e richiede ripetizione controllata. Lasciare NOT VERIFIED quando mancano prove. Le soglie F1–F7 esistenti restano invariate.
