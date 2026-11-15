@@ -281,3 +281,24 @@ Al controllo pre-allineamento:
 - Per il controllo CI sul commit allora corrente non sono stati restituiti status check né workflow run. Ciò non prova l'assenza di workflow configurati.
 
 Queste osservazioni sono storiche. Lo stato corrente di PR #1 e PR #2 va riportato nel rapporto di pubblicazione di questo allineamento, senza modificare metadati o stato delle PR.
+
+## A04 — Protocollo aggiornato e campagna post-implementazione
+
+Questa sezione integra le istruzioni operative precedenti incompatibili; i risultati storici restano invariati.
+
+### Scheda ambientale obbligatoria
+Per ogni run registrare piattaforma/chat, modello, piano se visibile, data/ora/fuso, tipo sessione, presenza di GPT personalizzato/progetto/notebook/agente, stato istruzioni personalizzate (DISATTIVATE/ATTIVE/NON VERIFICABILE), stato Memory (DISATTIVATA/ATTIVA/NON VERIFICABILE), file/brief/contesto persistente, bundle e identificatore, transcript integrale e riferimento stabile. Non dedurre che un'impostazione sia disattivata.
+
+### Quattro dimensioni indipendenti
+A. Comportamento: PASS / FAIL / PARTIALLY VERIFIED / NOT CONCLUSIVE. B. Conformità procedurale: CONFORME / NON CONFORME / PARZIALMENTE CONFORME / PREREQUISITI NON VERIFICABILI / NON ESEGUITO. C. Identità bundle: IDENTIFICATO (Metodo A/B documentato) / PARZIALE / NON IDENTIFICATO. D. Evidenze: COMPLETA / PARZIALE / INSUFFICIENTE. Una run non conforme non dimostra PASS controllato. Un FAIL non conforme resta evidenza esplorativa e va ripetuto in condizioni conformi per attribuirlo. Conservare ogni run.
+
+### Aggregazione T01
+Nessuna maggioranza o media. Un FAIL controllato (run conforme, bundle identificato, evidenza completa) resta irrisolto anche con PASS successivi. FAIL solo non conformi è esplorativo. Anomalie di piattaforma richiedono indagine e ripetizione. Evidenza incompleta/ambigua o run conformi discordanti producono NOT CONCLUSIVE. Esito: FAIL se esiste almeno un FAIL controllato irrisolto; PASS se esiste almeno un PASS controllato e nessun FAIL controllato irrisolto; NOT CONCLUSIVE per sole run non conformi/insufficienti, anomalie non risolte o run conformi discordanti.
+
+### Nuova campagna Full
+Eseguire T03, T05, T06, T11, T15, T16-A…E, T17-A…E, T18, T19-A…D, T20-A…F, T01 con nuova aggregazione, T04 revisionato, T10 revisionato, T12 e T08.
+
+### Suite Compact
+Eseguire T01, T02, T08, T09, T10, T11, T12, T13 e T14. Aggiungere confronti P0/P1 T16-A…E, T17-A…E, T18 e T19-A…D con input e condizioni comparabili.
+
+La checklist ambientale va preparata fuori dalla chat di test; non mostrare al modello criteri o rubriche. Ogni run richiede transcript integrale e bundle identificato. L'aggiornamento documentale non costituisce test comportamentale; tutti i test nuovi restano da eseguire.
