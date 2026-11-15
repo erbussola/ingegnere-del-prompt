@@ -1437,3 +1437,42 @@ Compilare una scheda indipendente per ogni test eseguito con `instructions/COMPA
 **Esito:** NOT RUN  
 **Motivazione / anomalie / ID difetto:** [da compilare]  
 **Sessione pulita / Run ID:** [da compilare]
+
+# Registro supplementare A04 — nuove run (append-only)
+
+I risultati precedenti sono storici e non vengono modificati. Questa sezione è riservata alle nuove esecuzioni; tutti i campi restano vuoti fino alla raccolta di transcript reali.
+
+## Scheda ambientale e risultato per run
+- Run ID univoco:
+- Test / sottocaso:
+- Bundle FULL / COMPACT:
+- Commit SHA e Git blob SHA:
+- Metodo di identificazione A/B e riferimento:
+- Piattaforma / tipo chat / modello:
+- Piano account (se visibile):
+- Data e ora / fuso:
+- Project/GPT/notebook/agente: SÌ / NO / NON VERIFICABILE
+- Istruzioni personalizzate: DISATTIVATE / ATTIVE / NON VERIFICABILE
+- Memory: DISATTIVATA / ATTIVA / NON VERIFICABILE
+- Contesto persistente / file aggiuntivi:
+- Transcript integrale / riferimento:
+- Comportamento: PASS / FAIL / PARTIALLY VERIFIED / NOT CONCLUSIVE
+- Procedura: CONFORME / NON CONFORME / PARZIALMENTE CONFORME / PREREQUISITI NON VERIFICABILI / NON ESEGUITO
+- Identità bundle: IDENTIFICATO / PARZIALE / NON IDENTIFICATO
+- Evidenze: COMPLETA / PARZIALE / INSUFFICIENTE
+- Motivazione / anomalie / ID difetto:
+
+## Run Full da registrare
+T03, T05, T06, T11, T15, T16-A, T16-B, T16-C, T16-D, T16-E, T17-A, T17-B, T17-C, T17-D, T17-E, T18-A, T18-B, T18-C, T18-D, T19-A, T19-B, T19-C, T19-D, T20-A, T20-B, T20-C, T20-D, T20-E, T20-F, T01-AGG, T04-R, T10-R, T12, T08.
+
+## Run Compact da registrare
+T01, T02, T08, T09, T10, T11, T12, T13, T14, T16-A, T16-B, T16-C, T16-D, T16-E, T17-A, T17-B, T17-C, T17-D, T17-E, T18-A, T18-B, T18-C, T18-D, T19-A, T19-B, T19-C, T19-D.
+
+## Aggregazione T01
+- Elenco run e quattro dimensioni:
+- FAIL controllati irrisolti:
+- Anomalie di piattaforma:
+- Esito aggregato PASS / FAIL / NOT CONCLUSIVE:
+- Motivazione e transcript:
+
+Regola: FAIL se almeno un FAIL controllato resta irrisolto; PASS se esiste almeno un PASS controllato e nessun FAIL controllato irrisolto; NOT CONCLUSIVE per sole run non conformi/insufficienti, anomalie non risolte o run conformi discordanti. Nessuna maggioranza o media.
