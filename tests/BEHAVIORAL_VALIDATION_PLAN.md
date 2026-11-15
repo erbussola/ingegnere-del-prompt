@@ -292,8 +292,31 @@ Per ogni run registrare piattaforma/chat, modello, piano se visibile, data/ora/f
 ### Quattro dimensioni indipendenti
 A. Comportamento: PASS / FAIL / PARTIALLY VERIFIED / NOT CONCLUSIVE. B. Conformità procedurale: CONFORME / NON CONFORME / PARZIALMENTE CONFORME / PREREQUISITI NON VERIFICABILI / NON ESEGUITO. C. Identità bundle: IDENTIFICATO (Metodo A/B documentato) / PARZIALE / NON IDENTIFICATO. D. Evidenze: COMPLETA / PARZIALE / INSUFFICIENTE. Una run non conforme non dimostra PASS controllato. Un FAIL non conforme resta evidenza esplorativa e va ripetuto in condizioni conformi per attribuirlo. Conservare ogni run.
 
-### Aggregazione T01
-Nessuna maggioranza o media. Un FAIL controllato (run conforme, bundle identificato, evidenza completa) resta irrisolto anche con PASS successivi. FAIL solo non conformi è esplorativo. Anomalie di piattaforma richiedono indagine e ripetizione. Evidenza incompleta/ambigua o run conformi discordanti producono NOT CONCLUSIVE. Esito: FAIL se esiste almeno un FAIL controllato irrisolto; PASS se esiste almeno un PASS controllato e nessun FAIL controllato irrisolto; NOT CONCLUSIVE per sole run non conformi/insufficienti, anomalie non risolte o run conformi discordanti.
+### Aggregazione T01 — regola deterministica
+
+Conservare sempre tutte le run e i loro quattro assi (comportamento, conformità procedurale, identità bundle, qualità delle evidenze). Non cancellare, sovrascrivere o riclassificare retroattivamente un risultato storico. Le run non conformi restano evidenza esplorativa e non dimostrano PASS controllato.
+
+Applicare nell'ordine le seguenti regole, senza maggioranze, medie o voto prevalente:
+
+1. **NOT RUN:** non esiste alcuna run registrata.
+2. **NOT CONCLUSIVE:** esistono soltanto run non conformi oppure prerequisiti/evidenze non consentono una valutazione controllata.
+3. **NOT CONCLUSIVE — ANOMALIA DA INVESTIGARE:** esiste almeno un FAIL controllato e almeno una run conforme successiva con esito PASS. Il FAIL controllato resta esplicitamente aperto; nessun PASS aggregato è consentito finché la discordanza non è investigata e risolta.
+4. **FAIL:** tutte le run conformi valutabili sono FAIL e non esistono PASS conformi discordanti.
+5. **PASS:** tutte le run conformi valutabili sono PASS e non esistono FAIL controllati irrisolti.
+6. **NOT CONCLUSIVE:** ogni altra combinazione discordante o incompleta, inclusi FAIL controllati associati a run conformi PARTIALLY VERIFIED/NOT CONCLUSIVE, oppure anomalie non risolte.
+
+**Indagine:** registrare ipotesi, controlli, evidenze, responsabile, data e conclusione. Se l'indagine conferma un difetto, mantenere l'aggregato FAIL. Se dimostra che il FAIL dipendeva da causa esterna o condizione non riproducibile, documentare causa, evidenze e decisione esplicita di riclassificazione per l'aggregato; il risultato originale resta nel registro storico e non viene eliminato né riscritto. Solo dopo una risoluzione documentata si può ricalcolare l'aggregato.
+
+Un PASS conforme non annulla un FAIL controllato. Un FAIL non conforme resta esplorativo. La conformità non trasforma da sola un risultato comportamentale in PASS.
+
+### Riferimenti univoci ai casi storici e alle revisioni A04
+
+- **T04 storico:** TEST_CASES.md → “T04 — Creazione per marketing”. Input e criteri storici restano invariati.
+- **T04 — Revisione A04: marketing, KPI e budget:** TEST_CASES.md → sezione omonima. Prova distinta con input iniziale invariato e requisiti A04 aggiuntivi.
+- **T10 storico:** TEST_CASES.md → “T10 — Revisione iterativa”. Sequenza storica a due messaggi, invariata.
+- **T10 — Revisione A04: artefatto completo e iterazione:** TEST_CASES.md → sezione omonima. Prova distinta sui campi completi al primo turno e sulla loro conservazione al secondo.
+
+Non sostituire, rinominare o sovrascrivere i casi storici. Nel registro usare T04-R e T10-R per le revisioni A04; T04 e T10 restano riservati ai casi storici.
 
 ### Nuova campagna Full
 Eseguire T03, T05, T06, T11, T15, T16-A…E, T17-A…E, T18, T19-A…D, T20-A…F, T01 con nuova aggregazione, T04 revisionato, T10 revisionato, T12 e T08.
