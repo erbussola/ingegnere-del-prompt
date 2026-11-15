@@ -5,6 +5,21 @@
 **Scala:** 0–5 per dimensione; massimo 35 punti.  
 **Stato iniziale:** tutte le dimensioni NOT VERIFIED.
 
+## Cronologia e snapshot
+
+| Riferimento | SHA completo | Significato |
+|---|---|---|
+| Baseline della QA documentale | `c27935069a2961ad6bf6fd7f16bc18ef52136871` | Snapshot del branch esaminato; è il commit immediatamente precedente alla pubblicazione del rapporto QA. |
+| Pubblicazione di `tests/QA_REPORT.md` | `85050807cb19f68c30aca484060c316b750ece06` | Commit che ha aggiunto il rapporto QA; il confronto con la baseline mostra esclusivamente l'aggiunta di `tests/QA_REPORT.md`. |
+| HEAD iniziale della fase Behavioral Validation | `85050807cb19f68c30aca484060c316b750ece06` | HEAD rilevato all'avvio della preparazione Behavioral Validation. Coincide con il commit di pubblicazione QA, ma rappresenta un riferimento temporale distinto. |
+| HEAD corrente al controllo pre-allineamento | `daf142111b952dea5a37e41a9cc916a86764d306` | Ultimo commit del branch prima delle modifiche documentali richieste in questo allineamento. |
+| Bundle CORE — Git blob SHA | `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6` | SHA del contenuto di `instructions/CORE_INSTRUCTIONS.md`, verificato nuovamente. |
+| Bundle COMPACT — Git blob SHA | `bc852ec4925e9c81a5689c16a166fd8fb46181aa` | SHA del contenuto di `instructions/COMPACT.md`, verificato nuovamente. |
+
+**Distinzione degli snapshot:** la baseline QA identifica il codice esaminato; il commit successivo pubblica il rapporto; il medesimo commit era anche l'HEAD all'avvio della preparazione Behavioral Validation. Il HEAD corrente del branch è un riferimento successivo e non va confuso con i tre riferimenti storici. Gli SHA dei bundle identificano i contenuti dei file, non commit Git.
+
+**HEAD operativo per l'esecuzione:** il commit di allineamento documentale verrà fissato nel rapporto di pubblicazione. Prima di iniziare T01, verificare che i due Git blob SHA dei bundle corrispondano esattamente ai valori riportati sopra.
+
 ## 1. Regole di valutazione
 
 | Voto | Definizione |
