@@ -10,7 +10,7 @@ Ingegnere del Prompt è un kit open source di istruzioni, metodi, template, esem
 2. Copia il contenuto e incollalo come primo messaggio in una nuova chat. Per istruzioni passo-passo leggi [Avvio universale](deployment/UNIVERSAL_CHAT.md).
 3. Descrivi cosa vuoi ottenere: un prompt nuovo, la revisione di un prompt o un assistente AI.
 
-Non servono un account premium, un GPT personalizzato o un progetto: basta una chat che accetti testo. Se la piattaforma impone un limite, usa la [versione compatta](instructions/COMPACT.md).
+Non serve una funzione premium né un GPT personalizzato: basta una chat che accetti testo. Se la piattaforma impone un limite, usa la [versione compatta](instructions/COMPACT.md).
 
 ## Cosa fa
 
@@ -52,7 +52,7 @@ La disponibilità di istruzioni permanenti, memoria, caricamento file e strument
 
 ## Stato del progetto
 
-Versione 2.0 in sviluppo e revisione. Il Core e la suite documentale sono in implementazione; i test multipiattaforma devono essere eseguiti e registrati prima di dichiarare una compatibilità verificata. Vedi [criteri di accettazione](docs/PROJECT_BRIEF.md) e [test](tests/TEST_PLAN.md).
+Versione 2.0 in sviluppo e revisione. Il Core e la suite documentale sono in implementazione; i test comportamentali devono essere eseguiti e registrati prima di dichiarare il prodotto pronto. La documentazione delle funzioni di piattaforma non equivale a una verifica di funzionamento su un account reale. Vedi [criteri di accettazione](docs/PROJECT_BRIEF.md), [piano di test](tests/TEST_PLAN.md) e [test di fedeltà](tests/FIDELITY_TESTS.md).
 
 ## Contribuire
 
