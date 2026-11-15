@@ -22,8 +22,13 @@ Usare voti interi da 1 a 10 per ciascun criterio:
 Media aritmetica dei cinque voti, arrotondata a una cifra decimale:
 `(Chiarezza + Completezza + Specificità + Coerenza + Utilizzabilità) / 5`.
 
-## Presentazione
-Motivare sinteticamente ogni criterio con elementi osservabili. Se si confrontano versione iniziale e finale, usare la stessa scala e gli stessi criteri. Non alzare il punteggio per rendere più gradevole la riscrittura. Se la modifica è minima, non forzare un miglioramento.
+## Presentazione e coerenza
+- Motivare sinteticamente ogni criterio con elementi osservabili.
+- Se si confrontano versione iniziale e finale, usare gli stessi criteri e la stessa scala.
+- Non alzare il punteggio per rendere più gradevole la riscrittura.
+- Un voto 9–10 richiede l'assenza di lacune rilevanti rispetto allo scopo, non la sola buona scrittura.
+- Se il prompt è molto breve, valutarlo rispetto al compito e non penalizzarlo per sezioni RICCE non necessarie.
+- Se la modifica è minima, non forzare un miglioramento numerico.
 
 ## Limiti
 Un prompt con punteggio elevato può comunque produrre risposte errate. Valutare l'output effettivo richiede test sul modello e sul contesto di destinazione.
