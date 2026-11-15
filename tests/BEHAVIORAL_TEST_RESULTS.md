@@ -3,7 +3,7 @@
 **Campagna:** Behavioral Validation 2.0  
 **Branch di riferimento:** `architecture/universal-core-v2`  
 **Riferimenti Git:** consultare la sezione **Cronologia e snapshot** qui sotto; non utilizzare gli SHA storici come sinonimi tra loro.
-**Stato iniziale di tutti i test:** NOT RUN
+**Stato iniziale della campagna:** tutti i test NOT RUN prima della prima esecuzione; stato corrente riportato nel riepilogo aggiornato.
 
 > Compilare una scheda per ogni esecuzione. Non inserire output ipotetici, simulati o riassunti al posto dei transcript. Per T10 e T13 mantenere i turni nella stessa sessione.
 
@@ -36,22 +36,65 @@ Bundle: `instructions/CORE_INSTRUCTIONS.md`
 
 ### T01 — Creazione di un prompt semplice
 
-**Bundle:** CORE_INSTRUCTIONS.md  
-**Piattaforma / modello:** [da compilare]  
-**Data e ora / fuso:** [da compilare]  
-**SHA del bundle:** [da compilare]  
+**Bundle:** `instructions/CORE_INSTRUCTIONS.md` — Core Universale 2.0.0  
+**Snapshot operativo:** `84db964b5ec17ae6c203c125b95133c64b772e75`  
+**SHA Git del bundle:** `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6` — corrispondenza verificata confrontando il contenuto integrale del Core riportato nel transcript con il blob del bundle nello snapshot operativo.  
+**Piattaforma:** ChatGPT (indicata dal transcript)  
+**Modello visualizzato:** non documentato  
+**Piano / tipo account:** non documentato  
+**Data e ora effettiva di esecuzione / fuso:** non documentati  
+**Data di esportazione del transcript:** 15 novembre 2026, 14:19:49 (fuso non indicato)  
+**Transcript integrale:** `Avvio ingegnere prompt - T01.md` (allegato alla richiesta di registrazione; non pubblicato nel repository)  
+**Run ID:** non documentato  
+**Sessione pulita confermata:** NOT VERIFIED — il transcript non documenta esplicitamente che la conversazione fosse una nuova chat standard, esterna a progetti/GPT personalizzati e priva di istruzioni aggiuntive.
+
 **Input esatto:**
 
 > Scrivimi un prompt per chiedere a un chatbot di preparare una lista della spesa per una settimana
 
-**Output integrale / riferimento transcript:** [incollare o indicare percorso/URL]
-**Comportamento atteso:** riconosce la creazione; produce un prompt breve con obiettivo e formato; usa segnaposto per numero di persone, preferenze e budget se non forniti, senza bloccare inutilmente.
-**Criteri:** prompt copiabile; nessuna domanda superflua; ipotesi o segnaposto chiari.
-**Esito:** NOT RUN
-**Motivazione:** [da compilare]
-**Anomalie / ID difetto:** [nessuna / dettaglio]
-**Sessione pulita confermata:** [sì/no]
-**Run ID:** [da compilare]
+**Evidenze osservate nel transcript:**
+
+- Il Core Universale 2.0.0 è stato inviato come primo messaggio.
+- L'assistente ha accettato il ruolo e richiamato i principi operativi principali.
+- Alla richiesta T01 ha riconosciuto la modalità di creazione e ha prodotto direttamente un prompt strutturato, senza porre domande preliminari all'utente.
+- Il prompt finale è organizzato per categorie e include durata di sette giorni, quantità in funzione del numero di persone, preferenze/restrizioni, budget, prodotti già disponibili, conservazione, acquisti a metà settimana e formato con caselle di spunta.
+- È presente una breve raccomandazione conclusiva sul valore della raccolta progressiva delle informazioni.
+
+**Aspetti positivi:**
+
+- Corretta identificazione della modalità di creazione.
+- Comprensione immediata dell'obiettivo.
+- Prompt organizzato per categorie.
+- Indicazione di quantità e numero di persone.
+- Gestione delle informazioni mancanti tramite domande successive, una alla volta.
+- Attenzione a conservazione, sprechi e budget.
+- Output completo e pronto da copiare.
+
+**Osservazioni / limiti non bloccanti:**
+
+- Il prompt richiede quantità adeguate al numero di persone, ma demanda al chatbot destinatario la raccolta di questo dato nella successiva interazione.
+- La lista include anche prodotti per la casa e l'igiene personale: ampliamento ragionevole della spesa domestica, ma più esteso della sola spesa alimentare.
+
+**Valutazione F1–F7 riferita esclusivamente alle evidenze T01**  
+I punteggi seguenti sono una valutazione del solo transcript T01, non il risultato aggregato della scorecard di campagna. I criteri non applicabili non entrano in alcun totale o media.
+
+| Criterio | Punteggio | Evidenza e motivazione |
+|---|---:|---|
+| F1 — Accoglienza | 5/5 | Accettazione naturale e professionale del ruolo; risposta iniziale pertinente, senza preamboli ridondanti. |
+| F2 — Comprensione | 5/5 | Identifica correttamente la richiesta di creare un prompt per una lista settimanale e produce il deliverable coerente. |
+| F3 — Domande progressive | 4/5 | Non avvia un questionario e inserisce nel prompt la raccolta delle sole informazioni necessarie, una domanda alla volta. La progressione effettiva su più turni e il riuso delle risposte non sono osservabili in T01. |
+| F4 — RICCE flessibile | 5/5 | Il prompt include ruolo, istruzioni, contesto temporale, vincoli pratici e formato. Non forza una sezione Examples, non necessaria per questa richiesta semplice. |
+| F5 — Cinque suggerimenti | N/A | T01 è un caso di creazione, non di ottimizzazione sostanziale di un prompt esistente. |
+| F6 — Prompt finale | 5/5 | Prompt strutturato, autonomo e copiabile; i dati mancanti sono raccolti dal chatbot destinatario prima della preparazione della lista. |
+| F7 — Iterazione | N/A | Il test non prevede una seconda iterazione. L'assenza di una seconda iterazione non è un fallimento. |
+
+**Riepilogo dei criteri applicabili T01:** 24/25 (F5 e F7 esclusi). Questo valore descrive soltanto i cinque criteri applicabili osservati nel caso e non viene confrontato con le soglie di campagna definite su 35 punti.
+
+**Esito:** PARTIALLY VERIFIED
+
+**Motivazione dell'esito:** il comportamento osservato soddisfa i criteri funzionali del caso T01: riconoscimento della creazione, prompt copiabile, assenza di domande preliminari superflue e gestione proporzionata dei dati mancanti. Non è tuttavia possibile confermare il prerequisito di sessione pulita richiesto dal piano di validazione. In assenza di tale evidenza, non si assegna PASS.
+
+**Anomalie / ID difetto:** nessuna anomalia bloccante osservata; resta il limite di tracciabilità relativo all'isolamento della sessione.
 
 ### T02 — Ottimizzazione di un prompt incompleto
 
@@ -355,10 +398,10 @@ Per ciascun test compatto compilare: piattaforma/modello, data e ora, SHA di COM
 
 | Bundle | Test previsti | PASS | FAIL | PARTIALLY VERIFIED | NOT RUN | NOT VERIFIED |
 |---|---:|---:|---:|---:|---:|---:|
-| Completo | 15 | 0 | 0 | 0 | 15 | 0 |
+| Completo | 15 | 0 | 0 | 1 | 14 | 0 |
 | Compatto | 9 | 0 | 0 | 0 | 9 | 0 |
 
-I valori iniziali sopra indicano soltanto che nessun test è stato eseguito al momento della preparazione. Aggiornare il riepilogo solo dopo aver raccolto evidenze reali.
+Il registro aggiornato riporta T01 del bundle completo come PARTIALLY VERIFIED; gli altri 14 test completi e tutti i 9 test compatti restano NOT RUN. Il risultato T01 non modifica lo stato degli altri casi e non costituisce una valutazione della fedeltà complessiva al GPT originale.
 
 
 ## Schede di esecuzione — bundle compatto
