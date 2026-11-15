@@ -22,10 +22,10 @@ Alcuni campi istruzioni hanno limiti di caratteri. La versione compatta conserva
 Non è garantito. Ogni servizio interpreta le istruzioni in modo diverso e può imporre limiti propri. La compatibilità va testata.
 
 ## Copilot Notebooks può ricevere istruzioni?
-La documentazione Microsoft descrive istruzioni personalizzate per singolo notebook. Disponibilità, licenza e rollout possono variare; consulta [la guida dedicata](../deployment/COPILOT_NOTEBOOKS.md).
+La documentazione Microsoft descrive istruzioni personalizzate per singolo notebook. Disponibilità, licenza, servizi SharePoint/OneDrive e rollout possono variare; consulta [la guida dedicata](../deployment/COPILOT_NOTEBOOKS.md).
 
 ## Gemini usa ancora i Gems?
-A novembre 2026 Google ha annunciato la transizione dei Gems verso skills per gli account personali, con una transizione prevista nel 2027 per gli account di lavoro e scuola. Verifica cosa mostra il tuo account.
+Al 15 novembre 2026 Google prevede che i Gems degli account personali 18+ diventino di sola lettura il 17 novembre e vengano rimossi il 17 dicembre 2026. La transizione è prevista a marzo 2027 per gli account Workspace business, enterprise e non profit e a giugno 2027 per Workspace for Education. Consulta [la guida Gemini](../deployment/GEMINI.md) e verifica gli aggiornamenti ufficiali.
 
 ## Claude Projects è gratuito?
 La documentazione Anthropic consultata indica che Projects è disponibile per piani Claude a pagamento. La chat standard resta l'alternativa universale.
