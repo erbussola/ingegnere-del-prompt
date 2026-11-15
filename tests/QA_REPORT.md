@@ -402,6 +402,6 @@ Nessun risultato comportamentale è stato creato, simulato o riclassificato da A
 **Autorizzazione alla campagna QA:** NON CONCESSA.  
 **Rilascio:** NON AUTORIZZATO.
 
-A08 rende deterministici T16-D, T16-E e T20-F; formalizza l'attribuibilità al bundle e l'esclusione documentata delle run dall'aggregazione T01 senza alterare i risultati storici; marca come superato il vecchio modello vuoto T01; uniforma T04-R/T10-R; chiarisce che una variazione dell'impatto richiede riepilogo aggiornato e nuova conferma anche quando la conseguenza dichiarata non cambia.
+A08 rende deterministici T16-D, T16-E e T20-F; formalizza validità della run, attribuibilità al bundle e ammissibilità/esclusione documentata delle run nell'aggregazione T01 senza alterare i risultati storici; marca come superato il vecchio modello vuoto T01; uniforma T04-R/T10-R; chiarisce che una variazione dell'impatto richiede riepilogo aggiornato e nuova conferma anche quando la conseguenza dichiarata non cambia.
 
 Questo addendum registra l'intervento documentale, non il superamento dei test. I risultati storici e i transcript restano invariati. La preparazione A08 non equivale a QA comportamentale, non autorizza la campagna Full/Compact e non autorizza il rilascio. La prontezza per il nuovo audit statico deve essere determinata indipendentemente in A09.
