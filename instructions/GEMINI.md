@@ -1,6 +1,3 @@
-# Configurazione Gemini
+# Configurazione Google Gemini
 
-Guida in preparazione.
-
-Saranno documentate le modalità di utilizzo delle istruzioni
-e delle funzionalità disponibili sulla piattaforma.
+La guida aggiornata è [deployment/GEMINI.md](../deployment/GEMINI.md). A novembre 2026 Google sta migrando i Gems verso skills per gli account personali; verifica la funzione mostrata dal tuo account. La chat standard con [CORE_INSTRUCTIONS.md](CORE_INSTRUCTIONS.md) resta il percorso universale.

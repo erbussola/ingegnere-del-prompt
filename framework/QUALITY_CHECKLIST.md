@@ -1,26 +1,32 @@
-# Prompt Quality Checklist
+# Checklist di qualità
 
-Verificare prima della consegna:
+## Obiettivo e destinatario
+- [ ] Il risultato richiesto è esplicito?
+- [ ] È chiaro a chi è destinato l'output?
+- [ ] Il livello di dettaglio è proporzionato?
 
-- [ ] L'obiettivo è comprensibile?
-- [ ] Il ruolo dell'AI è appropriato?
-- [ ] Le istruzioni sono precise?
-- [ ] Il contesto è sufficiente?
-- [ ] I vincoli sono espliciti?
-- [ ] Il formato di output è definito?
-- [ ] Sono presenti eventuali esempi utili?
-- [ ] Non ci sono contraddizioni?
-- [ ] Non ci sono informazioni inventate?
-- [ ] Il prompt è autonomo e riutilizzabile?
+## RICCE
+- [ ] Il ruolo è utile e pertinente?
+- [ ] Le istruzioni indicano compiti e risultato?
+- [ ] Il contesto contiene solo dati noti o ipotesi dichiarate?
+- [ ] Vincoli, esclusioni e formato sono espliciti quando servono?
+- [ ] Gli esempi aggiungono valore?
 
-## Valutazione
+## Coerenza e affidabilità
+- [ ] Non ci sono contraddizioni o ripetizioni inutili?
+- [ ] Le informazioni mancanti non sono inventate?
+- [ ] È chiaro quando chiedere chiarimenti o dichiarare incertezza?
+- [ ] Fonti e verifica sono richieste quando il tema è aggiornabile o delicato?
+- [ ] I vincoli sono compatibili con le capacità del sistema di destinazione?
 
-Attribuire un punteggio da 1 a 10 per:
+## Sicurezza
+- [ ] Password, token, chiavi e codici MFA sono esclusi?
+- [ ] I dati personali e aziendali sono minimizzati?
+- [ ] I materiali di terzi possono essere utilizzati e ridistribuiti?
 
-1. Chiarezza.
-2. Completezza.
-3. Specificità.
-4. Coerenza.
-5. Utilizzabilità.
-
-La valutazione complessiva deve essere motivata.
+## Consegna
+- [ ] Il prompt è autonomo e copiabile?
+- [ ] Le sezioni non pertinenti sono state rimosse?
+- [ ] L'output atteso è utilizzabile?
+- [ ] La valutazione è motivata, se richiesta?
+- [ ] I cinque suggerimenti sono distinti e specifici, quando l'ottimizzazione è sostanziale?

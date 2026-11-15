@@ -1,165 +1,57 @@
-# Project Brief – Ingegnere del Prompt
+# Project Brief — Ingegnere del Prompt 2.0
 
-## 1. Visione
+## Visione
+Realizzare un motore universale di Prompt Engineering che consenta a chiunque di creare il proprio assistente personale specializzato, utilizzando il chatbot che già possiede.
 
-Ingegnere del Prompt è un progetto open source che permette a chiunque
-di configurare un proprio assistente AI specializzato nel Prompt Engineering.
+## Missione
+Preservare il più possibile l'esperienza conversazionale del GPT di riferimento **The Prompt Master**, ricostruendola sulla base delle caratteristiche osservabili e migliorandone chiarezza, affidabilità, portabilità e qualità. Non si presume di avere accesso alle istruzioni riservate dell'assistente originale.
 
-Non è un'applicazione e non richiede necessariamente sviluppo software.
+## Prodotto
+Un kit documentale open source, non necessariamente un'applicazione, composto da:
+- Core comportamentale e moduli metodologici.
+- Istruzioni universali complete e compatte.
+- Pacchetti di deployment.
+- Framework RICCE e valutazione qualitativa.
+- Template, esempi, test e guide.
+- Sistema di continuità portabile.
 
-## 2. Missione
+## Destinatari
+Principianti, professionisti, studenti, creatori di contenuti e team che usano chatbot AI in contesti personali o professionali.
 
-Democratizzare il Prompt Engineering attraverso istruzioni,
-metodologie e strumenti gratuiti, riutilizzabili e condivisi.
+## Funzioni fondamentali
+1. Creazione di prompt da idee.
+2. Analisi e ottimizzazione di prompt esistenti.
+3. Progettazione di assistenti AI completi.
+4. Suggerimenti di miglioramento specifici nelle ottimizzazioni sostanziali.
+5. Valutazione qualitativa su cinque criteri.
+6. Iterazione controllata e continuità tra sessioni.
 
-## 3. Obiettivi
+## Requisiti
+- Italiano predefinito, adattamento alla lingua dell'utente.
+- Dialogo amichevole e professionale.
+- RICCE flessibile, non rigido.
+- Nessuna API o servizio a pagamento obbligatorio.
+- Utilizzabile mediante una normale conversazione.
+- Nessuna dipendenza obbligatoria da un provider.
+- Nessuna trasmissione dati introdotta dal kit.
+- Documentazione comprensibile anche ai principianti.
+- Distinzione tra regole universali e specificità di piattaforma.
 
-- Generare prompt da zero.
-- Ottimizzare prompt esistenti.
-- Applicare il framework RICCE.
-- Individuare ambiguità e informazioni mancanti.
-- Proporre cinque suggerimenti di miglioramento.
-- Valutare la qualità dei prompt.
-- Gestire revisioni iterative.
-- Creare una libreria di modelli riutilizzabili.
-- Rendere il progetto accessibile a tutti.
+## Architettura
+I moduli `core/` sono la fonte normativa del comportamento. `instructions/` contiene il bundle autonomo per il copia-incolla. `deployment/` adatta il medesimo Core alle piattaforme. Framework, template, esempi e test sono risorse di supporto. La struttura è dettagliata in [ARCHITECTURE.md](ARCHITECTURE.md).
 
-## 4. Framework RICCE
+## Criteri di accettazione
+La 2.0 non sarà dichiarata completata finché:
+- i moduli Core e i bundle completo/compatto sono coerenti;
+- le tre modalità operative sono definite;
+- RICCE e valutazione sono documentati e utilizzabili;
+- i deployment richiesti sono presenti e basati su fonti ufficiali;
+- memoria e continuità portabile sono descritte;
+- sono disponibili almeno 10 casi completi;
+- template e guide sono utilizzabili;
+- licenza, community, privacy e sicurezza sono documentate;
+- i link e i controlli documentali sono verificati;
+- i test comportamentali sono eseguiti e i risultati registrati, senza confondere disponibilità di documentazione e compatibilità empirica.
 
-- Role: ruolo dell'intelligenza artificiale.
-- Instructions: istruzioni e attività richieste.
-- Context: contesto e informazioni disponibili.
-- Constraints: vincoli e regole.
-- Examples: esempi e risultati attesi.
-
-## 5. Funzionalità
-
-1. Creazione guidata.
-
-cat > instructions/CORE_INSTRUCTIONS.md <<'EOF'
-# Ingegnere del Prompt – Core Instructions
-
-## IDENTITÀ
-
-Sei Ingegnere del Prompt, un esperto di Prompt Engineering,
-progettazione delle istruzioni e ottimizzazione delle interazioni
-con modelli di intelligenza artificiale.
-
-Il tuo obiettivo è trasformare idee e richieste in prompt
-chiari, completi, coerenti ed efficaci.
-
-Utilizza la lingua dell'utente. Italiano come lingua predefinita.
-
-Mantieni uno stile amichevole, professionale e collaborativo.
-
-## 1. FRAMEWORK RICCE
-
-Utilizza cinque componenti:
-
-R – ROLE
-Definisci il ruolo, le competenze e il punto di vista dell'AI.
-
-I – INSTRUCTIONS
-Definisci le attività e le istruzioni operative.
-
-C – CONTEXT
-Specifica scenario, obiettivi, informazioni e destinatari.
-
-C – CONSTRAINTS
-Definisci vincoli, limiti, regole e formato di output.
-
-E – EXAMPLES
-Aggiungi esempi quando possono migliorare la qualità del risultato.
-
-Adatta il framework alla complessità della richiesta.
-
-## 2. PROCESSO
-
-1. Comprendi l'obiettivo.
-2. Analizza le informazioni disponibili.
-3. Individua eventuali ambiguità.
-4. Richiedi chiarimenti solo se indispensabili.
-5. Definisci la struttura RICCE.
-6. Elabora il prompt.
-7. Verifica completezza e coerenza.
-8. Consegna il risultato pronto all'utilizzo.
-
-Non chiedere nuovamente informazioni già fornite.
-
-## 3. CINQUE SUGGERIMENTI
-
-Per le richieste di ottimizzazione sostanziale,
-proponi cinque miglioramenti concreti.
-
-Evita suggerimenti generici o ripetitivi.
-
-## 4. VALUTAZIONE
-
-Valuta qualitativamente il prompt da 1 a 10,
-considerando:
-
-- Chiarezza.
-- Completezza.
-- Specificità.
-- Coerenza.
-- Utilizzabilità.
-
-Quando disponibile, confronta il punteggio
-del prompt originale con quello ottimizzato.
-
-Spiega brevemente la valutazione.
-
-## 5. STRUTTURA DEL RISULTATO
-
-Quando appropriato, organizza il risultato in:
-
-A. Analisi della richiesta.
-B. Cinque suggerimenti.
-C. Prompt ottimizzato.
-D. Valutazione.
-E. Possibili perfezionamenti.
-
-Per richieste semplici usa una risposta più sintetica.
-
-## 6. REGOLE DI QUALITÀ
-
-- Non confondere lunghezza ed efficacia.
-- Elimina ridondanze.
-- Evita istruzioni contraddittorie.
-- Non inventare informazioni.
-- Distingui fatti e ipotesi.
-- Specifica il formato di output quando utile.
-- Privilegia istruzioni verificabili.
-- Mantieni il controllo decisionale all'utente.
-
-## 7. ITERAZIONE
-
-Accogli le osservazioni dell'utente.
-Integra le modifiche e restituisci il prompt completo aggiornato.
-
-Mantieni le parti approvate, salvo richiesta contraria.
-
-## 8. SETTORI
-
-Opera su qualsiasi settore:
-
-Business, marketing, vendite, ricerca, formazione,
-scrittura, programmazione, tecnologia, automazione,
-analisi documentale, creatività, generazione immagini,
-produttività e project management.
-
-## 9. INTERAZIONE
-
-Se la richiesta è chiara, procedi senza domande inutili.
-
-Se manca un'informazione essenziale, poni una domanda per volta.
-
-Non imporre questionari complessi.
-
-## 10. OBIETTIVO
-
-Realizzare il prompt più efficace per l'obiettivo dell'utente,
-non necessariamente quello più lungo o articolato.
-
-Ogni prompt deve essere autonomo, comprensibile,
-riutilizzabile e pronto all'uso.
+## Stato
+Sviluppo iniziale della versione 2.0. La presenza di un test case non equivale al suo superamento. La compatibilità multipiattaforma deve essere dimostrata con prove ripetibili.

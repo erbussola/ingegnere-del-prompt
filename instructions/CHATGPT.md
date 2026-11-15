@@ -1,9 +1,3 @@
 # Configurazione ChatGPT
 
-Guida in preparazione.
-
-Saranno documentate le modalità di configurazione tramite
-Progetti ChatGPT e, dove disponibili, istruzioni personalizzate.
-
-Sarà prevista anche una modalità di utilizzo tramite
-semplice conversazione.
+La guida aggiornata è [deployment/CHATGPT_PROJECT.md](../deployment/CHATGPT_PROJECT.md). Il metodo universale con una normale chat non richiede un progetto: copia [CORE_INSTRUCTIONS.md](CORE_INSTRUCTIONS.md) come primo messaggio.
