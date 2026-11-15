@@ -166,7 +166,7 @@ Un test è PASS solo se:
 4. tutti i criteri essenziali del caso sono soddisfatti;
 5. non si rilevano errori critici.
 
-L'identificazione del bundle richiesta al punto 2 può essere supportata anche dall'attestazione esplicita dell'operatore descritta al §10.1; tale attestazione non equivale a una verifica tecnica indipendente e non sostituisce il requisito di isolamento del punto 1. Se il confronto degli hash risulta non corrispondente, il bundle di riferimento non è identificato come file utilizzato e il caso non può essere dichiarato PASS.
+L'identificazione del bundle richiesta al punto 2 può essere supportata dal Metodo A (confronto hash dell'operatore) oppure dal Metodo B (acquisizione diretta da GitHub) descritti al §10.1. Il Metodo B non richiede un ulteriore hash personale e non equivale a una verifica crittografica indipendente. Nessuno dei due metodi sostituisce il requisito di isolamento del punto 1. Se un confronto hash dà esito non corrispondente, il bundle di riferimento non è identificato come file utilizzato e il caso non può essere dichiarato PASS.
 
 Un test non eseguito non può essere PASS. Un test simulato o una revisione statica non è un test comportamentale reale. Se un transcript è parziale, segnare NOT VERIFIED o PARTIALLY VERIFIED secondo ciò che è dimostrabile.
 
@@ -193,28 +193,32 @@ Ogni transcript deve riportare:
 
 Non modificare il testo del transcript. Eventuali oscuramenti di dati personali o segreti vanno indicati e applicati a una copia destinata alla condivisione; conservare l'originale solo se autorizzato e necessario.
 
-### 10.1 Identità del bundle e attestazione dell'operatore
+### 10.1 Identità del bundle e metodi di identificazione
 
-L'identità del file bundle effettivamente utilizzato può essere documentata mediante una delle seguenti evidenze, da mantenere distinte:
+L'identità del file bundle effettivamente utilizzato può essere documentata mediante due metodi alternativi, da mantenere distinti dalla verifica crittografica indipendente:
 
-1. **Verifica dell'operatore:** l'operatore attesta esplicitamente di avere calcolato personalmente l'hash del file effettivamente utilizzato e di averlo confrontato con quello del file di riferimento nel repository. L'attestazione è un'evidenza documentale valida ai fini della registrazione QA, anche se il transcript non contiene i byte dell'allegato né un hash acquisito automaticamente durante la sessione.
-2. **Verifica tecnica indipendente:** un processo tecnico o la sessione di analisi calcola autonomamente gli hash dei due file e verifica la corrispondenza. Questa evidenza non deve essere confusa con l'attestazione dell'operatore.
-3. **Non verificato:** non è disponibile né una verifica tecnica indipendente né un'attestazione esplicita e identificabile dell'operatore.
-4. **Non corrispondente:** gli hash calcolati con lo stesso algoritmo sui due file sono differenti. In questo caso l'identità del bundle è non corrispondente; non attribuire al file utilizzato l'identità del bundle di riferimento.
+1. **Metodo A — Confronto hash effettuato dall'operatore:** l'operatore calcola personalmente l'hash del file effettivamente utilizzato e lo confronta con quello del file di riferimento nel repository. I due valori devono essere ottenuti con lo stesso algoritmo e la stessa modalità. Registrare nome file, algoritmo/tipo di hash, entrambi i valori e risultato del confronto.
+2. **Metodo B — Acquisizione diretta da GitHub:** l'operatore fornisce un URL GitHub fissato a uno specifico commit immutabile; la chat accede al file, ne legge integralmente il contenuto e conferma esplicitamente l'acquisizione. Se il transcript documenta URL, commit, percorso del file e conferma di lettura integrale, registrare il Core come **identificato mediante acquisizione diretta da GitHub**. Non è richiesto un ulteriore hash personale dell'operatore; l'attestazione hash resta facoltativa.
+3. **Verifica crittografica indipendente:** un processo tecnico indipendente calcola autonomamente l'hash del contenuto effettivamente acquisito e quello del riferimento, quindi verifica la corrispondenza. Questa evidenza non deve essere confusa con il Metodo A o con il Metodo B.
+4. **Identità non verificata:** non è disponibile evidenza sufficiente per il Metodo A, il Metodo B o una verifica crittografica indipendente.
+5. **Non corrispondente:** nel Metodo A o nella verifica indipendente, gli hash comparabili ottenuti con lo stesso algoritmo sono differenti.
 
-Per ogni attestazione registrare almeno:
+Per ogni identificazione registrare il metodo e le evidenze disponibili. Per il Metodo A riportare almeno:
 - nome del file effettivamente utilizzato;
 - algoritmo e tipo di identificatore;
 - hash del file utilizzato;
 - hash del file di riferimento;
-- esito dichiarato del confronto (corrispondente / non corrispondente);
-- provenienza dell'evidenza (attestazione dell'operatore oppure verifica tecnica indipendente).
+- esito dichiarato del confronto.
 
-I due hash devono essere ottenuti con lo stesso algoritmo e secondo la stessa modalità. **SHA-256 del file e Git blob SHA non sono intercambiabili**: indicare sempre quale è stato usato. Un Git blob SHA va denominato esplicitamente come tale; non chiamarlo SHA-256 del file. Il solo nome del file o la dichiarazione dell'assistente di averlo acquisito non dimostrano l'identità del contenuto.
+Per il Metodo B riportare almeno:
+- URL GitHub completo fissato al commit;
+- commit SHA;
+- percorso del file;
+- evidenza nel transcript della conferma di accesso e lettura integrale.
 
-L'attestazione dell'operatore è sufficiente come evidenza documentale per registrare l'identità del Core come **verificata dall'operatore**; non va descritta come verifica tecnica indipendente. Se manca l'attestazione e non esiste una verifica indipendente, registrare **non verificato**. Se il confronto dà esito negativo, registrare **non corrispondente**.
+**SHA-256 del file e Git blob SHA non sono intercambiabili**: indicare sempre il tipo di identificatore. L'acquisizione diretta da GitHub identifica la provenienza documentata del contenuto dal commit indicato, ma non costituisce né va descritta come verifica crittografica indipendente.
 
-Questa regola riguarda esclusivamente l'identità del file bundle. Non modifica il §6, non sana una sessione non isolata, non cambia i criteri F1–F7 e non determina automaticamente PASS. La conformità procedurale e l'esito comportamentale restano valutazioni separate. Un hash non corrispondente impedisce di identificare il file utilizzato con il bundle di riferimento, ma non autorizza a modificare retroattivamente l'esito comportamentale osservato.
+Questa regola riguarda esclusivamente l'identità del file bundle. Non modifica il §6, non sana una sessione non isolata, non cambia i criteri F1–F7 e non determina automaticamente PASS. La conformità procedurale e l'esito comportamentale restano valutazioni separate.
 
 ## 11. Gestione delle anomalie
 
