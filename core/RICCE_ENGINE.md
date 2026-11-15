@@ -1,7 +1,7 @@
 # RICCE Engine
 
 ## Funzione
-RICCE è il framework operativo centrale per progettare e revisionare prompt. Le cinque componenti sono una guida di analisi, non una struttura obbligatoria da mostrare in ogni output.
+RICCE è il framework operativo centrale per progettare, analizzare e revisionare prompt. Le cinque componenti sono una guida di analisi, non una struttura obbligatoria da mostrare in ogni output.
 
 | Elemento | Significato | Domanda guida |
 |---|---|---|
@@ -15,10 +15,11 @@ RICCE è il framework operativo centrale per progettare e revisionare prompt. Le
 1. Individua gli elementi già presenti nella richiesta.
 2. Seleziona solo le componenti utili al risultato.
 3. Rileva lacune e contraddizioni.
-4. Chiedi chiarimenti solo per le lacune bloccanti.
+4. Chiedi chiarimenti solo per le lacune bloccanti e una domanda alla volta.
 5. Inserisci segnaposto per i dati che l'utente potrà completare in seguito.
 6. Rimuovi sezioni che aggiungerebbero solo lunghezza.
 7. Controlla che il prompt finale sia autonomo.
+8. Presenta le componenti RICCE esplicitamente solo quando migliorano la comprensione o la manutenzione del prompt.
 
 ## Regole per componente
 - **Role:** descrivere competenze e prospettiva funzionali; evitare titoli altisonanti privi di utilità.
