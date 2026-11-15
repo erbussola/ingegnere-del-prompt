@@ -223,6 +223,20 @@ Quando trovi un comportamento errato:
 
 Non modificare `core/` o `instructions/` per far passare il test. Le correzioni si discutono soltanto dopo la raccolta delle evidenze, in una fase separata.
 
+## Esecuzione riproducibile T16–T20
+
+Usare le sezioni omonime in TEST_CASES.md come fonte vincolante di input e fixture. Per ogni sottocaso aprire una chat nuova, caricare un solo bundle e inviare esclusivamente i messaggi INPUT UTENTE nell'ordine indicato. Non mostrare al modello setup riservati, attese, rubriche o criteri PASS/FAIL. Allegare i documenti T17 esattamente come riportati. I messaggi di consenso e variazione di T16-E restano nella stessa chat. Ogni sottocaso T19 è autonomo, salvo i turni di confronto espressamente indicati.
+
+Prima della prova compilare la scheda ambientale. Se non è possibile dimostrare isolamento, bundle, completezza del transcript o disponibilità dei fixture, classificare la conformità come non conforme/parziale/non verificabile e non attribuire PASS controllato. Conservare transcript integrale e tutte le evidenze richieste.
+
+### Riferimenti T04/T10
+- T04 storico: TEST_CASES.md → “T04 — Creazione per marketing”.
+- T04-R, revisione A04 marketing/KPI/budget: TEST_CASES.md → “T04 — Revisione A04: marketing, KPI e budget”.
+- T10 storico: TEST_CASES.md → “T10 — Revisione iterativa”.
+- T10-R, revisione A04 artefatto completo/iterazione: TEST_CASES.md → “T10 — Revisione A04: artefatto completo e iterazione”.
+
+Le revisioni A04 sono casi distinti e non sostituiscono i casi storici.
+
 ## 11. Quando la validazione può dirsi conclusa
 
 La preparazione dei documenti non significa che i test siano stati superati. La campagna termina soltanto quando:
@@ -242,6 +256,21 @@ Usare questo addendum per la campagna successiva all'implementazione A04. Prima 
 
 Valutare separatamente: comportamento osservato (PASS/FAIL/PARTIALLY VERIFIED/NOT CONCLUSIVE); conformità procedurale (CONFORME/NON CONFORME/PARZIALMENTE CONFORME/PREREQUISITI NON VERIFICABILI/NON ESEGUITO); identità bundle (IDENTIFICATO/PARZIALE/NON IDENTIFICATO); qualità evidenze (COMPLETA/PARZIALE/INSUFFICIENTE). Una run non conforme non dimostra PASS controllato; un FAIL in run non conforme resta esplorativo e richiede ripetizione controllata.
 
-T01: non usare maggioranza o media. FAIL se esiste almeno un FAIL controllato irrisolto; PASS se esiste almeno un PASS controllato e nessun FAIL controllato irrisolto; NOT CONCLUSIVE per sole run non conformi/insufficienti, anomalie non risolte o run conformi discordanti. Conservare tutte le run.
+### Aggregazione T01 — regola deterministica
+
+Conservare sempre tutte le run e i loro quattro assi (comportamento, conformità procedurale, identità bundle, qualità delle evidenze). Non cancellare, sovrascrivere o riclassificare retroattivamente un risultato storico. Le run non conformi restano evidenza esplorativa e non dimostrano PASS controllato.
+
+Applicare nell'ordine le seguenti regole, senza maggioranze, medie o voto prevalente:
+
+1. **NOT RUN:** non esiste alcuna run registrata.
+2. **NOT CONCLUSIVE:** esistono soltanto run non conformi oppure prerequisiti/evidenze non consentono una valutazione controllata.
+3. **NOT CONCLUSIVE — ANOMALIA DA INVESTIGARE:** esiste almeno un FAIL controllato e almeno una run conforme successiva con esito PASS. Il FAIL controllato resta esplicitamente aperto; nessun PASS aggregato è consentito finché la discordanza non è investigata e risolta.
+4. **FAIL:** tutte le run conformi valutabili sono FAIL e non esistono PASS conformi discordanti.
+5. **PASS:** tutte le run conformi valutabili sono PASS e non esistono FAIL controllati irrisolti.
+6. **NOT CONCLUSIVE:** ogni altra combinazione discordante o incompleta, inclusi FAIL controllati associati a run conformi PARTIALLY VERIFIED/NOT CONCLUSIVE, oppure anomalie non risolte.
+
+**Indagine:** registrare ipotesi, controlli, evidenze, responsabile, data e conclusione. Se l'indagine conferma un difetto, mantenere l'aggregato FAIL. Se dimostra che il FAIL dipendeva da causa esterna o condizione non riproducibile, documentare causa, evidenze e decisione esplicita di riclassificazione per l'aggregato; il risultato originale resta nel registro storico e non viene eliminato né riscritto. Solo dopo una risoluzione documentata si può ricalcolare l'aggregato.
+
+Un PASS conforme non annulla un FAIL controllato. Un FAIL non conforme resta esplorativo. La conformità non trasforma da sola un risultato comportamentale in PASS.
 
 Full: T03, T05, T06, T11, T15, T16-A…E, T17-A…E, T18, T19-A…D, T20-A…F, T01 aggregato, T04 revisionato, T10 revisionato, T12 e T08. Compact: T01, T02, T08, T09, T10, T11, T12, T13, T14 più confronti T16-A…E, T17-A…E, T18 e T19-A…D. Tutti i confronti richiedono sessioni distinte e input comparabili. La preparazione non è esecuzione: non inventare transcript o risultati.
