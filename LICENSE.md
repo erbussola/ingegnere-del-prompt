@@ -6,12 +6,14 @@ Salvo diversa indicazione esplicita, i materiali originali di **Ingegnere del Pr
 
 **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).**
 
-- Testo legale ufficiale: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+Il testo legale ufficiale completo, senza modifiche, è disponibile direttamente da Creative Commons:
+- Legal Code (HTML): https://creativecommons.org/licenses/by-sa/4.0/legalcode
+- Legal Code (testo semplice): https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt
 - Sintesi informativa: https://creativecommons.org/licenses/by-sa/4.0/
-- Attribuzione consigliata: **Ingegnere del Prompt — progetto erbussola**.
-- URL del progetto: https://github.com/erbussola/ingegnere-del-prompt
 
-Quando si riutilizzano o modificano materiali, rispettare le condizioni della licenza e indicare le modifiche apportate. Il testo legale pubblicato da Creative Commons è il riferimento prevalente; questa pagina è una nota informativa e non lo modifica né lo sostituisce.
+Riferimento canonico: versione 4.0 International. La copia/link ufficiale di Creative Commons prevale su questa nota informativa. Si mantiene il collegamento diretto alla fonte canonica per evitare che una trascrizione locale diverga in caso di correzioni o errata.
+
+Attribuzione consigliata: **Ingegnere del Prompt — progetto erbussola**. Indicare anche l'URL https://github.com/erbussola/ingegnere-del-prompt e descrivere le modifiche apportate.
 
 ## Materiali di terze parti
 
