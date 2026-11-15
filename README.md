@@ -34,7 +34,7 @@ Il comportamento centrale è indipendente dal fornitore. Le regole sono descritt
 | [Framework](framework/) | RICCE, valutazione, checklist e continuità |
 | [Template](templates/) | Business, marketing, analisi, scrittura e generazione immagini |
 | [Esempi](examples/) | Esempi base e avanzati |
-| [Test](tests/) | Piano, 12 casi di test e matrice multipiattaforma |
+| [Test](tests/) | Piano, 15 casi di test, test di fedeltà e matrice multipiattaforma |
 | [Knowledge Base](knowledge/) | Guida all'organizzazione delle fonti |
 | [Guide](docs/) | Brief, architettura, installazione, uso, FAQ e troubleshooting |
 | [Roadmap](roadmap/FUTURE_VERSIONS.md) | Evoluzione prevista |
