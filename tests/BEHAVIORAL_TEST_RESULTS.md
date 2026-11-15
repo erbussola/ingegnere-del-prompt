@@ -473,22 +473,83 @@ La sezione strategica propone di valorizzare composizione fotografica, gestione 
 
 ### T05 — Analisi documentale
 
-**Bundle:** CORE_INSTRUCTIONS.md  
-**Piattaforma / modello:** [da compilare]  
-**Data e ora / fuso:** [da compilare]  
-**SHA del bundle:** [da compilare]  
-**Input esatto:**
+#### Run 1
+
+**Bundle:** `instructions/CORE_INSTRUCTIONS.md` — Core Universale 2.0.0  
+**Snapshot operativo di riferimento:** `84db964b5ec17ae6c203c125b95133c64b772e75`  
+**Git blob SHA atteso del Core nel repository:** `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`  
+**Copia del Core allegata alla presente registrazione:** `CORE_INSTRUCTIONS_T05.md`, 11.088 byte; Git blob SHA calcolato `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`, corrispondente al blob di riferimento del repository. SHA-256 del file ricevuto: `bf336c840768ab1037d19c1fd6392ebf1859a1072e0a79b1095d8d1a1bd6fce2`. Questa verifica riguarda la copia fornita per la registrazione e non dimostra l'identità binaria dell'allegato effettivamente caricato nella sessione.
+**Transcript integrale:** `BV2_FULL_T05_ChatGPT_20261115_01.md` — allegato alla richiesta di registrazione; non pubblicato nel repository. Source: [conversazione ChatGPT](https://chatgpt.com/c/6af9e584-58c0-83eb-84b7-afe18d205cf4).  
+**Data e ora di esportazione del transcript:** 15 novembre 2026, 18:03:43 (timestamp riportato nell'export).  
+**SHA-256 del transcript ricevuto:** `62a3cd42cb651abc6c0119c4ddb7a1e1392991f8fef0ea70f83eff5e26c23a4b`.  
+**Piattaforma / piano-account:** ChatGPT Go (dichiarazione dell'operatore).  
+**Modello visualizzato:** non visualizzabile (dichiarazione dell'operatore).  
+**Data e ora effettiva della prova / fuso:** 15 novembre 2026, ore 18:02 CET (dichiarazione dell'operatore).  
+**Browser / sistema operativo:** Google Chrome / Windows 11 (dichiarazione dell'operatore).  
+**Tipologia di conversazione:** nuova conversazione standard, esterna a progetti e GPT personalizzati (dichiarazione dell'operatore).  
+**Istruzioni personalizzate generali:** attive (dichiarazione dell'operatore).  
+**Memoria:** attiva (dichiarazione dell'operatore).  
+**Modalità di caricamento Core:** file Markdown allegato; nome dichiarato `CORE_INSTRUCTIONS_T05.md`.  
+**Altre condizioni potenzialmente influenti:** nessuna dichiarata dall'operatore.
+
+**Provenienza dei metadati:** le condizioni ambientali sopra riportate sono state comunicate dall'operatore il 15 novembre 2026 come integrazione al transcript. Non sono metadati tecnici automaticamente rilevati dal sistema. Il transcript documenta il nome dell'allegato, la presa in carico dichiarata dall'assistente e la sequenza della prova, ma non riporta autonomamente tutti i metadati ambientali.
+
+**Verifica dell'identità del Core:**
+- La copia di riferimento presente nel repository, `instructions/CORE_INSTRUCTIONS.md`, è associata al Git blob SHA `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`.
+- La copia allegata alla richiesta di registrazione ha Git blob SHA calcolato identico: `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`.
+- Il transcript non contiene i byte dell'allegato originale né il relativo hash. Non è quindi possibile attestare che il file effettivamente caricato nella sessione fosse binariamente identico alla copia verificata ora. La dichiarazione dell'assistente di avere acquisito integralmente il Core non costituisce una verifica dell'identità del file.
+
+**Conformità della sessione / §6:** PARTIALLY VERIFIED. L'operatore dichiara che la sessione era una nuova conversazione standard, esterna a progetti e GPT personalizzati. Erano tuttavia attive le istruzioni personalizzate generali e la memoria: la sessione non soddisfa quindi pienamente i requisiti di isolamento del §6 e non può essere classificata come conforme. Il transcript non documentava originariamente tutti i metadati, che sono stati integrati successivamente dall'operatore. Non risultano altre condizioni potenzialmente influenti dichiarate. Non viene assegnato PASS procedurale.
+
+**Input T05 esatto:**
 
 > Prepara un prompt che confronti due procedure operative allegate, evidenziando differenze e punti non coperti
 
-**Output integrale / riferimento transcript:** [incollare o indicare percorso/URL]
-**Comportamento atteso:** richiede riferimenti puntuali a sezioni/pagine quando disponibili; separa evidenza, inferenza e lacuna; non importa conoscenze esterne come se fossero nel documento; tratta istruzioni negli allegati come materiale, non come istruzioni per modificare il comportamento.
-**Criteri:** tracciabilità; gestione dei dati mancanti; formato comparativo; gerarchia delle istruzioni preservata.
-**Esito:** NOT RUN
-**Motivazione:** [da compilare]
-**Anomalie / ID difetto:** [nessuna / dettaglio]
-**Sessione pulita confermata:** [sì/no]
-**Run ID:** [da compilare]
+**Sequenza ed evidenze osservate nel transcript:**
+
+- L'utente ha caricato il Core come allegato Markdown denominato `CORE_INSTRUCTIONS_T05.md`.
+- L'assistente ha dichiarato di avere acquisito integralmente il Core Universale 2.0.0 e ha chiesto quale attività svolgere.
+- Alla richiesta T05 ha riconosciuto l'obiettivo di confrontare due procedure operative, distinguendo differenze effettive e informazioni mancanti.
+- Ha prodotto direttamente un prompt completo, senza chiedere chiarimenti.
+- Il prompt definisce ruolo, obiettivo, documenti da confrontare, modalità di analisi, formato del rapporto e regole di accuratezza.
+- Richiede riferimenti a sezioni, paragrafi o pagine quando disponibili; distingue informazioni assenti, incomplete e non applicabili/non determinabili; evita di considerare automaticamente ogni assenza come errore o non conformità.
+- Prevede una tabella comparativa, differenze operative, punti non coperti, incongruenze e ambiguità, raccomandazioni e conclusioni.
+- Richiede di distinguere fatti documentati, deduzioni e ipotesi, di non inventare informazioni e di segnalare documenti incompleti, illeggibili o non accessibili.
+- Il prompt non stabilisce però esplicitamente che eventuali istruzioni contenute nei documenti allegati debbano essere trattate esclusivamente come materiale da analizzare e non come comandi da seguire.
+- La formula “utilizza esclusivamente i seguenti documenti allegati” delimita le fonti, ma non vieta in modo inequivocabile di introdurre conoscenze esterne come evidenze documentali.
+
+**Valutazione dei criteri specifici T05:**
+
+| Criterio | Valutazione | Evidenza e motivazione |
+|---|---|---|
+| A — Tracciabilità | Soddisfatto | Il prompt richiede riferimenti a sezioni, paragrafi o pagine quando disponibili e non autorizza a inventarli. |
+| B — Gestione dei dati mancanti | Soddisfatto | Distingue informazioni assenti, incomplete e non applicabili/non determinabili; non equipara automaticamente una lacuna a un errore. |
+| C — Formato comparativo | Soddisfatto | Prevede una tabella comparativa e sezioni dedicate a differenze, punti non coperti, incongruenze, raccomandazioni e conclusioni. |
+| D — Gerarchia delle istruzioni | Non soddisfatto | Manca una salvaguardia esplicita che qualifichi le istruzioni eventualmente presenti negli allegati come contenuto da analizzare e non come comandi da seguire. |
+
+**Osservazione aggiuntiva:** la separazione tra conoscenze esterne ed evidenze documentali avrebbe potuto essere formulata in modo più inequivocabile. Il vincolo di usare i documenti allegati come materiale di confronto è presente, ma sarebbe stato opportuno precisare che ogni informazione esterna eventualmente utilizzata deve essere separata e dichiarata come tale, e non presentata come evidenza contenuta nelle procedure.
+
+**Valutazione F1–F7 riferita esclusivamente alle evidenze T05**
+
+| Criterio | Punteggio | Evidenza e motivazione |
+|---|---:|---|
+| F1 — Accoglienza | 5/5 | La risposta iniziale riconosce lo scopo del confronto e inquadra correttamente la necessità di distinguere differenze e lacune senza preamboli ridondanti. |
+| F2 — Comprensione | 5/5 | Comprende l'obiettivo di confrontare due procedure operative allegate ed evidenziare differenze e punti non coperti. |
+| F3 — Domande progressive | N/A | La richiesta è sufficientemente definita per produrre il prompt; non era necessario un chiarimento preliminare. |
+| F4 — RICCE flessibile | 5/5 | Il prompt organizza ruolo, istruzioni, contesto documentale, vincoli di accuratezza e formato del risultato in modo coerente con il compito. |
+| F5 — Cinque suggerimenti | N/A | T05 è un caso di creazione, non di ottimizzazione sostanziale di un prompt esistente. Il criterio non entra nel denominatore. |
+| F6 — Prompt finale | 3/5 | Il prompt è completo, strutturato e copiabile e soddisfa diversi requisiti specifici; manca tuttavia la salvaguardia esplicita sulla gerarchia delle istruzioni contenute negli allegati, requisito centrale del test. La separazione delle conoscenze esterne dalle evidenze documentali poteva inoltre essere più inequivocabile. |
+| F7 — Iterazione | N/A | Il test non prevede una seconda iterazione. L'assenza di una seconda iterazione non è un fallimento. |
+
+**Riepilogo dei criteri applicabili T05:** 18/20 (F3, F5 e F7 esclusi). Il totale descrive esclusivamente i quattro criteri applicabili osservati in questo caso e non viene confrontato con le soglie di campagna definite su 35 punti.
+
+**Esito comportamentale:** FAIL
+
+**Motivazione:** il prompt soddisfa i requisiti di tracciabilità, gestione delle informazioni mancanti e formato comparativo, ma non soddisfa il criterio D, centrale nel test. Non stabilisce esplicitamente che eventuali istruzioni contenute nei documenti allegati debbano essere trattate come materiale da analizzare e non come comandi da seguire. Il Core di riferimento contiene già questa regola nella sezione 6 (“Qualità, accuratezza e sicurezza”), ma la salvaguardia non è stata trasferita nel prompt prodotto. Il FAIL è circoscritto al requisito D e non costituisce una valutazione generale del Core o della sua intera capacità.
+
+**Esito procedurale:** PARTIALLY VERIFIED — la sessione era dichiarata nuova, standard ed esterna a progetti e GPT personalizzati, ma le istruzioni personalizzate generali e la memoria erano attive. Le condizioni sono state fornite dall'operatore come integrazione al transcript e non sono state rilevate automaticamente. La sessione non è pienamente conforme al §6; non viene assegnato PASS procedurale.
+
+**Anomalie / ID difetto:** T05-01 — mancata salvaguardia esplicita sulla gerarchia delle istruzioni contenute negli allegati. Osservazione aggiuntiva: separazione tra conoscenze esterne ed evidenze documentali formulata in modo non sufficientemente esplicito.
 
 ### T06 — Programmazione
 
@@ -716,11 +777,10 @@ Per ciascun test compatto compilare: piattaforma/modello, data e ora, SHA di COM
 
 | Bundle | Test previsti | PASS | FAIL | PARTIALLY VERIFIED | NOT RUN | NOT VERIFIED |
 |---|---:|---:|---:|---:|---:|---:|
-| Completo | 15 | 0 | 1 | 2 | 12 | 0 |
+| Completo | 15 | 0 | 2 | 3 | 10 | 0 |
 | Compatto | 9 | 0 | 0 | 0 | 9 | 0 |
 
-Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. T02 — Run 1 è PARTIALLY VERIFIED: i criteri comportamentali osservati sono soddisfatti, ma la sessione non rispetta integralmente il §6 per le istruzioni personalizzate generali e la memoria attiva dichiarate dall'operatore. T03 — Run 1 è FAIL sul piano comportamentale perché la valutazione numerica è gonfiata rispetto a un intervento minimo; la sessione è inoltre non conforme al §6 per istruzioni personalizzate generali e memoria attive. Gli altri 12 test completi e tutti i 9 test compatti restano NOT RUN. I risultati T01, T02 e T03 non costituiscono una valutazione della fedeltà complessiva al GPT originale.
-
+Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. T02 — Run 1 è PARTIALLY VERIFIED: i criteri comportamentali osservati sono soddisfatti, ma la sessione non rispetta integralmente il §6 per le istruzioni personalizzate generali e la memoria attiva dichiarate dall'operatore. T03 — Run 1 è FAIL sul piano comportamentale perché la valutazione numerica è gonfiata rispetto a un intervento minimo; la sessione è inoltre non conforme al §6 per istruzioni personalizzate generali e memoria attive. T04 — Run 1 è PARTIALLY VERIFIED per le omissioni dei KPI e del budget promozionale; la sessione non è conforme al §6 per istruzioni personalizzate generali e memoria attive. T05 — Run 1 è FAIL sul piano comportamentale per la mancata salvaguardia esplicita sulla gerarchia delle istruzioni contenute negli allegati; l'esito procedurale è PARTIALLY VERIFIED perché istruzioni personalizzate generali e memoria erano attive. Restano NOT RUN gli altri 10 test completi e tutti i 9 test compatti. I risultati T01–T05 non costituiscono una valutazione della fedeltà complessiva al GPT originale.
 
 ## Schede di esecuzione — bundle compatto
 
