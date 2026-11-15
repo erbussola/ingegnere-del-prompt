@@ -1527,8 +1527,9 @@ Per T16-A…E, T17-A…E, T18-A…D, T19-A…D e T20-A…F utilizzare gli input 
 - Conformità procedurale:
 - Identità bundle:
 - Qualità evidenze:
+- Validità della run rispetto alle condizioni/bundle: VALIDA / NON VALIDA / INDETERMINATA:
 - Attribuibilità al bundle: ATTRIBUIBILE / CAUSA ESTERNA DIMOSTRATA / INDAGINE APERTA / NON DETERMINABILE:
-- Ammissibilità aggregata: INCLUSA / ESCLUSA / SOSPESA IN ATTESA DI INDAGINE:
+- Ammissibilità aggregata: INCLUSA / ESCLUSA PER CAUSA ESTERNA DOCUMENTATA / NON AMMISSIBILE (NON CONFORMITÀ O EVIDENZE INSUFFICIENTI) / SOSPESA IN ATTESA DI INDAGINE:
 - ID indagine:
 - Causa esterna (se dichiarata) e evidenze verificabili:
 - Valutatore responsabile:
@@ -1538,9 +1539,10 @@ Per T16-A…E, T17-A…E, T18-A…D, T19-A…D e T20-A…F utilizzare gli input 
 
 ## Scheda aggregazione T01 — nuova versione
 - Elenco completo delle run e ID:
-- Run INCLUSE (ID e motivazione):
-- Run ESCLUSE (ID, FAIL storico, causa dimostrata, evidenze, valutatore e data/ora):
-- Run SOSPESE (ID, indagine aperta e responsabile):
+- Run INCLUSE (ID, validità VALIDA e motivazione):
+- Run ESCLUSE PER CAUSA ESTERNA DOCUMENTATA (ID, FAIL storico, validità NON VALIDA, causa dimostrata, evidenze, valutatore e data/ora):
+- Run NON AMMISSIBILI (ID, validità NON VALIDA/INDETERMINATA, non conformità o evidenze insufficienti e motivazione):
+- Run SOSPESE (ID, validità INDETERMINATA, indagine aperta e responsabile):
 - FAIL storici conservati:
 - PASS/FAIL delle sole run INCLUSE:
 - Indagini aperte:
@@ -1565,4 +1567,4 @@ Per T16-A…E, T17-A…E, T18-A…D, T19-A…D e T20-A…F utilizzare gli input 
 - **F:** solo run non conformi → NOT CONCLUSIVE.
 - **G:** nessuna run → NOT RUN.
 
-Una causa esterna non dimostrata non consente l'esclusione. Se l'indagine si conclude senza dimostrare la causa, il FAIL resta INCLUSO quando la run è conforme, il bundle è identificato e le evidenze sono complete. Se la causa resta incerta, la run è SOSPESA e l'aggregato NOT CONCLUSIVE. L'esclusione non converte FAIL in PASS e non modifica la run originaria.
+Una causa esterna non dimostrata non consente l'esclusione. Se l'indagine si conclude senza dimostrare la causa, il FAIL resta INCLUSO quando la run è VALIDA, conforme, il bundle è identificato e le evidenze sono complete. Una run NON AMMISSIBILE per non conformità/evidenze insufficienti non è una run ESCLUSA per causa esterna documentata. Se la causa resta incerta, la run è SOSPESA e l'aggregato NOT CONCLUSIVE. L'esclusione non converte FAIL in PASS e non modifica la run originaria.
