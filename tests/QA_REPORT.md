@@ -365,3 +365,12 @@ La PR #2 deve rimanere draft.
 - [ ] Eseguire un confronto completo del Legal Code locale rispetto al plain text canonico.
 - [ ] Verificare eventuali controlli CI disponibili.
 - [ ] Aggiornare la raccomandazione di rilascio solo dopo evidenze riproducibili.
+
+## Addendum A04 — stato dopo implementazione documentale
+
+**Mandato:** A04 — implementazione controllata della specifica A03.  
+**QA comportamentale:** NON ESEGUITO durante l'implementazione.  
+**Equivalenza Compact:** NON VERIFICATA.  
+**Rilascio:** NON AUTORIZZATO.
+
+Questo addendum non riscrive gli esiti storici del rapporto. Le modifiche documentali non costituiscono prova comportamentale. La nuova campagna è descritta nel piano e nella guida; le nuove run sono registrate append-only in BEHAVIORAL_TEST_RESULTS.md. Applicare scheda ambientale, quattro assi indipendenti e aggregazione T01. Tutti i test nuovi richiedono sessioni conformi e transcript integrali. Non dichiarare risolti difetti sulla sola base delle modifiche documentali.
