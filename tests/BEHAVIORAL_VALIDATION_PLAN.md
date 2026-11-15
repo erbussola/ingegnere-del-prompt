@@ -4,10 +4,25 @@
 **Data preparazione:** 15 novembre 2026  
 **Branch:** `architecture/universal-core-v2`  
 **PR:** [#2 — Universal Core 2.0](https://github.com/erbussola/ingegnere-del-prompt/pull/2)  
-**Commit sottoposto alla QA precedente:** `c27935069a2961ad6bf6fd7f16bc18ef52136871`  
-**HEAD rilevato all'avvio di questa fase:** `85050807cb19f68c30aca484060c316b750ece06`
+**Baseline del codice sottoposto alla QA:** `c27935069a2961ad6bf6fd7f16bc18ef52136871`  
+**Commit di pubblicazione QA / HEAD iniziale Behavioral Validation:** `85050807cb19f68c30aca484060c316b750ece06`
 
 > Questo documento prepara l'esecuzione. Non contiene risultati di test comportamentali e non autorizza a dichiarare conclusa la validazione.
+
+## Cronologia e snapshot
+
+| Riferimento | SHA completo | Significato |
+|---|---|---|
+| Baseline della QA documentale | `c27935069a2961ad6bf6fd7f16bc18ef52136871` | Snapshot del branch esaminato; è il commit immediatamente precedente alla pubblicazione del rapporto QA. |
+| Pubblicazione di `tests/QA_REPORT.md` | `85050807cb19f68c30aca484060c316b750ece06` | Commit che ha aggiunto il rapporto QA; il confronto con la baseline mostra esclusivamente l'aggiunta di `tests/QA_REPORT.md`. |
+| HEAD iniziale della fase Behavioral Validation | `85050807cb19f68c30aca484060c316b750ece06` | HEAD rilevato all'avvio della preparazione Behavioral Validation. Coincide con il commit di pubblicazione QA, ma rappresenta un riferimento temporale distinto. |
+| HEAD corrente al controllo pre-allineamento | `daf142111b952dea5a37e41a9cc916a86764d306` | Ultimo commit del branch prima delle modifiche documentali richieste in questo allineamento. |
+| Bundle CORE — Git blob SHA | `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6` | SHA del contenuto di `instructions/CORE_INSTRUCTIONS.md`, verificato nuovamente. |
+| Bundle COMPACT — Git blob SHA | `bc852ec4925e9c81a5689c16a166fd8fb46181aa` | SHA del contenuto di `instructions/COMPACT.md`, verificato nuovamente. |
+
+**Distinzione degli snapshot:** la baseline QA identifica il codice esaminato; il commit successivo pubblica il rapporto; il medesimo commit era anche l'HEAD all'avvio della preparazione Behavioral Validation. Il HEAD corrente del branch è un riferimento successivo e non va confuso con i tre riferimenti storici. Gli SHA dei bundle identificano i contenuti dei file, non commit Git.
+
+**HEAD operativo per l'esecuzione:** il commit di allineamento documentale verrà fissato nel rapporto di pubblicazione. Prima di iniziare T01, verificare che i due Git blob SHA dei bundle corrispondano esattamente ai valori riportati sopra.
 
 ## 1. Obiettivo della campagna
 
@@ -225,60 +240,15 @@ La campagna potrà essere dichiarata conclusa soltanto quando:
 Il rilascio 2.0 resta NO-GO finché i difetti bloccanti non sono risolti e la valutazione finale non è supportata da evidenze. La PR #2 deve restare OPEN — DRAFT — NOT MERGED.
 
 
-## 15. Verifica amministrativa conclusiva della preparazione
+## 15. Verifiche amministrative e stato PR
 
-Dopo la creazione dei documenti, la PR #2 è stata interrogata nuovamente tramite GitHub:
-- stato: **OPEN**;
-- draft: **true**;
-- merged: **false**;
-- mergeable: **true**;
-- head SHA restituito dalla PR al controllo: `af7b7944916d540646c8a0ed1a39f0b872d513f5` (prima dell'ultima correzione editoriale al registro risultati);
-- nessuna review registrata.
+La cronologia degli snapshot e gli SHA dei bundle sono registrati nella sezione **Cronologia e snapshot** all'inizio del documento. Le osservazioni amministrative raccolte durante le verifiche precedenti non costituiscono riferimenti operativi alternativi.
 
-La mergeability è quindi risultata **true** al momento del controllo: non risulta un blocco di merge segnalato da GitHub. Questo dato non equivale a un'approvazione né autorizza il merge. La PR resta draft.
+Al controllo pre-allineamento:
+- PR #2 risultava OPEN e DRAFT, non merged.
+- Il campo `mergeable` è variato tra interrogazioni precedenti; non è stata acquisita una diagnosi attendibile della causa di `false`. Non attribuire cause né tentare correzioni automatiche.
+- La PR #1 non è stata modificata.
+- Il confronto branch/`main` mostrava 62 commit ahead e 0 behind; nessun file eliminato nel diff branch/`main`.
+- Per il controllo CI sul commit allora corrente non sono stati restituiti status check né workflow run. Ciò non prova l'assenza di workflow configurati.
 
-Per CI sul commit HEAD rilevato dopo i documenti: l'API del combined status ha restituito una lista vuota di status e la ricerca delle workflow run associate al commit ha restituito una lista vuota. Interpretazione: **nessuno status check e nessuna workflow run visibili tramite gli endpoint consultati**; non è prova che non esistano workflow configurati o altri controlli non esposti da questi endpoint.
-
-Il controllo di confronto tra HEAD iniziale della fase e branch aggiornato ha mostrato esclusivamente quattro file aggiunti sotto `tests/`, senza file eliminati o modificati. La correzione successiva del riferimento SHA nel registro risultati è una modifica ulteriore, sempre limitata a `tests/BEHAVIORAL_TEST_RESULTS.md`. Nessun file del Core o delle istruzioni è stato modificato.
-
-
-### Aggiornamento dell'ultimo controllo PR
-
-Una lettura successiva della PR, dopo l'aggiornamento della descrizione, ha restituito nuovamente:
-- stato `open`;
-- `draft: true`;
-- `merged: false`;
-- `mergeable: true`;
-- head SHA: `ec961215198a4f947828457b6d48a1fdda3e631d`;
-- base SHA: `e58706a73be2ad2da438a3216093d9eaedda8271`.
-
-Tra due interrogazioni ravvicinate il campo `mergeable` ha restituito prima `false` e poi `true`. Il connettore non espone il campo diagnostico `mergeable_state` né un dettaglio dei conflitti: **non è quindi possibile attribuire una causa certa al valore transitorio false**. L'ultimo stato letto è true e non segnala un blocco di merge; la PR resta comunque draft e non deve essere unita in questa fase.
-
-Il confronto finale tra l'HEAD iniziale `85050807cb19f68c30aca484060c316b750ece06` e il branch aggiornato mostra quattro soli file aggiunti, tutti sotto `tests/`, nessuna eliminazione e nessuna modifica ai file preesistenti. Il confronto branch/`main` indica 57 commit ahead e 0 behind. La PR espone 64 file complessivamente nel suo diff, relativi all'intera storia del branch rispetto a `main`, non soltanto a questa fase.
-
-
-### Ultimo snapshot amministrativo (dopo l'aggiornamento delle schede compatte)
-
-- PR #2: `state=open`, `draft=true`, `merged=false`.
-- `mergeable=false` nell'ultimo snapshot GitHub disponibile.
-- Head PR: `3664f7e6a57b11195386e47de52ad0c32960ea77`; base: `e58706a73be2ad2da438a3216093d9eaedda8271`.
-- Confronto dal HEAD iniziale della fase: 8 commit aggiuntivi; il diff netto è composto esclusivamente dai quattro documenti di validazione sotto `tests/`, tutti aggiunti. Nessun file eliminato e nessun file preesistente modificato in questa fase.
-- Status check e workflow run sul commit: liste vuote.
-
-Il valore `mergeable=false` è un problema amministrativo ancora aperto. L'interfaccia disponibile non restituisce `mergeable_state`, motivazione o dettaglio dei conflitti. Il confronto Git mostra che `main` è antenato del branch (0 commit behind), ma questo dato da solo non sostituisce la diagnosi GitHub. Non dedurre né dichiarare una causa: il proprietario deve controllare la sezione “Checks” e lo stato della PR direttamente su GitHub. Non tentare merge, aggiornamento del branch o risoluzione automatica dei conflitti in questa fase.
-
-
-### Verifica finale dopo l'allineamento degli input
-
-L'ultimo aggiornamento del registro risultati ha mantenuto le stringhe di test esattamente come contenute nei casi originali (i delimitatori tipografici usati nel documento sorgente non fanno parte dell'input da inviare).
-
-Snapshot GitHub successivo:
-- head branch: `d432489d3ceb61775ef513125476c2fb751b2794`;
-- PR #2: OPEN, DRAFT, NOT MERGED;
-- `mergeable=false` nell'ultimo controllo;
-- 10 commit aggiuntivi rispetto all'HEAD iniziale di questa fase;
-- diff netto della fase: soltanto i quattro documenti sotto `tests/`, tutti aggiunti;
-- SHA Git dei bundle invariati: CORE `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`, COMPACT `bc852ec4925e9c81a5689c16a166fd8fb46181aa`;
-- status check e workflow run: nessuno restituito per questo HEAD.
-
-Il motivo di `mergeable=false` resta **NOT VERIFIED**: non è disponibile una diagnosi dei conflitti o il campo `mergeable_state`. Non effettuare merge né tentare di risolvere il problema in questa fase.
+Queste osservazioni sono storiche. Lo stato corrente di PR #1 e PR #2 va riportato nel rapporto di pubblicazione di questo allineamento, senza modificare metadati o stato delle PR.
