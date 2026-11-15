@@ -16,13 +16,13 @@
 | Baseline della QA documentale | `c27935069a2961ad6bf6fd7f16bc18ef52136871` | Snapshot del branch esaminato; è il commit immediatamente precedente alla pubblicazione del rapporto QA. |
 | Pubblicazione di `tests/QA_REPORT.md` | `85050807cb19f68c30aca484060c316b750ece06` | Commit che ha aggiunto il rapporto QA; il confronto con la baseline mostra esclusivamente l'aggiunta di `tests/QA_REPORT.md`. |
 | HEAD iniziale della fase Behavioral Validation | `85050807cb19f68c30aca484060c316b750ece06` | HEAD rilevato all'avvio della preparazione Behavioral Validation. Coincide con il commit di pubblicazione QA, ma rappresenta un riferimento temporale distinto. |
-| HEAD corrente al controllo pre-allineamento | `daf142111b952dea5a37e41a9cc916a86764d306` | Ultimo commit del branch prima delle modifiche documentali richieste in questo allineamento. |
+| HEAD operativo di riferimento per l'esecuzione | `2559dc749e318df286de93e80ca4ce63bb10f11d` | Snapshot Git del branch fissato dopo il primo allineamento dei quattro documenti e prima della sola registrazione finale di questo riferimento. Usare questo SHA per il checkout dei bundle e dei test case. |
 | Bundle CORE — Git blob SHA | `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6` | SHA del contenuto di `instructions/CORE_INSTRUCTIONS.md`, verificato nuovamente. |
 | Bundle COMPACT — Git blob SHA | `bc852ec4925e9c81a5689c16a166fd8fb46181aa` | SHA del contenuto di `instructions/COMPACT.md`, verificato nuovamente. |
 
-**Distinzione degli snapshot:** la baseline QA identifica il codice esaminato; il commit successivo pubblica il rapporto; il medesimo commit era anche l'HEAD all'avvio della preparazione Behavioral Validation. Il HEAD corrente del branch è un riferimento successivo e non va confuso con i tre riferimenti storici. Gli SHA dei bundle identificano i contenuti dei file, non commit Git.
+**Distinzione degli snapshot:** la baseline QA identifica il codice esaminato; il commit successivo pubblica il rapporto; il medesimo commit era anche l'HEAD all'avvio della preparazione Behavioral Validation. Il commit `2559dc749e318df286de93e80ca4ce63bb10f11d` è lo snapshot operativo fissato per la campagna. Il successivo commit di pubblicazione di questo allineamento aggiorna esclusivamente i quattro documenti di validazione e non cambia i bundle né i test case. Gli SHA dei bundle identificano i contenuti dei file, non commit Git.
 
-**HEAD operativo per l'esecuzione:** il commit di allineamento documentale verrà fissato nel rapporto di pubblicazione. Prima di iniziare T01, verificare che i due Git blob SHA dei bundle corrispondano esattamente ai valori riportati sopra.
+**Istruzione operativa:** eseguire il checkout di `2559dc749e318df286de93e80ca4ce63bb10f11d` per avviare la campagna; verificare che i Git blob SHA di CORE e COMPACT corrispondano ai valori riportati sopra. Il branch corrente conterrà anche la pubblicazione finale dei riferimenti, ma il contenuto dei bundle e degli input resta identico allo snapshot operativo.
 
 ## 1. Obiettivo della campagna
 
