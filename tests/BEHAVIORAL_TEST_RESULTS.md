@@ -1468,7 +1468,10 @@ T03, T05, T06, T11, T15, T16-A, T16-B, T16-C, T16-D, T16-E, T17-A, T17-B, T17-C,
 ## Run Compact da registrare
 T01, T02, T08, T09, T10, T11, T12, T13, T14, T16-A, T16-B, T16-C, T16-D, T16-E, T17-A, T17-B, T17-C, T17-D, T17-E, T18-A, T18-B, T18-C, T18-D, T19-A, T19-B, T19-C, T19-D.
 
-## Aggregazione T01
+## Aggregazione T01 — MODELLO STORICO SUPERATO (NON COMPILARE)
+
+> Modello vuoto appartenente alla versione precedente del protocollo. È conservato per tracciabilità, ma non deve essere usato per nuove campagne. Per nuove aggregazioni usare esclusivamente la scheda A08 in fondo a questo file.
+
 - Elenco run e quattro dimensioni:
 - FAIL controllati irrisolti:
 - Anomalie di piattaforma:
@@ -1512,3 +1515,52 @@ Per T16-A…E, T17-A…E, T18-A…D, T19-A…D e T20-A…F utilizzare gli input 
 - Decisione motivata di riclassificazione aggregata, se applicabile:
 - Esito: NOT RUN / NOT CONCLUSIVE / NOT CONCLUSIVE — ANOMALIA DA INVESTIGARE / FAIL / PASS
 - Motivazione e riferimenti alle evidenze:
+
+# Addendum A08 — modello operativo di aggregazione T01
+
+**Integrazione append-only:** nessun transcript, risultato storico, punteggio o esito di run è stato cancellato o riscritto. Il modello vuoto precedente è marcato come storico superato; non usarlo per nuove campagne.
+
+## Modello di registrazione per ogni run
+- ID run / test / bundle / commit e blob SHA:
+- Data e ora della run (fuso):
+- Esito storico della singola run (immutabile): PASS / FAIL / PARTIALLY VERIFIED / NOT CONCLUSIVE / NOT RUN:
+- Conformità procedurale:
+- Identità bundle:
+- Qualità evidenze:
+- Attribuibilità al bundle: ATTRIBUIBILE / CAUSA ESTERNA DIMOSTRATA / INDAGINE APERTA / NON DETERMINABILE:
+- Ammissibilità aggregata: INCLUSA / ESCLUSA / SOSPESA IN ATTESA DI INDAGINE:
+- ID indagine:
+- Causa esterna (se dichiarata) e evidenze verificabili:
+- Valutatore responsabile:
+- Data/ora della decisione e fuso:
+- Motivazione e riferimento alla run originaria:
+- Decisione precedente / nuova decisione (solo stato di ammissibilità, mai l'esito storico):
+
+## Scheda aggregazione T01 — nuova versione
+- Elenco completo delle run e ID:
+- Run INCLUSE (ID e motivazione):
+- Run ESCLUSE (ID, FAIL storico, causa dimostrata, evidenze, valutatore e data/ora):
+- Run SOSPESE (ID, indagine aperta e responsabile):
+- FAIL storici conservati:
+- PASS/FAIL delle sole run INCLUSE:
+- Indagini aperte:
+- Esito aggregato: NOT RUN / NOT CONCLUSIVE / NOT CONCLUSIVE — INDAGINE APERTA / FAIL / PASS:
+- Motivazione e riferimenti alle evidenze:
+
+### Regola A08 — calcolo e casi A–G
+1. Nessuna run registrata: NOT RUN.
+2. Solo run non conformi/esplorative o nessuna run INCLUSA: NOT CONCLUSIVE.
+3. Almeno una run SOSPESA per indagine aperta: NOT CONCLUSIVE — INDAGINE APERTA.
+4. Tutte le run INCLUSE sono FAIL: FAIL.
+5. Tutte le run INCLUSE sono PASS: PASS.
+6. Run INCLUSE discordanti (PASS e FAIL) o con esiti parziali/non conclusivi: NOT CONCLUSIVE.
+
+- **A:** nessuna run → NOT RUN.
+- **B:** solo run non conformi → NOT CONCLUSIVE.
+- **C:** tutte le run ammissibili PASS → PASS.
+- **D:** tutte le run ammissibili FAIL → FAIL.
+- **E:** FAIL con causa esterna dimostrata → conservare FAIL storico, marcare ESCLUSA e ricalcolare solo sulle INCLUSE; se non ne restano, NOT CONCLUSIVE.
+- **F:** PASS e FAIL ammissibili discordanti → NOT CONCLUSIVE, indagine, nessuna maggioranza/media.
+- **G:** risultati parziali, prerequisiti/evidenze insufficienti o attribuibilità incerta → NOT CONCLUSIVE; sospendere se l'indagine è aperta.
+
+Una causa esterna non dimostrata non consente l'esclusione. Se l'indagine si conclude senza dimostrare la causa, la run resta INCLUSA come FAIL quando è conforme, identificata e supportata da evidenze complete. La decisione di esclusione non converte FAIL in PASS e non modifica la run originaria.
