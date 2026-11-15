@@ -255,3 +255,14 @@ Una lettura successiva della PR, dopo l'aggiornamento della descrizione, ha rest
 Tra due interrogazioni ravvicinate il campo `mergeable` ha restituito prima `false` e poi `true`. Il connettore non espone il campo diagnostico `mergeable_state` né un dettaglio dei conflitti: **non è quindi possibile attribuire una causa certa al valore transitorio false**. L'ultimo stato letto è true e non segnala un blocco di merge; la PR resta comunque draft e non deve essere unita in questa fase.
 
 Il confronto finale tra l'HEAD iniziale `85050807cb19f68c30aca484060c316b750ece06` e il branch aggiornato mostra quattro soli file aggiunti, tutti sotto `tests/`, nessuna eliminazione e nessuna modifica ai file preesistenti. Il confronto branch/`main` indica 57 commit ahead e 0 behind. La PR espone 64 file complessivamente nel suo diff, relativi all'intera storia del branch rispetto a `main`, non soltanto a questa fase.
+
+
+### Ultimo snapshot amministrativo (dopo l'aggiornamento delle schede compatte)
+
+- PR #2: `state=open`, `draft=true`, `merged=false`.
+- `mergeable=false` nell'ultimo snapshot GitHub disponibile.
+- Head PR: `3664f7e6a57b11195386e47de52ad0c32960ea77`; base: `e58706a73be2ad2da438a3216093d9eaedda8271`.
+- Confronto dal HEAD iniziale della fase: 8 commit aggiuntivi; il diff netto è composto esclusivamente dai quattro documenti di validazione sotto `tests/`, tutti aggiunti. Nessun file eliminato e nessun file preesistente modificato in questa fase.
+- Status check e workflow run sul commit: liste vuote.
+
+Il valore `mergeable=false` è un problema amministrativo ancora aperto. L'interfaccia disponibile non restituisce `mergeable_state`, motivazione o dettaglio dei conflitti. Il confronto Git mostra che `main` è antenato del branch (0 commit behind), ma questo dato da solo non sostituisce la diagnosi GitHub. Non dedurre né dichiarare una causa: il proprietario deve controllare la sezione “Checks” e lo stato della PR direttamente su GitHub. Non tentare merge, aggiornamento del branch o risoluzione automatica dei conflitti in questa fase.
