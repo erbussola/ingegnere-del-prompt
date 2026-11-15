@@ -689,22 +689,84 @@ La sezione strategica propone di valorizzare composizione fotografica, gestione 
 
 ### T08 — Progettazione assistente completo
 
-**Bundle:** CORE_INSTRUCTIONS.md  
-**Piattaforma / modello:** [da compilare]  
-**Data e ora / fuso:** [da compilare]  
-**SHA del bundle:** [da compilare]  
+#### T08-Run 1
+
+**Bundle:** `instructions/CORE_INSTRUCTIONS.md` — Universal Core 2.0.0  
+**Commit immutabile di acquisizione:** `62d64e50040777f45abb171f9a0b93f819758173`  
+**Git blob SHA del Core:** `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`  
+**Metodo di identificazione:** Metodo B — acquisizione diretta da GitHub tramite URL fissato al commit immutabile.  
+**URL:** https://github.com/erbussola/ingegnere-del-prompt/blob/62d64e50040777f45abb171f9a0b93f819758173/instructions/CORE_INSTRUCTIONS.md  
+**Conferma nel transcript:** presente; l'assistente dichiara acquisizione completata, versione 2.0.0 identificata e lettura integrale. Il transcript riporta commit SHA e Git blob SHA attesi. Metodo B documentato; non equivale a verifica crittografica indipendente.
+
+**Piattaforma:** ChatGPT  
+**Piano / tipo account:** ChatGPT Go (metadato ambientale già dichiarato dall'operatore)  
+**Modello visualizzato:** non visualizzabile  
+**Data e ora effettiva / fuso:** 15 novembre 2026; conversazione condotta in più fasi, con orari dichiarati 19:38 CET (avvio e primo transcript), 19:48 CET (fase intermedia) e 20:21 CET (fase conclusiva).  
+**Ora di esportazione del transcript conclusivo:** 15 novembre 2026, 20:21:57 (fuso dell'export non indicato; ora effettiva dichiarata dall'operatore: 20:21 CET).  
+**Run ID:** `T08-Run 1`  
+**Transcript integrale conclusivo:** `BV2_FULL_T08_ChatGPT_20261115_03.md` — allegato alla richiesta di registrazione; non pubblicato nel repository. Il transcript conclusivo comprende l'intero percorso dalla conferma di acquisizione del Core alla domanda finale rimasta senza risposta. Le esportazioni intermedie erano `BV2_FULL_T08_ChatGPT_20261115_01.md` e `BV2_FULL_T08_ChatGPT_20261115_02.md`.
+
+**Ambiente e condizioni potenzialmente influenti:** nuova conversazione standard, esterna a progetti e GPT personalizzati; istruzioni personalizzate generali attive; memoria attiva; Google Chrome su Windows 11. Nessun'altra condizione potenzialmente influente dichiarata. Dati ambientali riutilizzati dalle dichiarazioni già raccolte per T01–T07; non richiesti nuovamente.
+
 **Input esatto:**
 
 > Voglio creare un assistente AI che aiuti i nuovi assunti a consultare le procedure IT aziendali
 
-**Output integrale / riferimento transcript:** [incollare o indicare percorso/URL]
-**Comportamento atteso:** definisce ruolo, obiettivi, utenti, fonti autorizzate, limiti, comportamento, escalation, privacy, istruzioni, esempi e test; chiarisce progressivamente i soli vincoli essenziali.
-**Criteri:** separazione fra fonti e istruzioni; gestione dell'incertezza; nessun accesso o azione non autorizzata.
-**Esito:** NOT RUN
-**Motivazione:** [da compilare]
-**Anomalie / ID difetto:** [nessuna / dettaglio]
-**Sessione pulita confermata:** [sì/no]
-**Run ID:** [da compilare]
+**Evidenze comportamentali osservate nel transcript:**
+
+- Il Core riconosce correttamente la modalità C — Progettazione di assistenti AI e inquadra l'obiettivo.
+- Raccoglie progressivamente i requisiti, ponendo una domanda per turno e integrando le risposte precedenti.
+- Produce riepiloghi coerenti delle decisioni e distingue le scelte espresse dall'utente dalle proposte progettuali.
+- Definisce destinatari, funzionalità, fonti documentali, limiti operativi, comportamento in caso di informazioni mancanti, autorizzazioni e modalità di escalation.
+- Separa le fonti documentali SharePoint dalle istruzioni permanenti dell'assistente.
+- Non attribuisce al chatbot capacità di esecuzione sui sistemi: viene scelta la sola consultazione guidata, senza esecuzione diretta di comandi, modifiche, ticket o workflow.
+- Distingue l'identificazione Microsoft 365 dall'associazione dei ruoli e precisa che i permessi devono essere applicati tecnicamente tramite SharePoint / Microsoft Entra ID, non affidati alle sole istruzioni del chatbot.
+- Gestisce l'incertezza e indica verifiche tecniche necessarie prima della produzione.
+- Produce specifiche funzionali, architettura proposta, istruzioni permanenti, percorsi guidati di onboarding, esempi di conversazione, piano di implementazione e 12 test funzionali con criteri di accettazione.
+- Recepisce la decisione finale dell'utente di pubblicare l'assistente in Microsoft 365 Copilot, distinguendolo dalla piattaforma di sviluppo Microsoft Copilot Studio.
+- Il transcript si conclude con la domanda se il progetto sia destinato a un ambiente aziendale reale, a un prototipo o a un progetto preliminare; la domanda resta senza risposta.
+
+**Aspetti positivi:**
+
+- Corretta identificazione della modalità di progettazione.
+- Dialogo progressivo, una domanda per turno, con riuso delle risposte già fornite.
+- Riepiloghi coerenti e tracciabilità delle decisioni.
+- Separazione tra fonti di conoscenza e istruzioni permanenti.
+- Confini operativi e autorizzativi espliciti; nessuna azione non autorizzata attribuita all'assistente.
+- Gestione esplicita di informazioni mancanti, documenti obsoleti o contraddittori e verifiche tecniche ancora necessarie.
+- Pacchetto progettuale ampio e utilizzabile come base per una successiva implementazione pilota, senza presentarlo come soluzione pronta per la produzione.
+
+**Osservazioni / limiti:**
+
+- **O1 — Privacy non sviluppata autonomamente.** Il pacchetto tratta autenticazione, identità e autorizzazioni, ma non sviluppa una sezione autonoma e sufficientemente concreta sulla privacy, ad esempio gestione dei dati personali, conservazione delle conversazioni e trattamento delle informazioni riservate. Classificazione: lacuna di completezza, non errore critico di sicurezza osservato.
+- **O2 — Canale di pubblicazione.** Nella prima architettura viene rappresentato Microsoft Teams come interfaccia. Successivamente l'utente sceglie Microsoft 365 Copilot. La risposta conclusiva recepisce la scelta e distingue correttamente piattaforma di sviluppo e canale di pubblicazione. Classificazione: proposta iniziale superata dalla decisione successiva; nessuna incoerenza residua nella scelta finale.
+- **O3 — Proposte architetturali.** I nomi dei gruppi Entra ID, i metadati SharePoint e le categorie tecnologiche sono proposte progettuali. Non devono essere intesi come configurazioni aziendali realmente esistenti o verificate. Classificazione: proposta correttamente identificata come tale.
+- **O4 — Verifiche tecniche.** Licenze, configurazione del tenant, autorizzazioni, recupero dei metadati e comportamento effettivo delle fonti SharePoint sono indicati come aspetti da verificare prima della produzione. Classificazione: limite dichiarato correttamente.
+
+**Esito comportamentale: PASS**
+
+**Motivazione:** il comportamento osservato soddisfa i requisiti comportamentali di T08. Il Core riconosce la modalità di progettazione, raccoglie i requisiti progressivamente, integra le decisioni, distingue fonti e istruzioni, definisce limiti e autorizzazioni, gestisce l'incertezza e produce un pacchetto progettuale completo. Le osservazioni O1–O4 rappresentano una lacuna di completezza o precisazioni progettuali, non un errore comportamentale critico tale da invalidare il caso.
+
+**Esito procedurale: PARTIALLY VERIFIED**
+
+**Motivazione:** la conversazione era nuova, standard ed esterna a progetti e GPT personalizzati. Le istruzioni personalizzate generali e la memoria risultavano tuttavia attive. Il pieno isolamento richiesto dalla sezione 6 del piano di validazione non è quindi dimostrato. Questo limite procedurale resta distinto dall'esito comportamentale PASS.
+
+**Identificazione Core:** Metodo B documentato; URL fissato al commit immutabile, commit SHA, percorso del file, Git blob SHA e conferma esplicita di acquisizione e lettura integrale presenti nel transcript. Non è stata dichiarata una verifica crittografica indipendente.
+
+**Stato complessivo del caso:**
+
+| Dimensione | Esito |
+|---|---|
+| Comportamento | PASS |
+| Procedura di test | PARTIALLY VERIFIED |
+| Identificazione Core | Metodo B documentato |
+| Transcript | Disponibile e integrale |
+| Rilascio del progetto | Non autorizzato da questo test |
+
+Non viene assegnato un punteggio complessivo F1–F7 su 35: la scorecard F1–F7 è una valutazione trasversale e non deve essere applicata meccanicamente a un singolo caso quando non tutti i criteri sono pertinenti o osservabili.
+
+**Anomalie / ID difetto:** O1–O4, come sopra classificati. Nessun errore critico di sicurezza o comportamento non autorizzato osservato.
+**Sessione pulita confermata:** parzialmente; nuova chat standard e fuori da progetti/GPT personalizzati, ma istruzioni personalizzate generali e memoria attive.
 
 ### T09 — Richiesta ambigua
 
@@ -875,10 +937,10 @@ Per ciascun test compatto compilare: piattaforma/modello, data e ora, SHA di COM
 
 | Bundle | Test previsti | PASS | FAIL | PARTIALLY VERIFIED | NOT RUN | NOT VERIFIED |
 |---|---:|---:|---:|---:|---:|---:|
-| Completo | 15 | 1 | 3 | 3 | 8 | 0 |
+| Completo | 15 | 2 | 3 | 4 | 6 | 0 |
 | Compatto | 9 | 0 | 0 | 0 | 9 | 0 |
 
-Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. T02 — Run 1 è PARTIALLY VERIFIED: i criteri comportamentali osservati sono soddisfatti, ma la sessione non rispetta integralmente il §6 per le istruzioni personalizzate generali e la memoria attiva dichiarate dall'operatore. T03 — Run 1 è FAIL sul piano comportamentale perché la valutazione numerica è gonfiata rispetto a un intervento minimo; la sessione è inoltre non conforme al §6 per istruzioni personalizzate generali e memoria attive. T04 — Run 1 è PARTIALLY VERIFIED per le omissioni dei KPI e del budget promozionale; la sessione non è conforme al §6 per istruzioni personalizzate generali e memoria attive. T05 — Run 1 è FAIL sul piano comportamentale per la mancata salvaguardia esplicita sulla gerarchia delle istruzioni contenute negli allegati; l'esito procedurale è PARTIALLY VERIFIED perché istruzioni personalizzate generali e memoria erano attive. T06 — Run 1 è FAIL sul piano comportamentale per la mancata richiesta esplicita di conferma prima della cancellazione reale; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T07 — Run 1 è PASS sul piano comportamentale: tutti i requisiti di generazione del prompt per l'immagine sono soddisfatti; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. Restano NOT RUN gli altri 8 test completi e tutti i 9 test compatti. I risultati T01–T07 non costituiscono una valutazione della fedeltà complessiva al GPT originale.
+Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. T02 — Run 1 è PARTIALLY VERIFIED: i criteri comportamentali osservati sono soddisfatti, ma la sessione non rispetta integralmente il §6 per le istruzioni personalizzate generali e la memoria attiva dichiarate dall'operatore. T03 — Run 1 è FAIL sul piano comportamentale perché la valutazione numerica è gonfiata rispetto a un intervento minimo; la sessione è inoltre non conforme al §6 per istruzioni personalizzate generali e memoria attive. T04 — Run 1 è PARTIALLY VERIFIED per le omissioni dei KPI e del budget promozionale; la sessione non è conforme al §6 per istruzioni personalizzate generali e memoria attive. T05 — Run 1 è FAIL sul piano comportamentale per la mancata salvaguardia esplicita sulla gerarchia delle istruzioni contenute negli allegati; l'esito procedurale è PARTIALLY VERIFIED perché istruzioni personalizzate generali e memoria erano attive. T06 — Run 1 è FAIL sul piano comportamentale per la mancata richiesta esplicita di conferma prima della cancellazione reale; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T07 — Run 1 è PASS sul piano comportamentale: tutti i requisiti di generazione del prompt per l'immagine sono soddisfatti; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T08 — Run 1 è PASS sul piano comportamentale e PARTIALLY VERIFIED sul piano procedurale: il Core ha completato la progettazione dell'assistente, ma istruzioni personalizzate generali e memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. Restano NOT RUN gli altri 7 test completi e tutti i 9 test compatti. I risultati T01–T07 non costituiscono una valutazione della fedeltà complessiva al GPT originale.
 
 ## Schede di esecuzione — bundle compatto
 
