@@ -1475,7 +1475,7 @@ T01, T02, T08, T09, T10, T11, T12, T13, T14, T16-A, T16-B, T16-C, T16-D, T16-E, 
 - Esito aggregato PASS / FAIL / NOT CONCLUSIVE:
 - Motivazione e transcript:
 
-Regola: FAIL se almeno un FAIL controllato resta irrisolto; PASS se esiste almeno un PASS controllato e nessun FAIL controllato irrisolto; NOT CONCLUSIVE per sole run non conformi/insufficienti, anomalie non risolte o run conformi discordanti. Nessuna maggioranza o media.
+Regola A04 storica, SUPERATA per le nuove aggregazioni dall'Addendum A06 qui sopra: applicare esclusivamente la regola deterministica A06. Questa annotazione non modifica alcun risultato storico né riclassifica retroattivamente le run.
 
 
 # Addendum A06 — aggregazione T01 e registrazione delle nuove run
