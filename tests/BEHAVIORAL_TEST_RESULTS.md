@@ -2,7 +2,10 @@
 
 **Campagna:** Behavioral Validation 2.0  
 **Branch di riferimento:** `architecture/universal-core-v2`  
-**SHA bundle completo atteso:** `85050807cb19f68c30aca484060c316b750ece06` (verificare che non sia cambiato prima dell'esecuzione)  
+**Commit SHA di riferimento all'avvio della campagna:** `85050807cb19f68c30aca484060c316b750ece06`  
+**Git blob SHA del bundle completo (CORE_INSTRUCTIONS.md):** `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`  
+**Git blob SHA del bundle compatto (COMPACT.md):** `bc852ec4925e9c81a5689c16a166fd8fb46181aa`  
+**Nota:** prima di eseguire i test, verificare che i blob SHA dei bundle siano ancora identici; il commit SHA identifica invece la revisione del repository.
 **Stato iniziale di tutti i test:** NOT RUN
 
 > Compilare una scheda per ogni esecuzione. Non inserire output ipotetici, simulati o riassunti al posto dei transcript. Per T10 e T13 mantenere i turni nella stessa sessione.
