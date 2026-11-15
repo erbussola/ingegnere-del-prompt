@@ -235,3 +235,13 @@ La preparazione dei documenti non significa che i test siano stati superati. La 
 - i casi non verificabili e i limiti di piattaforma sono dichiarati.
 
 Fino ad allora la validazione resta incompleta e la PR #2 deve restare OPEN — DRAFT — NOT MERGED.
+
+## A04 — Istruzioni operative per la nuova campagna
+
+Usare questo addendum per la campagna successiva all'implementazione A04. Prima di ogni run aprire una chat standard nuova; verificare assenza di Project/GPT personalizzato/notebook/agente; registrare piattaforma, modello, data/ora/fuso, istruzioni personalizzate e Memory come ATTIVE/DISATTIVATE/NON VERIFICABILE, contesto persistente e bundle. Non dedurre gli stati ignoti. Caricare soltanto il bundle e inviare input esatto; conservare transcript integrale senza suggerire criteri al modello.
+
+Valutare separatamente: comportamento osservato (PASS/FAIL/PARTIALLY VERIFIED/NOT CONCLUSIVE); conformità procedurale (CONFORME/NON CONFORME/PARZIALMENTE CONFORME/PREREQUISITI NON VERIFICABILI/NON ESEGUITO); identità bundle (IDENTIFICATO/PARZIALE/NON IDENTIFICATO); qualità evidenze (COMPLETA/PARZIALE/INSUFFICIENTE). Una run non conforme non dimostra PASS controllato; un FAIL in run non conforme resta esplorativo e richiede ripetizione controllata.
+
+T01: non usare maggioranza o media. FAIL se esiste almeno un FAIL controllato irrisolto; PASS se esiste almeno un PASS controllato e nessun FAIL controllato irrisolto; NOT CONCLUSIVE per sole run non conformi/insufficienti, anomalie non risolte o run conformi discordanti. Conservare tutte le run.
+
+Full: T03, T05, T06, T11, T15, T16-A…E, T17-A…E, T18, T19-A…D, T20-A…F, T01 aggregato, T04 revisionato, T10 revisionato, T12 e T08. Compact: T01, T02, T08, T09, T10, T11, T12, T13, T14 più confronti T16-A…E, T17-A…E, T18 e T19-A…D. Tutti i confronti richiedono sessioni distinte e input comparabili. La preparazione non è esecuzione: non inventare transcript o risultati.
