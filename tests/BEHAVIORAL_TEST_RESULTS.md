@@ -30,6 +30,29 @@
 - Se non esiste evidenza, lasciare il punteggio non compilato e usare NOT RUN.
 - Usare solo: PASS, FAIL, PARTIALLY VERIFIED, NOT RUN, NOT VERIFIED.
 
+## Regola per le registrazioni future — identità del Core
+
+Per tutte le nuove registrazioni comportamentali, sia del bundle completo sia del bundle compatto, documentare separatamente il livello di verifica dell'identità del file utilizzato. Non retro-applicare questa regola alle registrazioni storiche T01–T05: restano fedeli alle evidenze disponibili al momento della loro valutazione.
+
+Usare il seguente modello:
+
+**Attestazione dell'identità del Core**
+- Ho calcolato personalmente l'hash del Core effettivamente utilizzato: Sì / No
+- Nome del file utilizzato:
+- Algoritmo utilizzato:
+- Hash del Core utilizzato:
+- Hash del Core di riferimento:
+- Confermo che i due hash corrispondono: Sì / No
+- Eventuali note:
+
+**Classificazione dell'evidenza:**
+- **Verificata dall'operatore:** attestazione esplicita presente, con nome file, algoritmo, entrambi gli hash e confronto dichiarato.
+- **Verificata tecnicamente in modo indipendente:** processo tecnico autonomo ha calcolato e confrontato gli hash.
+- **Non verificata:** mancano sia verifica indipendente sia attestazione esplicita.
+- **Non corrispondente:** gli hash comparabili sono differenti.
+
+Indicare sempre il tipo di hash. SHA-256 del file e Git blob SHA sono identificatori distinti e non intercambiabili. L'attestazione dell'operatore è evidenza QA valida, ma non deve essere descritta come verifica indipendente. L'assenza dell'attestazione non invalida automaticamente il test: si applicano le normali regole probatorie. Questa classificazione non modifica isolamento §6, F1–F7, né la distinzione tra esito comportamentale e procedurale; non attribuisce automaticamente PASS.
+
 ## Registro esecuzioni — bundle completo
 
 Bundle: `instructions/CORE_INSTRUCTIONS.md`
