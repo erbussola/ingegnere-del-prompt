@@ -266,3 +266,19 @@ Il confronto finale tra l'HEAD iniziale `85050807cb19f68c30aca484060c316b750ece0
 - Status check e workflow run sul commit: liste vuote.
 
 Il valore `mergeable=false` è un problema amministrativo ancora aperto. L'interfaccia disponibile non restituisce `mergeable_state`, motivazione o dettaglio dei conflitti. Il confronto Git mostra che `main` è antenato del branch (0 commit behind), ma questo dato da solo non sostituisce la diagnosi GitHub. Non dedurre né dichiarare una causa: il proprietario deve controllare la sezione “Checks” e lo stato della PR direttamente su GitHub. Non tentare merge, aggiornamento del branch o risoluzione automatica dei conflitti in questa fase.
+
+
+### Verifica finale dopo l'allineamento degli input
+
+L'ultimo aggiornamento del registro risultati ha mantenuto le stringhe di test esattamente come contenute nei casi originali (i delimitatori tipografici usati nel documento sorgente non fanno parte dell'input da inviare).
+
+Snapshot GitHub successivo:
+- head branch: `d432489d3ceb61775ef513125476c2fb751b2794`;
+- PR #2: OPEN, DRAFT, NOT MERGED;
+- `mergeable=false` nell'ultimo controllo;
+- 10 commit aggiuntivi rispetto all'HEAD iniziale di questa fase;
+- diff netto della fase: soltanto i quattro documenti sotto `tests/`, tutti aggiunti;
+- SHA Git dei bundle invariati: CORE `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`, COMPACT `bc852ec4925e9c81a5689c16a166fd8fb46181aa`;
+- status check e workflow run: nessuno restituito per questo HEAD.
+
+Il motivo di `mergeable=false` resta **NOT VERIFIED**: non è disponibile una diagnosi dei conflitti o il campo `mergeable_state`. Non effettuare merge né tentare di risolvere il problema in questa fase.
