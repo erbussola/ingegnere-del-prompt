@@ -1,7 +1,7 @@
 # Deployment — ChatGPT Projects
 
 ## Opzioni disponibili
-La modalità universale tramite chat standard resta gratuita e non richiede un progetto. In alternativa, ChatGPT offre:
+La modalità universale tramite chat standard resta il percorso più semplice e non richiede un progetto. In alternativa, ChatGPT offre:
 - **Progetti:** spazi di lavoro con chat, file/fonti e istruzioni specifiche del progetto.
 - **Istruzioni personalizzate globali:** preferenze generali applicate alle conversazioni, quando attive.
 
@@ -25,7 +25,11 @@ Il numero massimo di file caricabili per progetto dipende dal piano:
 È possibile caricare al massimo 10 file per singola operazione. Il numero di progetti creabili è illimitato secondo la documentazione consultata. I limiti possono cambiare: controlla la pagina ufficiale aggiornata prima di pianificare una knowledge base ampia.
 
 ## Istruzioni personalizzate globali
-Le Custom Instructions sono disponibili su tutti i piani, ma i campi di testo estesi hanno un limite di 1.500 caratteri ciascuno. Per questo motivo il Core completo non è adatto a essere inserito integralmente nelle sole istruzioni globali: usa un Progetto, quando disponibile, oppure la chat universale. Le impostazioni globali non sostituiscono la conoscenza specifica di un progetto.
+Le Custom Instructions sono disponibili su tutti i piani, ma il limite di caratteri è differenziato:
+- **Free e Go:** massimo 1.500 caratteri nei campi di testo estesi.
+- **Plus, Pro, Business, Enterprise ed Education:** massimo 5.000 caratteri nei campi di testo estesi.
+
+Questi limiti rendono il Core completo troppo lungo per l'inserimento nelle sole istruzioni globali. Usa un Progetto, quando disponibile, oppure la chat universale. Le impostazioni globali non sostituiscono la conoscenza specifica di un progetto.
 
 ## Cosa non fa un Progetto
 Un Progetto non è un GPT personalizzato pubblicato né un agente autonomo. Fornisce un contesto organizzato, istruzioni specifiche e fonti alle chat al suo interno. Strumenti, modelli, memoria e controlli restano quelli disponibili nel piano e nel workspace.
@@ -39,6 +43,6 @@ Un Progetto non è un GPT personalizzato pubblicato né un agente autonomo. Forn
 
 ## Fonti ufficiali
 - Progetti ChatGPT e limiti: https://help.openai.com/en/articles/10169521-projects-in-chatgpt
-- Istruzioni personalizzate: https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions
+- Istruzioni personalizzate e limiti per piano: https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions
 
 Verifica fonti: 15 novembre 2026.
