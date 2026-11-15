@@ -32,3 +32,9 @@ Media aritmetica dei cinque voti, arrotondata a una cifra decimale:
 
 ## Limiti
 Un prompt con punteggio elevato può comunque produrre risposte errate. Valutare l'output effettivo richiede test sul modello e sul contesto di destinazione.
+
+## Motivazioni verificabili e confronto
+
+Per ciascuno dei cinque criteri fornire una motivazione breve, specifica e basata su elementi osservabili del prompt rispetto allo scopo. Evitare formule generiche.
+
+Nel confronto iniziale/finale applicare gli stessi criteri e la stessa scala, riportare voti e medie, spiegare le differenze effettive, consentire che il voto aumenti, resti invariato o diminuisca e non attribuire un bonus automatico alla riscrittura. Ogni voto 9–10 richiede una motivazione specifica sull'assenza di lacune rilevanti. Mantenere le motivazioni proporzionate senza costruire giustificazioni artificiali per voti invariati.
