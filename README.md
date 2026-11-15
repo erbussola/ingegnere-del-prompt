@@ -1,65 +1,35 @@
 # Ingegnere del Prompt
 
-**Costruisci il tuo assistente personale di Prompt Engineering.**
+**Kit open source italiano per creare, ottimizzare e valutare prompt AI.**
 
-Ingegnere del Prompt è un progetto open source che mette a disposizione
-istruzioni, metodologie, framework e modelli per creare un assistente
-specializzato nella progettazione e ottimizzazione dei prompt AI.
+Il progetto offre istruzioni testuali, framework RICCE, guide, template ed esempi da utilizzare nel chatbot che già usi. Non è un'applicazione e non richiede programmazione, API a pagamento, server o database.
 
-## Obiettivo
+## Inizia
+1. Copia [CORE_INSTRUCTIONS.md](instructions/CORE_INSTRUCTIONS.md).
+2. Incollalo nelle istruzioni permanenti del chatbot, se disponibili; altrimenti come primo messaggio di una nuova chat seguendo [UNIVERSAL.md](instructions/UNIVERSAL.md).
+3. Descrivi ciò che vuoi creare, migliorare o progettare.
 
-Consentire a chiunque di creare il proprio Ingegnere del Prompt
-utilizzando il chatbot AI che già utilizza, senza dover sviluppare
-un'applicazione o acquistare API e servizi aggiuntivi.
-
-## Cosa troverai
-
-- Istruzioni pronte da utilizzare.
-- Framework RICCE per progettare prompt.
-- Metodologie di analisi e ottimizzazione.
-- Sistemi di valutazione qualitativa.
-- Template per diversi settori.
-- Esempi pratici.
-- Guide di installazione e configurazione.
-
-## Come funziona
-
-1. Scarica le istruzioni dal repository.
-2. Segui la guida relativa al tuo chatbot.
-3. Copia le istruzioni nella configurazione disponibile
-   oppure in una nuova conversazione.
-4. Inizia a utilizzare il tuo Ingegnere del Prompt.
-
-## Filosofia del progetto
-
-- Open source.
-- Gratuito.
-- Accessibile a tutti.
-- Nessuna API a pagamento obbligatoria.
-- Nessuna applicazione proprietaria necessaria.
-- Documentazione aperta alla collaborazione.
-
-## Compatibilità
-
-Il progetto punta a essere utilizzabile con ChatGPT, Gemini,
-Claude e altri chatbot che supportano istruzioni personalizzate.
-
-Le funzionalità effettivamente disponibili dipendono dalla piattaforma.
+## Cosa offre
+- Tre modalità: creazione, ottimizzazione, progettazione di assistenti.
+- Metodo RICCE adattabile alla complessità.
+- Cinque suggerimenti concreti nelle ottimizzazioni sostanziali.
+- Valutazione qualitativa su cinque criteri, da 1 a 10.
+- Template ed esempi riutilizzabili.
 
 ## Documentazione
+- [Guida utente](docs/USER_GUIDE.md) · [Configurazione](docs/INSTALLATION_GUIDE.md)
+- [Project brief](docs/PROJECT_BRIEF.md) · [Architettura](docs/ARCHITECTURE.md) · [FAQ](docs/FAQ.md)
+- Istruzioni: [Core](instructions/CORE_INSTRUCTIONS.md), [Universale](instructions/UNIVERSAL.md), [ChatGPT](instructions/CHATGPT.md), [Gemini](instructions/GEMINI.md), [Claude](instructions/CLAUDE.md)
+- Framework: [RICCE](framework/RICCE.md), [Valutazione](framework/PROMPT_EVALUATION.md), [Checklist](framework/QUALITY_CHECKLIST.md)
+- [Template](templates/) · [Esempi](examples/) · [Roadmap](roadmap/FUTURE_VERSIONS.md)
 
-Consulta la cartella [docs](docs/) per il brief e le guide.
+## Filosofia e compatibilità
+Gratuito, aperto, portabile e senza servizi aggiuntivi obbligatori. La modalità universale funziona tramite copia-incolla. Non è garantita compatibilità assoluta: persistenza, limiti, modelli e funzioni dipendono dal chatbot e dal piano.
 
-## Collaborazione
-
-La community è invitata a proporre miglioramenti, segnalare problemi
-e contribuire all'evoluzione del progetto.
+## Contribuire
+Leggi [CONTRIBUTING.md](CONTRIBUTING.md), il [Codice di condotta](CODE_OF_CONDUCT.md) e il [modello PR](.github/PULL_REQUEST_TEMPLATE.md).
 
 ## Licenza
+I materiali originali del progetto sono destinati a CC BY-SA 4.0: [LICENSE.md](LICENSE.md). Materiali di terze parti sono esclusi salvo indicazione esplicita.
 
-Documentazione, istruzioni e template sono distribuiti secondo
-la licenza CC BY-SA 4.0, salvo diversa indicazione.
-
-## Stato del progetto
-
-Fase iniziale di progettazione e sviluppo della versione 2.0.
+**Stato:** sviluppo versione 2.0; verificare le guide specifiche rispetto alle fonti ufficiali prima dell'uso.
