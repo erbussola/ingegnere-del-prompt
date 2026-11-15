@@ -36,6 +36,8 @@ Bundle: `instructions/CORE_INSTRUCTIONS.md`
 
 ### T01 — Creazione di un prompt semplice
 
+#### Run 1
+
 **Bundle:** `instructions/CORE_INSTRUCTIONS.md` — Core Universale 2.0.0  
 **Snapshot operativo:** `84db964b5ec17ae6c203c125b95133c64b772e75`  
 **SHA Git del bundle:** `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6` — corrispondenza verificata confrontando il contenuto integrale del Core riportato nel transcript con il blob del bundle nello snapshot operativo.  
@@ -46,7 +48,7 @@ Bundle: `instructions/CORE_INSTRUCTIONS.md`
 **Data di esportazione del transcript:** 15 novembre 2026, 14:19:49 (fuso non indicato)  
 **Transcript integrale:** `Avvio ingegnere prompt - T01.md` (allegato alla richiesta di registrazione; non pubblicato nel repository)  
 **Run ID:** non documentato  
-**Sessione pulita confermata:** NOT VERIFIED — il transcript non documenta esplicitamente che la conversazione fosse una nuova chat standard, esterna a progetti/GPT personalizzati e priva di istruzioni aggiuntive.
+**Sessione / conformità procedurale:** NON CONFORME al §6 del piano. Chiarimento successivo dell'operatore: si trattava di una nuova chat all'interno del progetto ChatGPT “Progetto Clean”; memoria impostata su “Solo progetto”; accesso alla libreria disabilitato; nessuna istruzione aggiuntiva e nessun file di conoscenza presenti. La chat era nuova, ma l'esecuzione all'interno di un progetto non soddisfa il requisito di sessione pulita del piano. I punteggi comportamentali Run 1 già assegnati restano invariati.
 
 **Input esatto:**
 
@@ -95,6 +97,77 @@ I punteggi seguenti sono una valutazione del solo transcript T01, non il risulta
 **Motivazione dell'esito:** il comportamento osservato soddisfa i criteri funzionali del caso T01: riconoscimento della creazione, prompt copiabile, assenza di domande preliminari superflue e gestione proporzionata dei dati mancanti. Non è tuttavia possibile confermare il prerequisito di sessione pulita richiesto dal piano di validazione. In assenza di tale evidenza, non si assegna PASS.
 
 **Anomalie / ID difetto:** nessuna anomalia bloccante osservata; resta il limite di tracciabilità relativo all'isolamento della sessione.
+
+#### Run 2
+
+**Esecuzione:** 15 novembre 2026, ore 14:45 (dichiarazione dell'operatore; fuso orario non indicato)  
+**Piattaforma:** ChatGPT  
+**Piano / tipo account:** ChatGPT Go (dichiarazione dell'operatore)  
+**Modello visualizzato:** non identificabile dal transcript; non documentato  
+**Ambiente:** chat standard, esterna al progetto ChatGPT “Progetto Clean” (dichiarazione dell'operatore; non verificata tecnicamente in modo indipendente)  
+**Transcript:** “Progettazione prompt universale” (allegato alla richiesta; non pubblicato nel repository)  
+**Data di esportazione:** 15 novembre 2026, 14:46:01  
+**Primo messaggio:** caricamento del Core Universale 2.0.0  
+**Input T01 esatto:**
+
+> Scrivimi un prompt per chiedere a un chatbot di preparare una lista della spesa per una settimana
+
+**Snapshot operativo previsto:** `84db964b5ec17ae6c203c125b95133c64b772e75`  
+**Blob SHA previsto di `instructions/CORE_INSTRUCTIONS.md`:** `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`
+
+**Verifica del bundle caricato:** NON CORRISPONDENTE / NON VERIFICATO. Il blob del Core nello snapshot operativo è stato recuperato e il suo SHA è `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`. Il testo del Core riportato nel transcript non coincide integralmente con quel file: nel transcript la riga della versione è resa come citazione (`> Versione: 2.0.0...`), mentre nel bundle è una riga normale (`Versione: 2.0.0...`); inoltre il bundle contiene l'istruzione iniziale `> **Avvio:** copia integralmente...`, assente dal testo riportato nel transcript. Non è quindi possibile attestare che il contenuto effettivamente inviato fosse identico al bundle previsto. Il solo nome/versione 2.0.0 non è sufficiente a dimostrare la corrispondenza.
+
+**Conformità della sessione:** l'operatore dichiara che Run 2 è stata eseguita in una chat standard, esterna al progetto “Progetto Clean”. Questa dichiarazione supporta l'assenza del contesto di progetto, ma non costituisce una verifica tecnica indipendente dell'ambiente. Il transcript non permette da solo di controllare tutte le condizioni di isolamento del §6 del piano.
+
+**Evidenze comportamentali osservate nel transcript:**
+
+- Il Core Universale 2.0.0 è stato inviato come primo messaggio della conversazione.
+- L'assistente ha dichiarato di aver acquisito il documento, precisando correttamente che può applicarne il metodo ma non sostituire le istruzioni di sistema della piattaforma.
+- Ha riconosciuto e descritto le modalità A/B/C e i principi conversazionali, RICCE e di iterazione.
+- Alla richiesta T01 ha identificato la creazione di un prompt e ha prodotto direttamente un testo strutturato, senza chiedere chiarimenti preliminari.
+- Il prompt include menu settimanale, categorie di acquisto, quantità, ottimizzazione degli ingredienti, budget, raccolta progressiva delle informazioni e formato finale consultabile da smartphone.
+- È presente una breve raccomandazione conclusiva che spiega la scelta di ricavare la lista della spesa da un menu settimanale.
+
+**Aspetti positivi:**
+
+- Accoglienza professionale e presa in carico esplicita del Core.
+- Identificazione corretta dell'obiettivo.
+- Prompt autonomo, strutturato e copiabile.
+- Organizzazione per categorie e attenzione a quantità, sprechi e budget.
+- Indicazione di raccogliere le informazioni mancanti una domanda per volta.
+- Raccomandazione finale pertinente.
+
+**Osservazioni non bloccanti:**
+
+- Il prompt è piuttosto esteso per una richiesta semplice e amplia il compito alla pianificazione del menu settimanale e alla stima dei costi. L'estensione è coerente con l'obiettivo, ma meno sintetica di quanto suggerito dal caso T01.
+- Le informazioni mancanti (numero di persone, preferenze, esigenze, budget e disponibilità in dispensa) sono raccolte tramite domande successive; non sono predisposti segnaposto espliciti per ciascun dato.
+- La lista include prodotti per la casa e altri articoli soltanto se richiesti, quindi non impone automaticamente una spesa non alimentare.
+
+**Valutazione F1–F7 — Run 2**
+
+| Criterio | Punteggio | Evidenza e motivazione |
+|---|---:|---|
+| F1 — Accoglienza | 5/5 | La risposta di acquisizione è naturale, professionale e chiarisce correttamente il perimetro del ruolo. |
+| F2 — Comprensione | 5/5 | La richiesta è riconosciuta come creazione di un prompt per organizzare la spesa di una settimana; il risultato resta pertinente. |
+| F3 — Domande progressive | 4/5 | Il prompt prescrive una domanda per volta e raccoglie i dati mancanti. Non è però osservabile una progressione multi-turn effettiva né il riuso delle risposte in una sequenza reale. |
+| F4 — RICCE flessibile | 5/5 | Il prompt integra ruolo, istruzioni, contesto, vincoli e formato senza imporre una sezione Examples non necessaria. |
+| F5 — Cinque suggerimenti | N/A | T01 è un caso di creazione, non di ottimizzazione sostanziale. |
+| F6 — Prompt finale | 4/5 | Il prompt è completo e copiabile, ma risulta più articolato del necessario per una richiesta semplice e non usa segnaposto espliciti per tutti i dati mancanti. |
+| F7 — Iterazione | N/A | Il test non contiene una seconda iterazione. |
+
+**Riepilogo dei criteri applicabili Run 2:** 23/25 (F5 e F7 esclusi). Il totale riguarda esclusivamente i cinque criteri applicabili e non viene confrontato con le soglie di campagna definite su 35 punti.
+
+**Esito Run 2:** PARTIALLY VERIFIED
+
+**Motivazione:** il comportamento osservato soddisfa in larga parte i requisiti funzionali di T01. Non si assegna PASS perché non è stata dimostrata la corrispondenza integrale del Core caricato con il bundle dello snapshot operativo; inoltre la conformità completa dell'isolamento della sessione è attestata dall'operatore ma non verificabile indipendentemente dal transcript.
+
+**Anomalie / ID difetto:** nessuna anomalia comportamentale bloccante osservata. Limite di tracciabilità: contenuto del Core nel transcript non identico al bundle previsto.
+
+#### Stato del caso T01 dopo Run 1 e Run 2
+
+- **Run 1:** PARTIALLY VERIFIED — nuova chat interna al progetto “Progetto Clean”, quindi non conforme al requisito di sessione pulita del §6; chiarimenti dell'operatore registrati sopra.
+- **Run 2:** PARTIALLY VERIFIED — comportamento funzionale positivo, ma identità del bundle non dimostrata e isolamento non verificabile indipendentemente.
+- **T01 complessivo:** PARTIALLY VERIFIED. Il piano definisce gli esiti dei singoli test/run ma non specifica una regola per aggregare run ripetute in un unico PASS del caso. Non viene quindi introdotta una regola di aggregazione: nessuna delle due run soddisfa tutti i prerequisiti per PASS e il caso resta PARTIALLY VERIFIED. La valutazione potrà essere riesaminata con una run il cui bundle e la cui sessione siano verificabili.
 
 ### T02 — Ottimizzazione di un prompt incompleto
 
@@ -401,7 +474,7 @@ Per ciascun test compatto compilare: piattaforma/modello, data e ora, SHA di COM
 | Completo | 15 | 0 | 0 | 1 | 14 | 0 |
 | Compatto | 9 | 0 | 0 | 0 | 9 | 0 |
 
-Il registro aggiornato riporta T01 del bundle completo come PARTIALLY VERIFIED; gli altri 14 test completi e tutti i 9 test compatti restano NOT RUN. Il risultato T01 non modifica lo stato degli altri casi e non costituisce una valutazione della fedeltà complessiva al GPT originale.
+Il registro riporta due esecuzioni distinte di T01 del bundle completo, entrambe PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle due soddisfa tutti i prerequisiti per PASS. Gli altri 14 test completi e tutti i 9 test compatti restano NOT RUN. Il risultato T01 non costituisce una valutazione della fedeltà complessiva al GPT originale.
 
 
 ## Schede di esecuzione — bundle compatto
