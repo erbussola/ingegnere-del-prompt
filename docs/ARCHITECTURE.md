@@ -1,22 +1,18 @@
-# Architettura del progetto
+# Architettura documentale
 
-## Repository
+Il progetto è un kit di file statici. GitHub distribuisce i contenuti; il chatbot scelto interpreta le istruzioni. Non esistono backend, database, API o componenti che trasmettono dati.
 
-GitHub conserva la versione ufficiale dei materiali.
+| Directory | Responsabilità |
+|---|---|
+| `instructions/` | Comportamento core e adattamenti piattaforma |
+| `framework/` | RICCE, valutazione e checklist |
+| `templates/` | Schemi riutilizzabili |
+| `examples/` | Casi dalla richiesta al prompt finale |
+| `docs/` | Orientamento, configurazione e FAQ |
+| `roadmap/` | Evoluzione prevista |
 
-## Configurazione
+Le Core Instructions sono autosufficienti e costituiscono il punto d'ingresso operativo. Il framework spiega il metodo; template ed esempi sono facoltativi. Le guide piattaforma spiegano come trasferire il testo, senza modificare la metodologia.
 
-L'utente copia o importa le istruzioni nel proprio chatbot,
-utilizzando le funzionalità disponibili.
+Flusso: copia istruzioni → trasferimento nel chatbot → richiesta → applicazione della modalità e di RICCE → revisione dell'utente.
 
-## Moduli
-
-- Core Instructions.
-- Framework RICCE.
-- Template.
-- Esempi.
-- Guide specifiche per piattaforma.
-
-## Principio
-
-Il progetto deve poter funzionare senza componenti software esterni.
+La portabilità del testo non garantisce identici risultati, persistenza, limiti o strumenti. Le istruzioni non aggiungono capacità al modello. Ogni nuova guida deve citare fonti ufficiali e indicare data di verifica.

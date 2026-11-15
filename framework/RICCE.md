@@ -1,41 +1,41 @@
 # Framework RICCE
 
-RICCE è il framework metodologico utilizzato da
-Ingegnere del Prompt per progettare istruzioni efficaci.
+RICCE è il metodo di riferimento per progettare prompt chiari. Non è una formula rigida: usa solo gli elementi utili alla richiesta.
 
 ## R – Role
+Definisce chi deve essere il modello: identità, competenze, esperienza pertinente, prospettiva e ambito. Evita titoli altisonanti senza valore operativo.
 
-Chi deve essere l'intelligenza artificiale?
-
-Definire ruolo, competenze, esperienza e prospettiva.
+**Esempio:** «Agisci come consulente didattico con esperienza nella formazione degli adulti».
 
 ## I – Instructions
+Definisce cosa fare: obiettivo, compiti, passaggi, priorità, criteri di completamento e risultato atteso. Usa verbi operativi.
 
-Che cosa deve fare?
-
-Descrivere attività, procedure, priorità e risultati richiesti.
+**Esempio:** «Progetta un percorso di quattro settimane, con tre esercizi pratici a settimana».
 
 ## C – Context
+Fornisce scenario, destinatari, situazione, risorse, dati disponibili e obiettivo finale. Distingui ciò che è noto da ciò che manca.
 
-In quale situazione deve operare?
-
-Fornire informazioni, obiettivi, destinatari e scenario.
+**Esempio:** «I partecipanti sono principianti, hanno 20 minuti al giorno e usano uno smartphone».
 
 ## C – Constraints
+Stabilisce limiti, esclusioni, requisiti, tono, lunghezza, formato, fonti e comportamenti da evitare.
 
-Quali regole deve rispettare?
-
-Definire limiti, vincoli, esclusioni, stile e formato.
+**Esempio:** «Non superare 500 parole; non dare per scontato l'acquisto di attrezzatura».
 
 ## E – Examples
+Mostra input/output, stile o comportamento desiderato. Gli esempi sono utili quando il risultato è difficile da descrivere a parole.
 
-Quali risultati sono desiderati?
+**Esempio:** «Per ogni lezione usa: obiettivo, durata, materiali, esercizio, verifica».
 
-Fornire esempi di input, output e comportamenti attesi.
+## Esempio completo
+«Agisci come consulente didattico (R). Progetta un piano di quattro settimane per imparare le basi della fotografia (I). Il destinatario è un principiante che può dedicare 20 minuti al giorno e usa uno smartphone (C). Non richiedere attrezzatura aggiuntiva e presenta una tabella settimanale (C). Per ogni attività indica obiettivo, durata ed esercizio pratico (E).»
 
-## Principio fondamentale
+## Esempio minimo
+«Riassumi questo testo in cinque punti, in italiano semplice, senza aggiungere informazioni non presenti.» Qui ruolo e contesto impliciti non richiedono sezioni separate.
 
-Non tutti i prompt necessitano di cinque sezioni esplicite.
-
-RICCE è una guida per migliorare la qualità,
-non un modello rigido da applicare meccanicamente.
+## Procedura di applicazione
+1. Identifica il risultato richiesto.
+2. Seleziona le componenti RICCE pertinenti.
+3. Segnala dati mancanti solo se bloccanti.
+4. Rimuovi vincoli contraddittori o ridondanti.
+5. Verifica che il prompt sia autonomo e copiabile.
