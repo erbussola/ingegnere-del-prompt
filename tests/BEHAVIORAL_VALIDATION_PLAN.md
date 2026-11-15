@@ -331,18 +331,19 @@ La checklist ambientale va preparata fuori dalla chat di test; non mostrare al m
 Questo addendum integra la regola A06 per il solo trattamento delle cause esterne e rende espliciti i campi di registrazione. In caso di divergenza, per le nuove campagne prevalgono le definizioni A08 qui riportate. Nessun risultato storico viene modificato.
 
 ### Aggregazione T01 — regola deterministica
-Conservare ogni run e i quattro assi già previsti. Non cancellare o riscrivere il risultato storico della singola run. Per l'aggregazione aggiungere due campi distinti: **attribuibilità al bundle** e **ammissibilità aggregata**.
+Conservare ogni run e i quattro assi già previsti. Non cancellare o riscrivere il risultato storico della singola run. Per l'aggregazione aggiungere tre campi distinti: **validità della run rispetto alle condizioni/bundle**, **attribuibilità al bundle** e **ammissibilità aggregata**.
 
 Per ogni run registrare:
 - **Esito storico della run:** PASS / FAIL / PARTIALLY VERIFIED / NOT CONCLUSIVE / NOT RUN; immutabile.
 - **Conformità procedurale, identità bundle e qualità evidenze:** secondo le classificazioni già definite.
+- **Validità della run rispetto alle condizioni/bundle:** VALIDA / NON VALIDA / INDETERMINATA. VALIDA richiede prerequisiti conformi, bundle identificato ed evidenze complete; NON VALIDA indica condizioni non conformi o causa esterna dimostrata; INDETERMINATA indica che le evidenze non consentono di decidere.
 - **Attribuibilità al bundle:** ATTRIBUIBILE / CAUSA ESTERNA DIMOSTRATA / INDAGINE APERTA / NON DETERMINABILE.
-- **Ammissibilità aggregata:** INCLUSA / ESCLUSA / SOSPESA IN ATTESA DI INDAGINE.
+- **Ammissibilità aggregata:** INCLUSA / ESCLUSA PER CAUSA ESTERNA DOCUMENTATA / NON AMMISSIBILE (NON CONFORMITÀ O EVIDENZE INSUFFICIENTI) / SOSPESA IN ATTESA DI INDAGINE.
 - **Decisione:** ID indagine, causa, evidenze puntuali, valutatore, data/ora, motivazione e riferimento alla run originaria.
 
-Una run è **INCLUSA** soltanto se è conforme, il bundle è identificato, le evidenze sono complete e non esiste una causa esterna dimostrata. Una run non conforme o con prerequisiti/evidenze insufficienti resta conservata come esplorativa e non entra nell'aggregazione controllata. Una run con indagine aperta che può cambiare l'attribuibilità è **SOSPESA** e blocca la conclusione dell'aggregato finché l'indagine non è chiusa.
+Una run è **INCLUSA** soltanto se la validità è VALIDA, la conformità è CONFORME, il bundle è identificato, le evidenze sono complete e l'attribuibilità è al bundle. Una run non conforme o con evidenze insufficienti è NON AMMISSIBILE e resta esplorativa; non va confusa con una run ESCLUSA per causa esterna documentata. Una run con indagine aperta che può cambiare l'attribuibilità è SOSPESA e blocca la conclusione dell'aggregato finché l'indagine non è chiusa.
 
-**Esclusione per causa esterna:** è ammessa soltanto quando l'indagine documenta evidenze sufficienti e verificabili che dimostrano che il FAIL è dovuto a una causa esterna non attribuibile al bundle o a una condizione di prova non riproducibile. Conservare il risultato storico FAIL senza modificarlo; impostare `Attribuibilità = CAUSA ESTERNA DIMOSTRATA` e `Ammissibilità = ESCLUSA`; registrare evidenze, valutatore, data/ora e motivazione. L'esclusione riguarda esclusivamente il calcolo aggregato, non cancella né converte il FAIL storico. Se le evidenze non dimostrano la causa esterna, la run non può essere esclusa discrezionalmente: chiudere l'indagine come non dimostrata e includere il FAIL se gli altri requisiti di ammissibilità sono soddisfatti. Se la causa resta incerta, mantenerla SOSPESA e l'aggregato NOT CONCLUSIVE.
+**Esclusione per causa esterna:** è ammessa soltanto quando l'indagine documenta evidenze sufficienti e verificabili che dimostrano che il FAIL è dovuto a una causa esterna non attribuibile al bundle o a una condizione di prova non riproducibile. Conservare il risultato storico FAIL senza modificarlo; impostare `Validità = NON VALIDA`, `Attribuibilità = CAUSA ESTERNA DIMOSTRATA` e `Ammissibilità = ESCLUSA PER CAUSA ESTERNA DOCUMENTATA`; registrare evidenze, valutatore, data/ora e motivazione. L'esclusione riguarda esclusivamente il calcolo aggregato, non cancella né converte il FAIL storico. Se le evidenze non dimostrano la causa esterna, la run non può essere esclusa discrezionalmente: chiudere l'indagine come non dimostrata e includere il FAIL se gli altri requisiti di ammissibilità sono soddisfatti. Se la causa resta incerta, mantenerla SOSPESA e l'aggregato NOT CONCLUSIVE.
 
 **Calcolo deterministico, senza maggioranze, medie o voto prevalente:**
 1. Nessuna run registrata → **NOT RUN** (caso G).
