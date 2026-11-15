@@ -22,16 +22,19 @@ Alcuni campi istruzioni hanno limiti di caratteri. La versione compatta conserva
 Non è garantito. Ogni servizio interpreta le istruzioni in modo diverso e può imporre limiti propri. La compatibilità va testata.
 
 ## Copilot Notebooks può ricevere istruzioni?
-La documentazione Microsoft descrive istruzioni personalizzate per singolo notebook. Disponibilità, licenza, servizi SharePoint/OneDrive e rollout possono variare; consulta [la guida dedicata](../deployment/COPILOT_NOTEBOOKS.md).
+Sì, Microsoft documenta istruzioni personalizzate per singolo notebook. Copilot Chat prevede fino a 50 fonti; la licenza Microsoft 365 Copilot Work/School fino a 300, con differenze anche nei tipi di fonte e negli strumenti. Non è un GPT personalizzato globale. Consulta [la guida dedicata](../deployment/COPILOT_NOTEBOOKS.md).
 
 ## Gemini usa ancora i Gems?
-Al 15 novembre 2026 Google prevede che i Gems degli account personali 18+ diventino di sola lettura il 17 novembre e vengano rimossi il 17 dicembre 2026. La transizione è prevista a marzo 2027 per gli account Workspace business, enterprise e non profit e a giugno 2027 per Workspace for Education. Consulta [la guida Gemini](../deployment/GEMINI.md) e verifica gli aggiornamenti ufficiali.
+Al 15 novembre 2026 le Skills sono già disponibili nelle chat per account Google personali maggiorenni. I Gems personali 18+ diventano di sola lettura il 17 novembre e vengono rimossi il 17 dicembre 2026; la transizione Workspace è prevista nel 2027. Consulta [la guida Gemini](../deployment/GEMINI.md) e verifica gli aggiornamenti ufficiali.
 
 ## Claude Projects è gratuito?
-La documentazione Anthropic consultata indica che Projects è disponibile per piani Claude a pagamento. La chat standard resta l'alternativa universale.
+Sì. La documentazione Anthropic aggiornata indica Projects disponibile anche sul piano Free, con massimo cinque progetti. Il RAG avanzato della knowledge base è riservato ai piani a pagamento; la condivisione è prevista per Team ed Enterprise. Consulta [la guida Claude](../deployment/CLAUDE.md).
 
 ## Il punteggio 1–10 garantisce un buon risultato?
 No. È una valutazione qualitativa del testo del prompt, non una misura scientifica né una garanzia sul comportamento del modello.
+
+## Come avvio il Core senza funzioni speciali?
+Apri una nuova chat e incolla integralmente `instructions/CORE_INSTRUCTIONS.md` oppure `instructions/UNIVERSAL.md`. Entrambi sono bundle autonomi; `COMPACT.md` è l'alternativa per campi o contesti con limiti di lunghezza.
 
 ## Il chatbot ricorderà il lavoro?
 Non necessariamente. Usa un progetto o una knowledge base quando disponibili e conserva un riepilogo portabile per riprendere il lavoro altrove.
