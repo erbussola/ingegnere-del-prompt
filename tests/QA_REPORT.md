@@ -393,3 +393,15 @@ Questo addendum registra le correzioni documentali dei rilievi A05. Non modifica
 - T04/T10: mantenere distinti casi storici e revisioni A04, identificate nel registro come T04-R e T10-R.
 
 Nessun risultato comportamentale è stato creato, simulato o riclassificato da A06. Le nuove run restano da eseguire in sessioni conformi con transcript reali.
+
+## Addendum A08 — stato delle correzioni successive all'audit A07
+
+**Mandato:** A08 — correzioni documentali per rendere riproducibile il protocollo prima dell'audit statico A09.  
+**Ambito:** documenti QA e registri; nessuna modifica ai moduli Core o ai bundle distribuibili.  
+**QA comportamentale:** NOT RUN durante A08.  
+**Autorizzazione alla campagna QA:** NON CONCESSA.  
+**Rilascio:** NON AUTORIZZATO.
+
+A08 rende deterministici T16-D, T16-E e T20-F; formalizza l'attribuibilità al bundle e l'esclusione documentata delle run dall'aggregazione T01 senza alterare i risultati storici; marca come superato il vecchio modello vuoto T01; uniforma T04-R/T10-R; chiarisce che una variazione dell'impatto richiede riepilogo aggiornato e nuova conferma anche quando la conseguenza dichiarata non cambia.
+
+Questo addendum registra l'intervento documentale, non il superamento dei test. I risultati storici e i transcript restano invariati. La preparazione A08 non equivale a QA comportamentale, non autorizza la campagna Full/Compact e non autorizza il rilascio. La prontezza per il nuovo audit statico deve essere determinata indipendentemente in A09.
