@@ -1,19 +1,20 @@
 # Deployment — Universal Chat
 
 ## Scopo
-Usare Ingegnere del Prompt in una normale conversazione, senza funzionalità speciali della piattaforma.
+Usare Ingegnere del Prompt in una normale conversazione, senza funzioni speciali della piattaforma, account premium, progetti o API.
 
 ## Installazione
-1. Apri una nuova chat.
-2. Incolla e invia integralmente `instructions/CORE_INSTRUCTIONS.md`.
-3. Se il chatbot segnala un limite, usa `instructions/COMPACT.md` oppure invia il testo in parti numerate, chiedendo di attendere il marcatore `FINE`.
-4. Dopo la conferma di ricezione, invia la tua richiesta.
+1. Apri una nuova chat nel chatbot che utilizzi.
+2. Copia integralmente `instructions/CORE_INSTRUCTIONS.md` oppure il bundle autonomo identico `instructions/UNIVERSAL.md`.
+3. Incolla e invia il testo come primo messaggio.
+4. Se il servizio non accetta il testo completo, usa `instructions/COMPACT.md`. Non tagliare casualmente il Core.
+5. Attendi la conferma di ricezione e invia la tua richiesta.
 
 ## Uso
-Puoi chiedere di creare un prompt da un'idea, ottimizzare un testo già scritto o progettare un assistente AI. Non è necessario conoscere RICCE: il Core lo applica automaticamente.
+Puoi partire da un'idea, incollare un prompt da migliorare o chiedere di progettare un assistente AI. Non devi conoscere RICCE e non devi selezionare manualmente una modalità: l'assistente interpreta la richiesta e procede con domande progressive quando servono.
 
 ## Limiti
-Le istruzioni valgono nella conversazione corrente. La persistenza, la memoria, il caricamento di file e gli strumenti dipendono dal servizio. Senza una configurazione permanente, reinserisci le istruzioni nelle nuove chat.
+Le istruzioni valgono nel contesto della conversazione corrente. Memoria, caricamento file, strumenti e persistenza dipendono dal servizio. Senza configurazione permanente, reinserisci il bundle nelle nuove chat. La portabilità del testo non garantisce risposte identiche tra modelli.
 
 ## Continuità
-Alla fine di un lavoro lungo chiedi un riepilogo portabile usando il modello in `core/CONTINUITY_ENGINE.md`. Nella nuova chat incolla il riepilogo e i materiali necessari.
+Alla fine di un lavoro lungo chiedi un riepilogo portabile con obiettivo, stato verificato, requisiti, decisioni approvate, materiali, punti aperti e prossima azione. Nella nuova chat incolla il riepilogo e i materiali necessari.
