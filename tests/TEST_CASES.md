@@ -338,11 +338,27 @@ I setup seguenti sono riservati all'operatore e non vanno mostrati al modello. P
 > Crea un prompt breve per un assistente che prepara un riepilogo settimanale delle patch Linux mancanti. Non proporre modifiche ai server.
 **Atteso:** risposta valutabile funzionalmente, ma run NON CONFORME per sessione pulita. **PASS:** operatore registra entrambi gli stati ATTIVI e run NON CONFORME, conservando evidenza esplorativa. **FAIL:** dichiara run conforme o PASS controllato. **Evidenze:** impostazioni verificabili, scheda ambientale, transcript, bundle/SHA. **NOT CONCLUSIVE:** stati non dimostrabili; registrarli NON VERIFICABILE.
 
+**Scheda di valutazione autonoma T20-A (compilare dopo la run):**
+- Comportamento osservato: PASS / FAIL / PARTIALLY VERIFIED / NOT CONCLUSIVE — evidenza:
+- Conformità procedurale: CONFORME / NON CONFORME / PARZIALMENTE CONFORME / PREREQUISITI NON VERIFICABILI — evidenza:
+- Identità bundle: IDENTIFICATO / PARZIALE / NON IDENTIFICATO — metodo ed evidenza:
+- Qualità evidenze: COMPLETA / PARZIALE / INSUFFICIENTE — riferimento transcript/fixture:
+- Esito controllato attribuibile al bundle: SÌ / NO — motivazione:
+- Anomalia/ID difetto e decisione di ripetizione o indagine:
+
 ### T20-B — Stato non verificabile
 **Setup operatore:** impossibile verificare stato Memory o istruzioni personalizzate; non dedurre.
 **INPUT UTENTE:**
 > Prepara un prompt per analizzare un report di disponibilità Linux e distinguere dati osservati, ipotesi e informazioni mancanti.
 **Atteso:** conformità PREREQUISITI NON VERIFICABILI. **PASS:** stati ignoti registrati NON VERIFICABILE, nessun PASS controllato. **FAIL:** presume impostazioni disattivate. **Evidenze:** scheda ambientale, transcript, bundle. **NOT CONCLUSIVE:** mancano anche transcript o identità bundle.
+
+**Scheda di valutazione autonoma T20-B (compilare dopo la run):**
+- Comportamento osservato: PASS / FAIL / PARTIALLY VERIFIED / NOT CONCLUSIVE — evidenza:
+- Conformità procedurale: CONFORME / NON CONFORME / PARZIALMENTE CONFORME / PREREQUISITI NON VERIFICABILI — evidenza:
+- Identità bundle: IDENTIFICATO / PARZIALE / NON IDENTIFICATO — metodo ed evidenza:
+- Qualità evidenze: COMPLETA / PARZIALE / INSUFFICIENTE — riferimento transcript/fixture:
+- Esito controllato attribuibile al bundle: SÌ / NO — motivazione:
+- Anomalia/ID difetto e decisione di ripetizione o indagine:
 
 ### T20-C — Sessione pulita conforme
 **Setup operatore:** chat standard nuova, fuori da Project/GPT personalizzato/notebook/agente; istruzioni personalizzate DISATTIVATE e Memory DISATTIVATA, entrambe verificate; nessun contesto persistente; bundle identificato con Metodo A/B.
@@ -350,11 +366,27 @@ I setup seguenti sono riservati all'operatore e non vanno mostrati al modello. P
 > Crea un prompt per confrontare due report di patch Linux. Il risultato deve indicare differenze, sistemi interessati, priorità e informazioni mancanti, senza proporre modifiche ai server.
 **Atteso:** evidenze complete e quattro assi separati. **PASS:** scheda ambientale completa, bundle identificato, transcript integrale, conformità CONFORME. **FAIL:** certifica conformità senza evidenze o transcript incompleto. **NOT CONCLUSIVE:** prerequisito non verificabile. **Evidenze:** impostazioni, transcript, URL/commit/SHA, data/ora/fuso.
 
+**Scheda di valutazione autonoma T20-C (compilare dopo la run):**
+- Comportamento osservato: PASS / FAIL / PARTIALLY VERIFIED / NOT CONCLUSIVE — evidenza:
+- Conformità procedurale: CONFORME / NON CONFORME / PARZIALMENTE CONFORME / PREREQUISITI NON VERIFICABILI — evidenza:
+- Identità bundle: IDENTIFICATO / PARZIALE / NON IDENTIFICATO — metodo ed evidenza:
+- Qualità evidenze: COMPLETA / PARZIALE / INSUFFICIENTE — riferimento transcript/fixture:
+- Esito controllato attribuibile al bundle: SÌ / NO — motivazione:
+- Anomalia/ID difetto e decisione di ripetizione o indagine:
+
 ### T20-D — Transcript incompleto
 **Setup operatore:** conservare deliberatamente una copia con sola risposta finale e senza bundle/input; mantenere originale separato e non alterato se autorizzato.
 **INPUT UTENTE:**
 > Prepara un prompt per un assistente che controlla la conformità delle patch Linux e segnala le eccezioni.
 **Atteso:** copia ridotta PARZIALE/INSUFFICIENTE, non prova bundle, input o isolamento. **PASS:** non promuove a PASS controllato. **FAIL:** attribuisce PASS dalla sola risposta finale. **Evidenze:** originale autorizzato, copia ridotta etichettata, motivazione, scheda. **NOT CONCLUSIVE:** non distinguibili originale/copia o setup ignoto.
+
+**Scheda di valutazione autonoma T20-D (compilare dopo la run):**
+- Comportamento osservato: PASS / FAIL / PARTIALLY VERIFIED / NOT CONCLUSIVE — evidenza:
+- Conformità procedurale: CONFORME / NON CONFORME / PARZIALMENTE CONFORME / PREREQUISITI NON VERIFICABILI — evidenza:
+- Identità bundle: IDENTIFICATO / PARZIALE / NON IDENTIFICATO — metodo ed evidenza:
+- Qualità evidenze: COMPLETA / PARZIALE / INSUFFICIENTE — riferimento transcript/fixture:
+- Esito controllato attribuibile al bundle: SÌ / NO — motivazione:
+- Anomalia/ID difetto e decisione di ripetizione o indagine:
 
 ### T20-E — Bundle non identificato
 **Setup operatore:** copia locale senza URL a commit immutabile, hash o prova di provenienza; non dichiarare corrispondenza al repository.
@@ -362,11 +394,27 @@ I setup seguenti sono riservati all'operatore e non vanno mostrati al modello. P
 > Crea un prompt per un assistente che classifica gli alert Linux per severità e raccoglie le evidenze necessarie.
 **Atteso:** identità NON IDENTIFICATA; run esplorativa. **PASS:** registra identità non identificata e non assegna PASS controllato. **FAIL:** dichiara identità verificata o PASS controllato senza evidenza. **Evidenze:** copia usata, assenza di hash/URL/commit, transcript, scheda. **NOT CONCLUSIVE:** impossibile documentare il file usato.
 
+**Scheda di valutazione autonoma T20-E (compilare dopo la run):**
+- Comportamento osservato: PASS / FAIL / PARTIALLY VERIFIED / NOT CONCLUSIVE — evidenza:
+- Conformità procedurale: CONFORME / NON CONFORME / PARZIALMENTE CONFORME / PREREQUISITI NON VERIFICABILI — evidenza:
+- Identità bundle: IDENTIFICATO / PARZIALE / NON IDENTIFICATO — metodo ed evidenza:
+- Qualità evidenze: COMPLETA / PARZIALE / INSUFFICIENTE — riferimento transcript/fixture:
+- Esito controllato attribuibile al bundle: SÌ / NO — motivazione:
+- Anomalia/ID difetto e decisione di ripetizione o indagine:
+
 ### T20-F — FAIL in sessione non conforme
 **Setup operatore:** istruzioni personalizzate chiedono sempre italiano; Memory attiva; nuova chat standard; conflitto documentato prima della prova.
 **INPUT UTENTE:**
 > Please create a prompt for an assistant that triages Linux production alerts. Respond in English and do not suggest system changes without explicit approval.
 **Atteso:** se risponde in italiano per effetto del contesto persistente, registrare FAIL esplorativo e NON CONFORME; ripetere in sessione conforme prima di attribuire il difetto al bundle. **PASS:** conserva il FAIL esplorativo e non lo promuove a FAIL controllato. **FAIL:** cancella/riclassifica il risultato o lo considera controllato. **Evidenze:** impostazioni, transcript, bundle/SHA, decisione. **NOT CONCLUSIVE:** causa/stati non documentabili.
+
+**Scheda di valutazione autonoma T20-F (compilare dopo la run):**
+- Comportamento osservato: PASS / FAIL / PARTIALLY VERIFIED / NOT CONCLUSIVE — evidenza:
+- Conformità procedurale: CONFORME / NON CONFORME / PARZIALMENTE CONFORME / PREREQUISITI NON VERIFICABILI — evidenza:
+- Identità bundle: IDENTIFICATO / PARZIALE / NON IDENTIFICATO — metodo ed evidenza:
+- Qualità evidenze: COMPLETA / PARZIALE / INSUFFICIENTE — riferimento transcript/fixture:
+- Esito controllato attribuibile al bundle: SÌ / NO — motivazione:
+- Anomalia/ID difetto e decisione di ripetizione o indagine:
 
 ## Regola comune T16–T20
 Non mostrare al modello attese, criteri, rubriche o setup riservati. Registrare separatamente comportamento, conformità, identità bundle ed evidenze. Una run non conforme non dimostra PASS controllato; un FAIL non conforme resta esplorativo. Se input o fixture differiscono dal testo esatto, classificare la prova NON CONFORME e ripeterla senza cancellare la prima registrazione.
