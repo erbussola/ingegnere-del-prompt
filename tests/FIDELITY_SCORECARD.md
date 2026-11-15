@@ -240,3 +240,9 @@ I punteggi F1–F7 descrivono evidenze osservate e non sostituiscono conformità
 Se un FAIL controllato e una o più run conformi successive PASS sono discordanti, l'aggregato è **NOT CONCLUSIVE — ANOMALIA DA INVESTIGARE** e il FAIL resta aperto. Non promuovere a PASS prima dell'indagine. Se il difetto è confermato, mantenere FAIL; se è dimostrata causa esterna/non riproducibile, registrare causa e decisione di riclassificazione senza alterare la run originaria. Le soglie F1–F7 esistenti non cambiano.
 
 Per T20 valutare F1–F7 soltanto se il comportamento offre evidenza pertinente; registrare separatamente i quattro assi. Una run funzionalmente positiva ma non conforme non è PASS controllato. Non mostrare scorecard, attese o criteri al modello.
+
+## A08 — uso dei risultati con causa esterna
+
+La scorecard F1–F7 e il risultato storico della singola run restano evidenze immutabili. L'esclusione di una run dall'aggregazione T01 per causa esterna documentata non cancella né riscrive i punteggi o il FAIL osservato; impedisce soltanto di attribuire quel risultato al bundle nel calcolo aggregato. Registrare sempre ID run, stato di ammissibilità, causa, evidenze, valutatore e data/ora secondo il modello A08 in BEHAVIORAL_TEST_RESULTS.md. Non usare una run esclusa come prova di PASS o FAIL controllato del bundle. Le soglie F1–F7 non cambiano e non si calcolano maggioranze o medie tra run.
+
+Per le nuove campagne, l'impatto è una dimensione materiale autonoma: se cambia, anche senza variazione della conseguenza testualmente dichiarata, il riepilogo e la conferma devono essere rinnovati. Questa interpretazione QA non modifica i bundle.
