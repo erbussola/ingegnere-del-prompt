@@ -163,11 +163,86 @@ I punteggi seguenti sono una valutazione del solo transcript T01, non il risulta
 
 **Anomalie / ID difetto:** nessuna anomalia comportamentale bloccante osservata. Limite di tracciabilità: contenuto del Core nel transcript non identico al bundle previsto.
 
-#### Stato del caso T01 dopo Run 1 e Run 2
+#### Run 3
+
+**Esecuzione:** data e ora effettive non documentate; transcript esportato il 15 novembre 2026 alle 15:10:33 (fuso orario non indicato).  
+**Piattaforma:** ChatGPT (URL sorgente del transcript).  
+**Piano / tipo account:** non documentato.  
+**Modello visualizzato:** non documentato.  
+**Ambiente:** non verificabile dal transcript. Il collegamento identifica una conversazione ChatGPT, ma non dimostra che fosse una chat standard esterna a progetti, GPT personalizzati, notebook, agenti e istruzioni persistenti aggiuntive.  
+**Transcript:** [“Procedere con RUN3”](https://chatgpt.com/c/6af9bc94-5db8-83ed-938a-e7d47faeb59c) — esportazione allegata alla richiesta di registrazione come `Avvio ingegnere prompt - T01 RUN3.md`.  
+**Data di esportazione:** 15 novembre 2026, 15:10:33 (fuso non indicato).  
+**Run ID:** non documentato.
+
+**Snapshot operativo:** `84db964b5ec17ae6c203c125b95133c64b772e75`  
+**Bundle previsto:** `instructions/CORE_INSTRUCTIONS.md`  
+**SHA Git del bundle recuperato:** `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6` — verificato direttamente recuperando il file dallo snapshot operativo; corrisponde esattamente allo SHA atteso.
+
+**Prova del file effettivamente caricato:** INSUFFICIENTE. Nel transcript il primo messaggio utente è rappresentato dal nome `CORE_INSTRUCTIONS_RUN3.md`; la risposta dell'assistente dichiara di aver ricevuto il file e di averne il contenuto disponibile. L'esportazione non include però i byte dell'allegato, il relativo Git/blob SHA o il testo integrale del file caricato. Non è quindi possibile confrontare l'allegato effettivo con il bundle originale recuperato dallo snapshot. Il nome del file e la dichiarazione di acquisizione non dimostrano l'identità binaria o testuale. La modalità risulta compatibile con un caricamento come allegato, ma la prova dell'identità del contenuto non è disponibile.
+
+**Conformità della sessione / §6:** NOT VERIFIABLE. Il transcript documenta una conversazione ChatGPT, ma non riporta se fosse una nuova chat standard né l'assenza di progetto, GPT personalizzato, notebook, agente o istruzioni persistenti aggiuntive. Non risultano dichiarazioni dell'operatore su questi punti nell'evidenza fornita. La conformità al requisito di isolamento non può essere attestata.
+
+**Input T01 esatto:**
+
+> Scrivimi un prompt per chiedere a un chatbot di preparare una lista della spesa per una settimana
+
+**Integrità del transcript:** l'esportazione allegata contiene il primo messaggio con il nome del file, la risposta di presa in carico, l'input T01 e la risposta completa dell'assistente. Il payload dell'allegato CORE non è incluso nell'esportazione. Il transcript testuale è conservato come riferimento esterno al repository; non è stato alterato né riassunto nel riferimento sorgente.
+
+**Evidenze comportamentali osservate:**
+
+- Alla ricezione del file, l'assistente dichiara di averne acquisito il contenuto e riassume le aree del Core che dichiara di avere a disposizione; l'evidenza non consente di verificare il contenuto effettivamente allegato.
+- Alla richiesta T01 riconosce la modalità di creazione e produce direttamente un prompt, senza porre domande preliminari all'utente.
+- Il prompt definisce un ruolo orientato all'organizzazione dei pasti e della spesa domestica e un obiettivo settimanale dal lunedì alla domenica.
+- Chiede al chatbot destinatario di raccogliere numero di persone, preferenze/restrizioni alimentari e copertura dei pasti; considera inoltre le scorte già disponibili.
+- Include ingredienti versatili, riduzione di sprechi e costi, pasti semplici, quantità indicative e categorie merceologiche.
+- Prevede un piano alimentare settimanale e una lista della spesa con nome, quantità e note.
+- Aggiunge criteri su deperibilità, riutilizzo degli ingredienti, prezzi e sostituzioni.
+- Specifica di procedere con una domanda alla volta e di non preparare la lista definitiva prima di avere raccolto le informazioni essenziali.
+
+**Aspetti positivi:**
+
+- Riconoscimento corretto della richiesta di creazione.
+- Risposta immediatamente pertinente e prompt autonomo.
+- Struttura chiara con obiettivo, istruzioni, formato, criteri di qualità e modalità di interazione.
+- Attenzione a scorte, quantità, sprechi e deperibilità.
+- Output copiabile senza dipendere da ulteriori spiegazioni esterne.
+
+**Osservazioni / limiti non bloccanti:**
+
+- Il prompt è piuttosto esteso per una richiesta semplice e amplia l'obiettivo alla pianificazione completa dei pasti settimanali.
+- Non usa segnaposto espliciti per numero di persone, preferenze e budget: demanda la raccolta di questi dati al chatbot destinatario.
+- Include una categoria per prodotti per la casa e altri articoli, ampliando la richiesta oltre la sola spesa alimentare.
+- La progressione effettiva delle domande su più turni non è osservabile nel test T01.
+
+**Valutazione F1–F7 — Run 3**
+
+| Criterio | Punteggio | Evidenza e motivazione |
+|---|---:|---|
+| F1 — Accoglienza | 5/5 | La presa in carico è cortese, chiara e pertinente; la risposta T01 parte direttamente dal risultato richiesto, senza preamboli superflui. |
+| F2 — Comprensione | 5/5 | Riconosce la creazione di un prompt per la spesa settimanale e produce un deliverable coerente, pur ampliandolo alla pianificazione dei pasti. |
+| F3 — Domande progressive | 4/5 | Il prompt prescrive una domanda alla volta e individua le informazioni da raccogliere. Non si assegna 5/5 perché T01 non verifica una progressione multi-turn effettiva né il riuso delle risposte. |
+| F4 — RICCE flessibile | 5/5 | Integra ruolo, obiettivo, istruzioni, contesto temporale, vincoli e formato; non impone una sezione Examples non necessaria per il caso. |
+| F5 — Cinque suggerimenti | N/A | T01 è un caso di creazione, non di ottimizzazione sostanziale di un prompt esistente. |
+| F6 — Prompt finale | 4/5 | Il prompt è completo, autonomo e copiabile; perde un punto per la lunghezza rispetto alla semplicità della richiesta, l'ampliamento al piano alimentare e l'assenza di segnaposto espliciti per i dati mancanti. |
+| F7 — Iterazione | N/A | Il test non prevede una seconda iterazione. |
+
+**Riepilogo dei criteri applicabili Run 3:** 23/25 (F5 e F7 esclusi). Il totale riguarda esclusivamente i cinque criteri applicabili T01 e non viene confrontato con le soglie di campagna definite su 35 punti.
+
+**Esito Run 3:** PARTIALLY VERIFIED
+
+**Motivazione:** il comportamento osservato soddisfa i principali criteri funzionali di T01. Non si assegna PASS perché il transcript non dimostra che l'allegato `CORE_INSTRUCTIONS_RUN3.md` corrispondesse integralmente al bundle verificato nello snapshot operativo; inoltre non documenta le condizioni di isolamento della sessione richieste dal §6. Il blob SHA del bundle previsto è stato verificato, ma non è dimostrata l'identità del file effettivamente caricato.
+
+**Anomalie / limiti di tracciabilità:**  
+- Identità del contenuto allegato non verificabile: manca il payload del file e manca uno SHA dell'allegato.  
+- Conformità della sessione al §6 non verificabile dal transcript.  
+- Modello, piano/account, orario effettivo e fuso non documentati.
+
+#### Stato del caso T01 dopo Run 1, Run 2 e Run 3
 
 - **Run 1:** PARTIALLY VERIFIED — nuova chat interna al progetto “Progetto Clean”, quindi non conforme al requisito di sessione pulita del §6; chiarimenti dell'operatore registrati sopra.
 - **Run 2:** PARTIALLY VERIFIED — comportamento funzionale positivo, ma identità del bundle non dimostrata e isolamento non verificabile indipendentemente.
-- **T01 complessivo:** PARTIALLY VERIFIED. Il piano definisce gli esiti dei singoli test/run ma non specifica una regola per aggregare run ripetute in un unico PASS del caso. Non viene quindi introdotta una regola di aggregazione: nessuna delle due run soddisfa tutti i prerequisiti per PASS e il caso resta PARTIALLY VERIFIED. La valutazione potrà essere riesaminata con una run il cui bundle e la cui sessione siano verificabili.
+- **Run 3:** PARTIALLY VERIFIED — comportamento funzionale positivo; SHA del bundle previsto verificato sullo snapshot, ma identità dell'allegato effettivamente caricato e isolamento della sessione non dimostrati.
+- **T01 complessivo:** PARTIALLY VERIFIED. Il piano definisce gli esiti delle singole run ma non specifica una regola per aggregare run ripetute in un unico PASS del caso. Non viene quindi introdotta una regola di aggregazione: tutte e tre le run restano PARTIALLY VERIFIED e il caso mantiene questo stato.
 
 ### T02 — Ottimizzazione di un prompt incompleto
 
@@ -474,7 +549,7 @@ Per ciascun test compatto compilare: piattaforma/modello, data e ora, SHA di COM
 | Completo | 15 | 0 | 0 | 1 | 14 | 0 |
 | Compatto | 9 | 0 | 0 | 0 | 9 | 0 |
 
-Il registro riporta due esecuzioni distinte di T01 del bundle completo, entrambe PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle due soddisfa tutti i prerequisiti per PASS. Gli altri 14 test completi e tutti i 9 test compatti restano NOT RUN. Il risultato T01 non costituisce una valutazione della fedeltà complessiva al GPT originale.
+Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. Gli altri 14 test completi e tutti i 9 test compatti restano NOT RUN. Il risultato T01 non costituisce una valutazione della fedeltà complessiva al GPT originale.
 
 
 ## Schede di esecuzione — bundle compatto
