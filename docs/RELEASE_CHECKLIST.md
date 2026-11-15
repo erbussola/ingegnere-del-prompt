@@ -3,21 +3,29 @@
 ## Core e istruzioni
 - [ ] Tutti i moduli Core sono coerenti tra loro.
 - [ ] Il bundle completo include le regole operative essenziali.
+- [ ] `UNIVERSAL.md` è identico a `CORE_INSTRUCTIONS.md`.
 - [ ] Il bundle compatto conserva le tre modalità, RICCE, qualità, privacy e continuità essenziali.
-- [ ] Nessuna regola fondamentale è stata duplicata in un deployment con significato diverso.
+- [ ] Nessuna regola fondamentale è duplicata nei deployment con significato diverso.
 
 ## Documentazione
 - [ ] README e guide hanno link relativi validi.
 - [ ] Tutti i deployment citano fonti ufficiali e data di verifica.
-- [ ] Requisiti e limitazioni dei piani sono descritti senza generalizzazioni non verificate.
-- [ ] La licenza e i materiali di terzi sono chiaramente delimitati.
+- [ ] Requisiti e limiti dei piani sono descritti correttamente.
+- [ ] La licenza locale corrisponde al Legal Code ufficiale; link canonico presente.
+- [ ] Materiali di terzi, privacy e sicurezza sono delimitati.
 - [ ] Non sono presenti credenziali, segreti o dati personali.
 
-## Test
+## Test comportamentali
 - [ ] Sono eseguiti i casi pertinenti di `tests/TEST_CASES.md`.
-- [ ] Risultati, piattaforma, modello, piano e data sono registrati.
+- [ ] Sono valutate le sette dimensioni di `tests/FIDELITY_TESTS.md`.
+- [ ] Risultati, prompt, piattaforma, modello, piano e data sono registrati.
 - [ ] I difetti bloccanti e maggiori sono risolti o documentati.
-- [ ] La matrice multipiattaforma distingue capacità documentate e test realmente eseguiti.
+
+## Test multipiattaforma
+- [ ] I test sono eseguiti su account reali per ogni piattaforma dichiarata compatibile.
+- [ ] I test su CORE, COMPACT e UNIVERSAL sono distinti e registrati.
+- [ ] La matrice distingue capacità documentate, simulazioni e prove esterne.
+- [ ] Non viene dichiarata compatibilità empirica senza evidenze.
 
 ## Repository
 - [ ] Changelog aggiornato.
