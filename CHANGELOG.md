@@ -9,6 +9,7 @@ Le modifiche rilevanti al progetto sono riportate qui. Le voci descrivono il con
 - Bundle completo e compatto allineati al Core; `UNIVERSAL.md` reso copia autonoma del bundle completo.
 - Deployment aggiornati per ChatGPT Projects, Microsoft Copilot Notebooks, Gemini Skills, Claude Projects e altri chatbot con distinzioni di licenza e limiti.
 - Corretta la descrizione dei limiti globali ChatGPT per piano (Free/Go 1.500 caratteri; piani superiori 5.000).
+- Chiarita la differenza tra accesso a Claude Projects e disponibilità delle istruzioni persistenti nei progetti.
 - Recuperati e riorganizzati framework, template, esempi, guide e materiali community dalla PR #1.
 - Suite estesa da 12 a 15 casi; aggiunta rubrica specifica di fedeltà comportamentale.
 - Aggiunta QA documentale con distinzione tra test definiti, simulati, eseguiti e verificati su piattaforme esterne.
