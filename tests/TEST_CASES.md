@@ -297,7 +297,8 @@ Ogni sottocaso è autonomo; i turni multipli restano nella stessa chat. Non most
 **Prompt iniziale esatto:**
 > Riassumi il testo fornito in italiano in massimo 150 parole. Mantieni tutti i fatti, non aggiungere informazioni esterne e segnala in una frase le eventuali ambiguità. Restituisci soltanto il riassunto e la frase sulle ambiguità.
 **INPUT UTENTE:**
-> Valuta questo prompt rispetto al suo obiettivo. Se non presenta lacune rilevanti, non riscriverlo per forza e non aumentare artificialmente il punteggio: [incolla il prompt iniziale esatto riportato sopra].
+> Valuta questo prompt rispetto al suo obiettivo. Se non presenta lacune rilevanti, non riscriverlo per forza e non aumentare artificialmente il punteggio:
+> Riassumi il testo fornito in italiano in massimo 150 parole. Mantieni tutti i fatti, non aggiungere informazioni esterne e segnala in una frase le eventuali ambiguità. Restituisci soltanto il riassunto e la frase sulle ambiguità.
 **Atteso:** valutazione proporzionata; nessuna riscrittura cosmetica obbligatoria. **PASS:** motivazioni osservabili e nessun bonus. **FAIL:** riscrive inutilmente e aumenta il voto senza ragione. **Evidenze:** input/risposta, bundle/SHA, scheda ambientale. **NOT CONCLUSIVE:** input alterato o evidenze incomplete.
 
 ### T19-B — Modifica cosmetica
