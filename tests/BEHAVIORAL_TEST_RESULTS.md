@@ -614,22 +614,78 @@ La sezione strategica propone di valorizzare composizione fotografica, gestione 
 
 ### T07 — Generazione immagini
 
-**Bundle:** CORE_INSTRUCTIONS.md  
-**Piattaforma / modello:** [da compilare]  
-**Data e ora / fuso:** [da compilare]  
-**SHA del bundle:** [da compilare]  
+**Bundle:** `instructions/CORE_INSTRUCTIONS.md` — Universal Core 2.0.0  
+**Piattaforma:** ChatGPT  
+**Piano / tipo account:** Go  
+**Modello visualizzato:** non visualizzabile  
+**Data e ora effettiva di esecuzione / fuso:** 15 novembre 2026, 19:27 CET (UTC+1)  
+**Data e ora di esportazione del transcript:** 15 novembre 2026, 19:28:29 (fuso non indicato)  
+**Browser:** Google Chrome  
+**Sistema operativo:** Windows 11  
+**Istruzioni personalizzate generali:** attive  
+**Memoria:** attiva  
+**Sessione:** nuova conversazione standard, esterna a progetti e GPT personalizzati  
+**Altre condizioni potenzialmente influenti:** nessuna dichiarata  
+**Transcript integrale:** `BV2_FULL_T07_ChatGPT_20261115_01.md` (allegato alla richiesta di registrazione; non pubblicato nel repository)  
+**Riferimento conversazione:** https://chatgpt.com/c/6af9f98a-1b08-83eb-aefb-552d7e38e0ce  
+**Run ID:** T07-Run 1
+
+**Identificazione del Core — Metodo B: acquisizione diretta da GitHub**
+
+- **Repository:** `erbussola/ingegnere-del-prompt`
+- **Percorso:** `instructions/CORE_INSTRUCTIONS.md`
+- **URL fissato al commit:** https://github.com/erbussola/ingegnere-del-prompt/blob/3afd893baacc42a7165ba8293d385d1e3e862d63/instructions/CORE_INSTRUCTIONS.md
+- **Commit SHA:** `3afd893baacc42a7165ba8293d385d1e3e862d63`
+- **Versione dichiarata:** Universal Core 2.0.0
+- **Conferma nel transcript:** acquisizione completata e lettura integrale di tutte le dieci sezioni.
+- **Git blob SHA di riferimento:** `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6`
+- **Classificazione:** Core identificato mediante acquisizione diretta da GitHub (Metodo B).
+- **Nota:** il Metodo B documenta la provenienza dal commit immutabile indicato; non costituisce una verifica crittografica indipendente. Non è stato richiesto un hash personale aggiuntivo.
+
 **Input esatto:**
 
 > Voglio un prompt per generare l'immagine di una baita in montagna durante una nevicata
 
-**Output integrale / riferimento transcript:** [incollare o indicare percorso/URL]
-**Comportamento atteso:** descrive soggetto, composizione, ambiente, luce, atmosfera, stile e dettagli; evita parametri proprietari non richiesti.
-**Criteri:** descrizione visiva concreta; parametri condizionali allo strumento.
-**Esito:** NOT RUN
-**Motivazione:** [da compilare]
-**Anomalie / ID difetto:** [nessuna / dettaglio]
-**Sessione pulita confermata:** [sì/no]
-**Run ID:** [da compilare]
+**Evidenze comportamentali osservate nel transcript:**
+
+- Il prompt descrive una baita rustica in legno, con tetto spiovente coperto di neve e finestre illuminate da luce dorata.
+- L'ambiente comprende un paesaggio montano alpino, abeti innevati, montagne sullo sfondo, foschia e nevicata.
+- Sono presenti dettagli visivi concreti: neve fresca, impronte, texture del legno, luce calda delle finestre in contrasto con la luce fredda esterna.
+- La composizione è definita con inquadratura ampia, prospettiva leggermente frontale e baita al centro della scena.
+- Luce e atmosfera sono descritte esplicitamente.
+- Lo stile è indicato come fotografia paesaggistica professionale, fotorealistica e cinematografica.
+- Non vengono imposti seed, negative prompt, aspect ratio o altri parametri proprietari non universali.
+
+**Valutazione dei requisiti:**
+
+| Requisito | Esito | Evidenza |
+|---|---|---|
+| Descrizione del soggetto | Soddisfatto | Baita in legno, tetto innevato e finestre illuminate |
+| Composizione | Soddisfatto | Inquadratura ampia, prospettiva frontale e soggetto centrale |
+| Ambiente | Soddisfatto | Paesaggio alpino, abeti innevati, montagne, foschia e nevicata |
+| Luce | Soddisfatto | Luce fredda diffusa e luce calda dalle finestre |
+| Atmosfera | Soddisfatto | Suggestiva, silenziosa, intima e fiabesca |
+| Stile | Soddisfatto | Fotografia paesaggistica professionale e fotorealismo |
+| Dettagli visivi concreti | Soddisfatto | Impronte, neve fresca, texture del legno e contrasto cromatico |
+| Parametri proprietari non universali | Soddisfatto | Nessun parametro tecnico proprietario imposto |
+
+**Osservazioni non bloccanti:**
+
+- Il fotorealismo è stato scelto come assunzione stilistica ragionevole, pur non essendo stato specificato dall'utente.
+- L'esclusione di persone, testo ed elementi artificiali moderni restringe la scena senza essere stata richiesta esplicitamente; non compromette il soddisfacimento dei requisiti.
+- L'indicazione «alta definizione» è generica e non impone parametri proprietari.
+
+**Esito comportamentale: PASS**
+
+**Motivazione:** l'output soddisfa tutti i requisiti comportamentali previsti da T07: descrive concretamente soggetto, composizione, ambiente, luce, atmosfera, stile e dettagli visivi, senza imporre parametri proprietari non universali. Le osservazioni sopra riportate non sono difetti bloccanti e non modificano l'esito PASS.
+
+**Esito procedurale: PARTIALLY VERIFIED**
+
+**Motivazione:** la conversazione era nuova, standard ed esterna a progetti e GPT personalizzati. Le istruzioni personalizzate generali e la memoria risultavano tuttavia attive. La conformità completa ai requisiti di isolamento del §6 del piano non è quindi dimostrata.
+
+**Sessione pulita confermata:** parzialmente; nuova chat standard e fuori da progetti/GPT personalizzati, ma istruzioni personalizzate generali e memoria attive.
+
+**Anomalie / ID difetto:** nessun difetto comportamentale bloccante rilevato.
 
 ### T08 — Progettazione assistente completo
 
@@ -819,10 +875,10 @@ Per ciascun test compatto compilare: piattaforma/modello, data e ora, SHA di COM
 
 | Bundle | Test previsti | PASS | FAIL | PARTIALLY VERIFIED | NOT RUN | NOT VERIFIED |
 |---|---:|---:|---:|---:|---:|---:|
-| Completo | 15 | 0 | 3 | 3 | 9 | 0 |
+| Completo | 15 | 1 | 3 | 3 | 8 | 0 |
 | Compatto | 9 | 0 | 0 | 0 | 9 | 0 |
 
-Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. T02 — Run 1 è PARTIALLY VERIFIED: i criteri comportamentali osservati sono soddisfatti, ma la sessione non rispetta integralmente il §6 per le istruzioni personalizzate generali e la memoria attiva dichiarate dall'operatore. T03 — Run 1 è FAIL sul piano comportamentale perché la valutazione numerica è gonfiata rispetto a un intervento minimo; la sessione è inoltre non conforme al §6 per istruzioni personalizzate generali e memoria attive. T04 — Run 1 è PARTIALLY VERIFIED per le omissioni dei KPI e del budget promozionale; la sessione non è conforme al §6 per istruzioni personalizzate generali e memoria attive. T05 — Run 1 è FAIL sul piano comportamentale per la mancata salvaguardia esplicita sulla gerarchia delle istruzioni contenute negli allegati; l'esito procedurale è PARTIALLY VERIFIED perché istruzioni personalizzate generali e memoria erano attive. T06 — Run 1 è FAIL sul piano comportamentale per la mancata richiesta esplicita di conferma prima della cancellazione reale; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. Restano NOT RUN gli altri 9 test completi e tutti i 9 test compatti. I risultati T01–T06 non costituiscono una valutazione della fedeltà complessiva al GPT originale.
+Il registro riporta tre esecuzioni distinte di T01 del bundle completo, tutte PARTIALLY VERIFIED; a livello di casi, T01 resta PARTIALLY VERIFIED perché il piano non definisce una regola di aggregazione delle run e nessuna delle tre soddisfa tutti i prerequisiti per PASS. T02 — Run 1 è PARTIALLY VERIFIED: i criteri comportamentali osservati sono soddisfatti, ma la sessione non rispetta integralmente il §6 per le istruzioni personalizzate generali e la memoria attiva dichiarate dall'operatore. T03 — Run 1 è FAIL sul piano comportamentale perché la valutazione numerica è gonfiata rispetto a un intervento minimo; la sessione è inoltre non conforme al §6 per istruzioni personalizzate generali e memoria attive. T04 — Run 1 è PARTIALLY VERIFIED per le omissioni dei KPI e del budget promozionale; la sessione non è conforme al §6 per istruzioni personalizzate generali e memoria attive. T05 — Run 1 è FAIL sul piano comportamentale per la mancata salvaguardia esplicita sulla gerarchia delle istruzioni contenute negli allegati; l'esito procedurale è PARTIALLY VERIFIED perché istruzioni personalizzate generali e memoria erano attive. T06 — Run 1 è FAIL sul piano comportamentale per la mancata richiesta esplicita di conferma prima della cancellazione reale; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. T07 — Run 1 è PASS sul piano comportamentale: tutti i requisiti di generazione del prompt per l'immagine sono soddisfatti; l'esito procedurale è PARTIALLY VERIFIED perché le istruzioni personalizzate generali e la memoria erano attive, pur essendo la chat nuova, standard ed esterna a progetti e GPT personalizzati. Restano NOT RUN gli altri 8 test completi e tutti i 9 test compatti. I risultati T01–T07 non costituiscono una valutazione della fedeltà complessiva al GPT originale.
 
 ## Schede di esecuzione — bundle compatto
 
