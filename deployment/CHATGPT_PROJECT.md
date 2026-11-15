@@ -1,19 +1,34 @@
 # Deployment — ChatGPT Projects
 
 ## Opzioni disponibili
-Il metodo universale con una chat standard resta il percorso di base. In alternativa, puoi usare le **Istruzioni personalizzate** per preferenze globali o un **Progetto ChatGPT** per un assistente dedicato al progetto.
+La modalità universale tramite chat standard resta gratuita e non richiede un progetto. In alternativa, ChatGPT offre:
+- **Progetti:** spazi di lavoro con chat, file/fonti e istruzioni specifiche del progetto.
+- **Istruzioni personalizzate globali:** preferenze generali applicate alle conversazioni, quando attive.
 
-## Configurazione consigliata del Progetto
-1. Crea un nuovo Progetto dalla barra laterale.
-2. Apri il menu del progetto e seleziona **Impostazioni del progetto**.
-3. Inserisci il contenuto di `instructions/CORE_INSTRUCTIONS.md` nelle istruzioni del progetto. Se il campo ha un limite, usa `instructions/COMPACT.md`.
-4. Aggiungi come fonti i documenti pertinenti: framework, template, esempi e guida alla continuità.
-5. Avvia una chat all'interno del progetto e prova uno scenario di `tests/TEST_CASES.md`.
+I Progetti sono disponibili agli utenti ChatGPT autenticati, soggetti al piano e alle impostazioni del workspace. Non è corretto considerarli una funzione esclusiva dei piani premium.
 
-Le istruzioni di progetto si applicano solo all'interno di quel progetto e hanno precedenza sulle istruzioni personalizzate globali. Progetti, caricamento file e condivisione sono soggetti alla disponibilità del piano e alle impostazioni dell'area di lavoro.
+## Configurazione di un Progetto
+1. Seleziona **Nuovo progetto** nella barra laterale.
+2. Apri il menu del progetto (**•••**) e seleziona **Impostazioni del progetto**.
+3. Inserisci il testo di `instructions/CORE_INSTRUCTIONS.md` nelle istruzioni del progetto. Se il campo o l'esperienza del tuo account non accetta il testo completo, usa `instructions/COMPACT.md`.
+4. Aggiungi come fonti i documenti pertinenti: RICCE, valutazione, checklist, template ed esempi. Non è necessario caricare tutto il repository.
+5. Avvia una chat nel progetto e verifica il comportamento con `tests/TEST_CASES.md`.
+
+Le istruzioni del progetto si applicano soltanto alle chat del progetto e prevalgono sulle istruzioni personalizzate globali. Il contesto delle chat e dei file può essere riutilizzato secondo le impostazioni di memoria del progetto e del workspace.
+
+## Limiti di file documentati
+Il numero massimo di file caricabili per progetto dipende dal piano:
+- **Free:** 5 file per progetto.
+- **Go e Plus:** 25 file per progetto.
+- **Edu, Pro, Business ed Enterprise:** 40 file per progetto.
+
+È possibile caricare al massimo 10 file per singola operazione. Il numero di progetti creabili è illimitato secondo la documentazione consultata. I limiti possono cambiare: controlla la pagina ufficiale aggiornata prima di pianificare una knowledge base ampia.
 
 ## Istruzioni personalizzate globali
-Se vuoi applicare preferenze a tutte le chat, puoi usare le Istruzioni personalizzate nelle impostazioni di personalizzazione. Le istruzioni personalizzate sono documentate come disponibili su tutti i piani, ma i limiti di caratteri e le capacità possono variare. Per il Core completo un Progetto o la chat universale sono più adatti di un campo breve.
+Le Custom Instructions sono disponibili su tutti i piani, ma i campi di testo estesi hanno un limite di 1.500 caratteri ciascuno. Per questo motivo il Core completo non è adatto a essere inserito integralmente nelle sole istruzioni globali: usa un Progetto, quando disponibile, oppure la chat universale. Le impostazioni globali non sostituiscono la conoscenza specifica di un progetto.
+
+## Cosa non fa un Progetto
+Un Progetto non è un GPT personalizzato pubblicato né un agente autonomo. Fornisce un contesto organizzato, istruzioni specifiche e fonti alle chat al suo interno. Strumenti, modelli, memoria e controlli restano quelli disponibili nel piano e nel workspace.
 
 ## Materiali suggeriti
 - Istruzioni: `instructions/CORE_INSTRUCTIONS.md` (o `COMPACT.md`).
@@ -22,11 +37,8 @@ Se vuoi applicare preferenze a tutte le chat, puoi usare le Istruzioni personali
 - Test: `tests/TEST_CASES.md`.
 - Continuità: `core/CONTINUITY_ENGINE.md`.
 
-## Verifica e limiti
-Le etichette dell'interfaccia possono cambiare. Le istruzioni non ampliano gli strumenti del modello e non sostituiscono la verifica delle fonti.
-
 ## Fonti ufficiali
-- Progetti: https://help.openai.com/en/articles/10169521-projects-in-chatgpt
+- Progetti ChatGPT e limiti: https://help.openai.com/en/articles/10169521-projects-in-chatgpt
 - Istruzioni personalizzate: https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions
 
 Verifica fonti: 15 novembre 2026.
