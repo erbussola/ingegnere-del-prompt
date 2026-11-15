@@ -279,8 +279,8 @@ Full: T03, T05, T06, T11, T15, T16-A…E, T17-A…E, T18, T19-A…D, T20-A…F, 
 
 Per le nuove campagne applicare l'integrazione A08 in BEHAVIORAL_VALIDATION_PLAN.md. In particolare:
 - conservare immutato il risultato storico di ogni run;
-- registrare separatamente attribuibilità al bundle e ammissibilità aggregata;
-- escludere un FAIL dall'aggregazione soltanto dopo evidenza documentata di causa esterna, con valutatore, data/ora e motivazione;
+- registrare separatamente validità della run, attribuibilità al bundle e ammissibilità aggregata;
+- escludere un FAIL dall'aggregazione soltanto dopo evidenza documentata di causa esterna, con valutatore, data/ora e motivazione; distinguere l'esclusione documentata dalla non ammissibilità per non conformità o evidenze insufficienti;
 - se la causa non è dimostrata, non escludere la run; se l'indagine resta aperta, sospendere la run e l'aggregato;
 - ricalcolare esclusivamente sulle run INCLUSE, senza maggioranze o medie, applicando la matrice A–G del piano;
 - usare T04-R e T10-R per le revisioni A04; non sovrascrivere T04/T10 storici.
