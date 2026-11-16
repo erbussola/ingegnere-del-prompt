@@ -1284,7 +1284,9 @@ I 27 casi individuali previsti per la nuova campagna sono elencati nell'addendum
 
 L'elenco e gli esiti delle nove schede Compact vuote già presenti sono conservati come modello storico di pianificazione; i relativi campi SHA sono stati allineati al blob A11 perché non contengono run né evidenze. Nessuna scheda con run o transcript è stata modificata.
 
-## Riepilogo campagna
+## Riepilogo campagna — snapshot storico precedente ad A15
+
+La tabella e la descrizione seguenti fotografano la campagna precedente; non rappresentano il conteggio né gli esiti della nuova campagna A15.
 
 | Bundle | Test previsti | PASS | FAIL | PARTIALLY VERIFIED | NOT RUN | NOT VERIFIED |
 |---|---:|---:|---:|---:|---:|---:|
