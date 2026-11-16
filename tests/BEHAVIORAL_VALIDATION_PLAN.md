@@ -118,49 +118,36 @@ Registrare piattaforma, modello effettivamente visualizzato, piano/tipo account 
 
 La sola apertura di una nuova chat dentro un progetto o un ambiente con istruzioni persistenti non è sufficiente a qualificare la sessione come pulita.
 
-## 7. Percorso A — Bundle completo
+## 7. Percorso A — Bundle completo (campagna A15)
 
-File: `instructions/CORE_INSTRUCTIONS.md`
+File: `instructions/CORE_INSTRUCTIONS.md` — baseline A11, blob SHA riportato nella cronologia.
 
-Eseguire tutti i 15 test, in 15 sessioni pulite indipendenti, salvo i turni multipli previsti all'interno di T10 e T13.
+Eseguire i 39 casi individuali in sessioni distinte e pulite, mantenendo nella stessa sessione soltanto i turni multipli esplicitamente previsti dal singolo test:
 
-| Test | Nome sintetico | Sessione |
-|---|---|---|
-| T01 | Creazione semplice | nuova chat |
-| T02 | Ottimizzazione incompleta | nuova chat |
-| T03 | Prompt già strutturato | nuova chat |
-| T04 | Marketing | nuova chat |
-| T05 | Analisi documentale | nuova chat |
-| T06 | Programmazione | nuova chat |
-| T07 | Generazione immagini | nuova chat |
-| T08 | Progettazione assistente | nuova chat |
-| T09 | Richiesta ambigua | nuova chat |
-| T10 | Iterazione | una chat, due messaggi utente |
-| T11 | Cinque suggerimenti e valutazione | nuova chat |
-| T12 | Privacy e segreti | nuova chat |
-| T13 | Dialogo progressivo | una chat, tre messaggi utente |
-| T14 | Qualità dei cinque suggerimenti | nuova chat |
-| T15 | Lingua e indipendenza dal settore | nuova chat |
+- T01, T02, T08, T09, T10, T11, T12, T13, T14;
+- T03, T05, T06, T15;
+- T04-R, T10-R;
+- T16-A…E;
+- T17-A…E;
+- T18-A…D;
+- T19-A…D;
+- T20-A…F.
 
-Per ciascun caso utilizzare input, comportamento atteso, criteri ed errori da evitare già presenti in `tests/TEST_CASES.md`. Non sostituire né ridurre i casi.
+Registrare l'aggregazione T01 separatamente come `T01-AGG-FULL`. Per ciascun caso utilizzare input, sequenza, comportamento atteso e criteri in `tests/TEST_CASES.md`. Non creare transcript o risultati ipotetici.
 
-## 8. Percorso B — Bundle compatto
+## 8. Percorso B — Bundle compatto (campagna A15)
 
-File: `instructions/COMPACT.md`
+File: `instructions/COMPACT.md` — baseline A11, blob SHA riportato nella cronologia.
 
-Ripetere in sessioni pulite indipendenti i seguenti nove casi, usando gli stessi input e la stessa sequenza di messaggi del percorso A:
+Eseguire i 27 casi individuali in sessioni distinte e pulite:
 
-- T01 — Creazione semplice
-- T02 — Ottimizzazione incompleta
-- T08 — Progettazione assistente
-- T09 — Richiesta ambigua
-- T10 — Iterazione
-- T11 — Cinque suggerimenti e valutazione
-- T12 — Privacy e segreti
-- T13 — Dialogo progressivo
-- T14 — Qualità dei cinque suggerimenti
+- T01, T02, T08, T09, T10, T11, T12, T13, T14;
+- T16-A…E;
+- T17-A…E;
+- T18-A…D;
+- T19-A…D.
 
-Non trasferire il transcript del bundle completo nella sessione compatta. Non riutilizzare la stessa conversazione. Registrare separatamente ogni risultato.
+T20-A…F e gli altri casi Full-only non appartengono alla suite Compact. Registrare l'aggregazione T01 separatamente come `T01-AGG-COMPACT`. Per ogni coppia comparabile usare lo stesso input e la stessa sequenza del percorso Full; conservare transcript indipendenti e non trasferire risposte da una sessione all'altra.
 
 ## 9. Criteri di superamento e fallimento
 
