@@ -1,18 +1,18 @@
 # Codice di condotta
 
-La community di Ingegnere del Prompt deve essere
-un ambiente aperto, inclusivo e rispettoso.
+Vogliamo mantenere una community aperta, rispettosa e collaborativa, in cui persone con livelli di esperienza e punti di vista differenti possano contribuire in modo costruttivo.
 
-Sono richiesti:
+## Comportamenti attesi
+- Comunicazione rispettosa, inclusiva e professionale.
+- Critiche rivolte alle idee e ai contenuti, non alle persone.
+- Disponibilità a spiegare, ascoltare e imparare.
+- Feedback motivato e orientato al miglioramento.
+- Rispetto della privacy e delle licenze.
 
-- Rispetto reciproco.
-- Comunicazione costruttiva.
-- Collaborazione.
-- Accettazione delle differenze.
-- Critiche motivate e rispettose.
+## Comportamenti non accettati
+Molestie, minacce, insulti, discriminazione, intimidazioni, divulgazione non autorizzata di dati personali, spam e comportamenti deliberatamente ostili.
 
-Non sono ammessi comportamenti offensivi,
-discriminatori o molesti.
+## Segnalazioni
+Per una segnalazione, contatta i manutentori attraverso i canali disponibili nel profilo GitHub del progetto. Non pubblicare in una Issue informazioni personali o dettagli di sicurezza. Ogni segnalazione sarà valutata con attenzione e proporzionalità.
 
-L'obiettivo comune è migliorare il progetto
-e renderlo accessibile a tutti.
+La partecipazione al progetto implica il rispetto di questo codice.

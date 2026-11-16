@@ -1,14 +1,24 @@
 ## Descrizione
+[Descrivi cosa cambia e perché.]
 
-Descrivi le modifiche proposte.
+## Tipo di modifica
+- [ ] Core / comportamento
+- [ ] Bundle istruzioni completo o compatto
+- [ ] Deployment piattaforma
+- [ ] Framework / metodologia
+- [ ] Template / esempio
+- [ ] Test
+- [ ] Documentazione / traduzione
 
-## Motivazione
-
-Quale problema risolvono o quale miglioramento introducono?
+## Coerenza architetturale
+- [ ] Le regole normative restano in `core/`.
+- [ ] Ho aggiornato i bundle se il Core è cambiato.
+- [ ] I deployment non introducono regole divergenti.
+- [ ] Ho aggiornato i test correlati.
 
 ## Verifiche
-
-- [ ] Documentazione aggiornata.
+- [ ] Markdown e link relativi controllati.
+- [ ] Fonti ufficiali e data di verifica indicati per le piattaforme.
+- [ ] Nessun dato personale, credenziale o segreto.
+- [ ] Licenze e attribuzioni verificate.
 - [ ] Nessuna dipendenza a pagamento obbligatoria.
-- [ ] Nessuna credenziale o dato personale inserito.
-- [ ] Modifiche coerenti con gli obiettivi del progetto.

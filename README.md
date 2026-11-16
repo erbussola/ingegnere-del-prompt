@@ -1,65 +1,63 @@
 # Ingegnere del Prompt
 
-**Costruisci il tuo assistente personale di Prompt Engineering.**
+**Un motore universale di Prompt Engineering, in italiano, pronto da usare nel chatbot che già utilizzi.**
 
-Ingegnere del Prompt è un progetto open source che mette a disposizione
-istruzioni, metodologie, framework e modelli per creare un assistente
-specializzato nella progettazione e ottimizzazione dei prompt AI.
+Ingegnere del Prompt è un kit open source di istruzioni, metodi, template, esempi e guide. Consente di creare prompt, ottimizzare quelli esistenti e progettare assistenti AI senza sviluppare un'applicazione e senza API a pagamento obbligatorie.
 
-## Obiettivo
+## Inizia in pochi minuti
 
-Consentire a chiunque di creare il proprio Ingegnere del Prompt
-utilizzando il chatbot AI che già utilizza, senza dover sviluppare
-un'applicazione o acquistare API e servizi aggiuntivi.
+1. Apri [instructions/CORE_INSTRUCTIONS.md](instructions/CORE_INSTRUCTIONS.md).
+2. Copia il contenuto e incollalo come primo messaggio in una nuova chat. Per istruzioni passo-passo leggi [Avvio universale](deployment/UNIVERSAL_CHAT.md).
+3. Descrivi cosa vuoi ottenere: un prompt nuovo, la revisione di un prompt o un assistente AI.
 
-## Cosa troverai
+Non serve una funzione premium né un GPT personalizzato: basta una chat che accetti testo. Se la piattaforma impone un limite, usa la [versione compatta](instructions/COMPACT.md).
 
-- Istruzioni pronte da utilizzare.
-- Framework RICCE per progettare prompt.
-- Metodologie di analisi e ottimizzazione.
-- Sistemi di valutazione qualitativa.
-- Template per diversi settori.
-- Esempi pratici.
-- Guide di installazione e configurazione.
+## Cosa fa
 
-## Come funziona
+- **Crea prompt** a partire da idee e richieste informali.
+- **Ottimizza prompt** esistenti, preservandone l'intento e fornendo cinque suggerimenti nelle revisioni sostanziali.
+- **Progetta assistenti AI** con identità, comportamento, istruzioni, vincoli, fonti e test.
+- Applica il framework **RICCE** in modo flessibile.
+- Valuta i prompt su chiarezza, completezza, specificità, coerenza e utilizzabilità.
 
-1. Scarica le istruzioni dal repository.
-2. Segui la guida relativa al tuo chatbot.
-3. Copia le istruzioni nella configurazione disponibile
-   oppure in una nuova conversazione.
-4. Inizia a utilizzare il tuo Ingegnere del Prompt.
+## Architettura: un Core, molte piattaforme
 
-## Filosofia del progetto
-
-- Open source.
-- Gratuito.
-- Accessibile a tutti.
-- Nessuna API a pagamento obbligatoria.
-- Nessuna applicazione proprietaria necessaria.
-- Documentazione aperta alla collaborazione.
-
-## Compatibilità
-
-Il progetto punta a essere utilizzabile con ChatGPT, Gemini,
-Claude e altri chatbot che supportano istruzioni personalizzate.
-
-Le funzionalità effettivamente disponibili dipendono dalla piattaforma.
+Il comportamento centrale è indipendente dal fornitore. Le regole sono descritte nei moduli [core/](core/); il pacchetto [instructions/CORE_INSTRUCTIONS.md](instructions/CORE_INSTRUCTIONS.md) riunisce le regole essenziali in un testo autonomo e copiabile. I documenti [deployment/](deployment/) spiegano come adattare lo stesso Core a ChatGPT, Microsoft Copilot Notebooks, Google Gemini, Anthropic Claude e altri chatbot. Non devono introdurre metodologie divergenti.
 
 ## Documentazione
 
-Consulta la cartella [docs](docs/) per il brief e le guide.
+| Area | Contenuto |
+|---|---|
+| [Core](core/) | Identità, comportamento, conversazione, RICCE, generazione, analisi, valutazione, qualità, modalità, continuità, sicurezza |
+| [Istruzioni](instructions/) | Bundle completo, compatto e avvio universale |
+| [Deployment](deployment/) | Chat standard, ChatGPT Projects, Copilot Notebooks, Gemini, Claude e altri chatbot |
+| [Framework](framework/) | RICCE, valutazione, checklist e continuità |
+| [Template](templates/) | Business, marketing, analisi, scrittura e generazione immagini |
+| [Esempi](examples/) | Esempi base e avanzati |
+| [Test](tests/) | Piano, 15 casi di test, test di fedeltà e matrice multipiattaforma |
+| [Knowledge Base](knowledge/) | Guida all'organizzazione delle fonti |
+| [Guide](docs/) | Brief, architettura, installazione, uso, FAQ e troubleshooting |
+| [Roadmap](roadmap/FUTURE_VERSIONS.md) | Evoluzione prevista |
 
-## Collaborazione
+## Principi
 
-La community è invitata a proporre miglioramenti, segnalare problemi
-e contribuire all'evoluzione del progetto.
+- **Gratuito e portabile:** nessuna API o servizio a pagamento obbligatorio.
+- **Conversazionale:** capisce prima di costruire; chiede solo ciò che serve.
+- **Proporzionato:** un prompt breve e preciso può essere migliore di uno lungo.
+- **Trasparente:** non inventa contesto, fonti o capacità.
+- **Privacy by design:** il kit non trasmette dati e non richiede segreti.
+- **Open source:** i materiali originali sono proposti con licenza CC BY-SA 4.0.
 
-## Licenza
-
-Documentazione, istruzioni e template sono distribuiti secondo
-la licenza CC BY-SA 4.0, salvo diversa indicazione.
+La disponibilità di istruzioni permanenti, memoria, caricamento file e strumenti dipende dalla piattaforma e dal piano. La modalità chat standard resta il fallback universale.
 
 ## Stato del progetto
 
-Fase iniziale di progettazione e sviluppo della versione 2.0.
+Versione 2.0 in sviluppo e revisione. Il Core e la suite documentale sono in implementazione; i test comportamentali devono essere eseguiti e registrati prima di dichiarare il prodotto pronto. La documentazione delle funzioni di piattaforma non equivale a una verifica di funzionamento su un account reale. Vedi [criteri di accettazione](docs/PROJECT_BRIEF.md), [piano di test](tests/TEST_PLAN.md) e [test di fedeltà](tests/FIDELITY_TESTS.md).
+
+## Contribuire
+
+Leggi [CONTRIBUTING.md](CONTRIBUTING.md), il [Codice di condotta](CODE_OF_CONDUCT.md) e il [modello Pull Request](.github/PULL_REQUEST_TEMPLATE.md). Le proposte per nuove piattaforme devono includere fonti ufficiali e risultati di test riproducibili.
+
+## Licenza
+
+I materiali originali del progetto sono proposti con licenza [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE.md). Materiali di terze parti e marchi restano soggetti ai rispettivi diritti e condizioni.
