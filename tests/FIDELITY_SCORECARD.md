@@ -16,6 +16,18 @@
 | Bundle CORE — Git blob SHA | `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6` | SHA del contenuto di `instructions/CORE_INSTRUCTIONS.md`, verificato nuovamente. |
 | Bundle COMPACT — Git blob SHA | `bc852ec4925e9c81a5689c16a166fd8fb46181aa` | SHA del contenuto di `instructions/COMPACT.md`, verificato nuovamente. |
 
+
+### Baseline operativa A15 — commit A11
+
+| Riferimento | SHA completo | Significato |
+|---|---|---|
+| Commit A11 / HEAD di riferimento della campagna | `6a765f9c27d7bf1f8cd8305a2d2b7d272964863c` | Baseline approvata per la nuova campagna Full/Compact A15. |
+| Bundle CORE — Git blob SHA | `06e809107d89333738aa96b758e81d1a94383cd3` | Contenuto di `instructions/CORE_INSTRUCTIONS.md` verificato sul commit A11. |
+| Bundle COMPACT — Git blob SHA | `a102a3819446565621f4a9d492107625ec99b6b0` | Contenuto di `instructions/COMPACT.md` verificato sul commit A11. |
+| TEST_CASES — Git blob SHA | `8dfb6edfed017efc459a8853c211e3c76b6de6e2` | Input e criteri di `tests/TEST_CASES.md` verificati sul commit A11. |
+
+Il riferimento operativo per le nuove run è A11. Gli snapshot e gli SHA precedenti, incluso `84db964b5ec17ae6c203c125b95133c64b772e75` e i relativi blob, restano conservati come riferimenti storici delle run già registrate: non sono sostituiti né riutilizzati come baseline della nuova campagna. Le run storiche non vengono riscritte.
+
 **Distinzione degli snapshot:** la baseline QA identifica il codice esaminato; il commit successivo pubblica il rapporto; il medesimo commit era anche l'HEAD all'avvio della preparazione Behavioral Validation. Il commit `84db964b5ec17ae6c203c125b95133c64b772e75` è lo snapshot operativo fissato per la campagna. Il commit finale di pubblicazione dell'allineamento aggiorna esclusivamente i quattro documenti di validazione per registrare questo riferimento; non cambia i bundle né i test case. Gli SHA dei bundle identificano i contenuti dei file, non commit Git.
 
 **Istruzione operativa:** eseguire il checkout di `84db964b5ec17ae6c203c125b95133c64b772e75` per avviare la campagna; verificare che i Git blob SHA di CORE e COMPACT corrispondano ai valori riportati sopra. Il branch corrente conterrà anche la pubblicazione finale dei riferimenti, ma il contenuto dei bundle e degli input resta identico allo snapshot operativo.
@@ -208,7 +220,7 @@ Le soglie sono mantenute senza modifiche rispetto a `tests/FIDELITY_TESTS.md`. I
 
 ## 5. Confronto tra bundle
 
-Compilare una tabella distinta per ogni coppia di test confrontata.
+La campagna A15 prevede 27 coppie direttamente comparabili: T01, T02, T08, T09, T10, T11, T12, T13, T14; T16-A…E; T17-A…E; T18-A…D; T19-A…D.
 
 | Test | Evidenza bundle completo | Evidenza bundle compatto | Differenza osservata | Impatto |
 |---|---|---|---|---|
@@ -221,8 +233,26 @@ Compilare una tabella distinta per ogni coppia di test confrontata.
 | T12 | [ ] | [ ] | [ ] | [ ] |
 | T13 | [ ] | [ ] | [ ] | [ ] |
 | T14 | [ ] | [ ] | [ ] | [ ] |
+| T16-A | [ ] | [ ] | [ ] | [ ] |
+| T16-B | [ ] | [ ] | [ ] | [ ] |
+| T16-C | [ ] | [ ] | [ ] | [ ] |
+| T16-D | [ ] | [ ] | [ ] | [ ] |
+| T16-E | [ ] | [ ] | [ ] | [ ] |
+| T17-A | [ ] | [ ] | [ ] | [ ] |
+| T17-B | [ ] | [ ] | [ ] | [ ] |
+| T17-C | [ ] | [ ] | [ ] | [ ] |
+| T17-D | [ ] | [ ] | [ ] | [ ] |
+| T17-E | [ ] | [ ] | [ ] | [ ] |
+| T18-A | [ ] | [ ] | [ ] | [ ] |
+| T18-B | [ ] | [ ] | [ ] | [ ] |
+| T18-C | [ ] | [ ] | [ ] | [ ] |
+| T18-D | [ ] | [ ] | [ ] | [ ] |
+| T19-A | [ ] | [ ] | [ ] | [ ] |
+| T19-B | [ ] | [ ] | [ ] | [ ] |
+| T19-C | [ ] | [ ] | [ ] | [ ] |
+| T19-D | [ ] | [ ] | [ ] | [ ] |
 
-Non dichiarare equivalenza generale: il confronto riguarda soltanto i casi eseguiti e l'ambiente indicato.
+I 12 casi Full-only sono T03, T05, T06, T15, T04-R, T10-R e T20-A…F. Non attribuire loro confronti Compact inesistenti. Le scorecard F1–F7 vanno compilate separatamente per Full e Compact, sulla base dei rispettivi transcript e delle evidenze disponibili. Nessun bonus o penalizzazione automatica per uno dei bundle.
 
 ## 6. Fedeltà al GPT originale — limite di interpretazione
 
@@ -246,3 +276,12 @@ Per T20 valutare F1–F7 soltanto se il comportamento offre evidenza pertinente;
 La scorecard F1–F7 e il risultato storico della singola run restano evidenze immutabili. L'esclusione di una run dall'aggregazione T01 per causa esterna documentata non cancella né riscrive i punteggi o il FAIL osservato; impedisce soltanto di attribuire quel risultato al bundle nel calcolo aggregato. Registrare sempre ID run, validità rispetto alle condizioni/bundle, attribuibilità, stato di ammissibilità, causa, evidenze, valutatore e data/ora secondo il modello A08 in BEHAVIORAL_TEST_RESULTS.md. Non usare una run esclusa come prova di PASS o FAIL controllato del bundle. Le soglie F1–F7 non cambiano e non si calcolano maggioranze o medie tra run.
 
 Per le nuove campagne, l'impatto è una dimensione materiale autonoma: se cambia, anche senza variazione della conseguenza testualmente dichiarata, il riepilogo e la conferma devono essere rinnovati. Questa interpretazione QA non modifica i bundle.
+
+
+## A15 — baseline e stato della nuova campagna
+
+La nuova campagna usa commit A11 `6a765f9c27d7bf1f8cd8305a2d2b7d272964863c`, CORE blob `06e809107d89333738aa96b758e81d1a94383cd3`, COMPACT blob `a102a3819446565621f4a9d492107625ec99b6b0` e TEST_CASES blob `8dfb6edfed017efc459a8853c211e3c76b6de6e2`. Gli SHA precedenti restano nella cronologia come riferimenti storici e non vengono sovrascritti.
+
+Sono previste scorecard distinte Full e Compact. I 27 casi comparabili sono quelli elencati nella sezione 5; i 12 casi Full-only (T03, T05, T06, T15, T04-R, T10-R, T20-A…F) non sono confrontabili con Compact. L'aggregazione T01 è registrata separatamente per ciascun bundle come `T01-AGG-FULL` e `T01-AGG-COMPACT`, applicando senza variazioni la regola deterministica A08.
+
+Stato iniziale della campagna A15: tutti i casi NOT RUN; punteggi F1–F7 NOT VERIFIED finché non esistono transcript ammissibili. Fedeltà diretta al GPT originale: NOT VERIFIED.
