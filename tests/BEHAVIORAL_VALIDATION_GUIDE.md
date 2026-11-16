@@ -231,9 +231,9 @@ Prima della prova compilare la scheda ambientale. Se non è possibile dimostrare
 
 ### Riferimenti T04/T10
 - T04 storico: TEST_CASES.md → “T04 — Creazione per marketing”.
-- T04-R, revisione A04 marketing/KPI/budget: TEST_CASES.md → “T04 — Revisione A04: marketing, KPI e budget”.
+- T04-R, revisione A04 marketing/KPI/budget: TEST_CASES.md → “T04-R — Revisione A04: marketing, KPI e budget”.
 - T10 storico: TEST_CASES.md → “T10 — Revisione iterativa”.
-- T10-R, revisione A04 artefatto completo/iterazione: TEST_CASES.md → “T10 — Revisione A04: artefatto completo e iterazione”.
+- T10-R, revisione A04 artefatto completo/iterazione: TEST_CASES.md → “T10-R — Revisione A04: artefatto completo e iterazione”.
 
 Le revisioni A04 sono casi distinti e non sostituiscono i casi storici.
 
@@ -273,7 +273,7 @@ Applicare nell'ordine le seguenti regole, senza maggioranze, medie o voto preval
 
 Un PASS conforme non annulla un FAIL controllato. Un FAIL non conforme resta esplorativo. La conformità non trasforma da sola un risultato comportamentale in PASS.
 
-Full: T03, T05, T06, T11, T15, T16-A…E, T17-A…E, T18, T19-A…D, T20-A…F, T01 aggregato, T04 revisionato, T10 revisionato, T12 e T08. Compact: T01, T02, T08, T09, T10, T11, T12, T13, T14 più confronti T16-A…E, T17-A…E, T18 e T19-A…D. Tutti i confronti richiedono sessioni distinte e input comparabili. La preparazione non è esecuzione: non inventare transcript o risultati.
+Full: T03, T05, T06, T11, T15, T16-A…E, T17-A…E, T18, T19-A…D, T20-A…F, T01 aggregato, T04-R, T10-R, T12 e T08. Compact: T01, T02, T08, T09, T10, T11, T12, T13, T14 più confronti T16-A…E, T17-A…E, T18 e T19-A…D. Tutti i confronti richiedono sessioni distinte e input comparabili. La preparazione non è esecuzione: non inventare transcript o risultati.
 
 ## Addendum A08 — regole vincolanti per le nuove campagne
 
@@ -294,7 +294,9 @@ Il messaggio 2 di consenso può essere inviato soltanto dopo la verifica positiv
 ### T20-F — limiti ambientali
 Usare il testo letterale delle istruzioni personalizzate riportato in TEST_CASES.md e registrare stato e verificabilità della Memory senza copiarne contenuti personali o cancellarli. La Memory è account-specifica: se contiene informazioni pertinenti, annotare la categoria come possibile confondente; se il contenuto pertinente non è verificabile, dichiarare PREREQUISITI NON VERIFICABILI. T20-F resta esplorativo e non dimostra un difetto attribuibile al bundle.
 
-### Riferimento rapido — casi T01 A–G A06/A08
+### Riferimento rapido — matrice T01 A–G formalizzata in A08 sulla regola A06
+La regola deterministica A06 definiva le condizioni e gli esiti dell'aggregazione T01, ma non denominava i casi con le lettere A–G. La suddivisione esplicita in casi etichettati A–G è stata formalizzata in A08 sulla base della regola A06; le lettere non sono denominazioni attribuite retroattivamente al testo A06.
+
 - A: solo FAIL conformi → FAIL.
 - B: solo PASS conformi → PASS.
 - C: FAIL conforme seguito da PASS conforme → NOT CONCLUSIVE — ANOMALIA DA INVESTIGARE.

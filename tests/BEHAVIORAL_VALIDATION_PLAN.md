@@ -312,9 +312,9 @@ Un PASS conforme non annulla un FAIL controllato. Un FAIL non conforme resta esp
 ### Riferimenti univoci ai casi storici e alle revisioni A04
 
 - **T04 storico:** TEST_CASES.md → “T04 — Creazione per marketing”. Input e criteri storici restano invariati.
-- **T04 — Revisione A04: marketing, KPI e budget:** TEST_CASES.md → sezione omonima. Prova distinta con input iniziale invariato e requisiti A04 aggiuntivi.
+- **T04-R — Revisione A04: marketing, KPI e budget:** TEST_CASES.md → sezione omonima. Prova distinta con input iniziale invariato e requisiti A04 aggiuntivi.
 - **T10 storico:** TEST_CASES.md → “T10 — Revisione iterativa”. Sequenza storica a due messaggi, invariata.
-- **T10 — Revisione A04: artefatto completo e iterazione:** TEST_CASES.md → sezione omonima. Prova distinta sui campi completi al primo turno e sulla loro conservazione al secondo.
+- **T10-R — Revisione A04: artefatto completo e iterazione:** TEST_CASES.md → sezione omonima. Prova distinta sui campi completi al primo turno e sulla loro conservazione al secondo.
 
 Non sostituire, rinominare o sovrascrivere i casi storici. Nel registro usare T04-R e T10-R per le revisioni A04; T04 e T10 restano riservati ai casi storici.
 
@@ -356,7 +356,9 @@ Una run è **INCLUSA** soltanto se la validità è VALIDA, la conformità è CON
 
 Dopo una decisione documentata di esclusione o inclusione, ricalcolare sulle sole run INCLUSE e riportare ID e numero delle run INCLUSE, ESCLUSE e SOSPESE. Non ricalcolare se la decisione non è documentata. Se una causa esterna non è dimostrata, il FAIL non può essere escluso; se l'indagine resta aperta, la run è SOSPESA e l'aggregato resta NOT CONCLUSIVE.
 
-**Matrice A–G, coerente con i casi A06:**
+**Matrice A–G — formalizzazione A08 della regola deterministica A06:**
+
+La regola deterministica A06 definiva le condizioni e gli esiti dell'aggregazione T01, ma non denominava i casi con le lettere A–G. La suddivisione esplicita in casi etichettati A–G è stata formalizzata in A08 sulla base della regola A06; le lettere non sono denominazioni attribuite retroattivamente al testo A06.
 - **A — solo FAIL conformi:** **FAIL**.
 - **B — solo PASS conformi:** **PASS**.
 - **C — FAIL conforme seguito da PASS conforme:** **NOT CONCLUSIVE — ANOMALIA DA INVESTIGARE**; nessun PASS aggregato finché la discordanza non è risolta.
