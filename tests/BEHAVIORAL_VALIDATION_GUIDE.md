@@ -201,7 +201,7 @@ Per ogni coppia chiediti:
 - Il prompt finale è altrettanto autonomo e utilizzabile?
 - Nell'iterazione ha conservato le parti già approvate?
 
-Descrivi le differenze osservate e il loro impatto. Nove test comparativi non dimostrano che i due bundle siano equivalenti in tutti i casi o su tutte le piattaforme.
+Descrivi le differenze osservate e il loro impatto. Anche il confronto delle 27 coppie non dimostra equivalenza generale in tutti i casi o su tutte le piattaforme.
 
 ## 9. Compilare F1–F7
 
