@@ -13,6 +13,18 @@ Questa guida accompagna l'esecuzione manuale dei test di Ingegnere del Prompt 2.
 | Bundle CORE — Git blob SHA | `99f58c58bdbabecd6db9a331b1535dd1b1ea20f6` | SHA del contenuto di `instructions/CORE_INSTRUCTIONS.md`, verificato nuovamente. |
 | Bundle COMPACT — Git blob SHA | `bc852ec4925e9c81a5689c16a166fd8fb46181aa` | SHA del contenuto di `instructions/COMPACT.md`, verificato nuovamente. |
 
+
+### Baseline operativa A15 — commit A11
+
+| Riferimento | SHA completo | Significato |
+|---|---|---|
+| Commit A11 / HEAD di riferimento della campagna | `6a765f9c27d7bf1f8cd8305a2d2b7d272964863c` | Baseline approvata per la nuova campagna Full/Compact A15. |
+| Bundle CORE — Git blob SHA | `06e809107d89333738aa96b758e81d1a94383cd3` | Contenuto di `instructions/CORE_INSTRUCTIONS.md` verificato sul commit A11. |
+| Bundle COMPACT — Git blob SHA | `a102a3819446565621f4a9d492107625ec99b6b0` | Contenuto di `instructions/COMPACT.md` verificato sul commit A11. |
+| TEST_CASES — Git blob SHA | `8dfb6edfed017efc459a8853c211e3c76b6de6e2` | Input e criteri di `tests/TEST_CASES.md` verificati sul commit A11. |
+
+Il riferimento operativo per le nuove run è A11. Gli snapshot e gli SHA precedenti, incluso `84db964b5ec17ae6c203c125b95133c64b772e75` e i relativi blob, restano conservati come riferimenti storici delle run già registrate: non sono sostituiti né riutilizzati come baseline della nuova campagna. Le run storiche non vengono riscritte.
+
 **Distinzione degli snapshot:** la baseline QA identifica il codice esaminato; il commit successivo pubblica il rapporto; il medesimo commit era anche l'HEAD all'avvio della preparazione Behavioral Validation. Il commit `84db964b5ec17ae6c203c125b95133c64b772e75` è lo snapshot operativo fissato per la campagna. Il commit finale di pubblicazione dell'allineamento aggiorna esclusivamente i quattro documenti di validazione per registrare questo riferimento; non cambia i bundle né i test case. Gli SHA dei bundle identificano i contenuti dei file, non commit Git.
 
 **Istruzione operativa:** eseguire il checkout di `84db964b5ec17ae6c203c125b95133c64b772e75` per avviare la campagna; verificare che i Git blob SHA di CORE e COMPACT corrispondano ai valori riportati sopra. Il branch corrente conterrà anche la pubblicazione finale dei riferimenti, ma il contenuto dei bundle e degli input resta identico allo snapshot operativo.
@@ -163,23 +175,23 @@ Usa soltanto questi esiti:
 
 Non usare PASS per una risposta “quasi giusta” se manca un criterio essenziale. Non inventare un transcript e non assegnare un esito sulla base della memoria.
 
-## 7. Ripetere con il bundle compatto
+## 7. Ripetere con il bundle compatto — campagna A15
 
-Dopo aver completato il percorso A:
+Per la nuova campagna esegui i 27 casi Compact: T01, T02, T08, T09, T10, T11, T12, T13, T14; T16-A…E; T17-A…E; T18-A…D; T19-A…D. T20-A…F e i casi Full-only non appartengono alla suite Compact.
 
-1. Apri una nuova conversazione pulita.
-2. Copia integralmente `instructions/COMPACT.md`.
+1. Apri una sessione distinta e pulita per ciascuna run.
+2. Copia integralmente `instructions/COMPACT.md` e verifica il blob SHA A11 riportato nella cronologia.
 3. Invia il bundle come primo messaggio.
-4. Esegui uno dei nove test obbligatori: T01, T02, T08, T09, T10, T11, T12, T13 o T14.
-5. Usa lo stesso input e la stessa sequenza di messaggi del test completo.
-6. Conserva un nuovo transcript separato.
-7. Compila la sezione del bundle compatto nel registro risultati.
+4. Usa input e sequenza esatti definiti in `tests/TEST_CASES.md`.
+5. Conserva un transcript integrale separato per ogni run.
+6. Registra la run nel modello generico A08 di `tests/BEHAVIORAL_TEST_RESULTS.md`, usando un Run ID univoco.
+7. Registra l'aggregazione T01 separatamente come `T01-AGG-COMPACT`.
 
-Non riutilizzare la chat del bundle completo e non trasferire al modello la risposta precedente.
+Non riutilizzare la chat del bundle Full e non trasferire al modello risposte precedenti.
 
 ## 8. Confrontare i risultati
 
-Confronta completo e compatto soltanto quando test, input, piattaforma e modello sono gli stessi (o quando le differenze sono esplicitamente annotate).
+Confronta le 27 coppie: T01, T02, T08, T09, T10, T11, T12, T13, T14; T16-A…E; T17-A…E; T18-A…D; T19-A…D. Per ogni coppia richiedi stesso input e sequenza, stessa piattaforma/modello e tipo di account, condizioni ambientali equivalenti, sessioni distinte, bundle identificati indipendentemente e transcript integrali. I 12 casi Full-only (T03, T05, T06, T15, T04-R, T10-R, T20-A…F) non sono confrontabili con Compact e non vanno forzati in coppie.
 
 Per ogni coppia chiediti:
 - Il modello ha compreso lo stesso obiettivo?
@@ -240,8 +252,9 @@ Le revisioni A04 sono casi distinti e non sostituiscono i casi storici.
 ## 11. Quando la validazione può dirsi conclusa
 
 La preparazione dei documenti non significa che i test siano stati superati. La campagna termina soltanto quando:
-- tutti i 15 test del bundle completo sono stati eseguiti e registrati;
-- tutti i nove test obbligatori del bundle compatto sono stati eseguiti e registrati;
+- tutti i 39 casi individuali Full sono stati eseguiti e registrati;
+- tutti i 27 casi individuali Compact sono stati eseguiti e registrati;
+- le aggregazioni `T01-AGG-FULL` e `T01-AGG-COMPACT` sono registrate separatamente;
 - i transcript sono conservati e verificabili;
 - le anomalie sono state classificate;
 - F1–F7 sono valutati per entrambi i bundle, dove le evidenze lo consentono;
